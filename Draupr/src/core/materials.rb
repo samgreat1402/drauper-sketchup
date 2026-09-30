@@ -13,6 +13,7 @@ module Draupr
         glass_tinted: ['Draupr Glass - Tinted Grey', [70, 90, 105, 85]],
         mullion_dark: ['Draupr Mullion - Graphite', [45, 48, 52, 255]],
         trim_light: ['Draupr Trim - Warm White', [224, 222, 214, 255]],
+        siding_light: ['Draupr Siding - Warm White', [226, 225, 219, 255]],
         steel: ['Draupr Steel - Satin', [100, 105, 110, 255]],
         timber: ['Draupr Timber - Oak', [184, 126, 70, 255]],
         concrete: ['Draupr Concrete - Structural', [155, 153, 148, 255]],
@@ -28,6 +29,7 @@ module Draupr
         concrete: ['draupr_concrete.png', 500.mm],
         timber: ['draupr_timber.png', 300.mm],
         wall_finish: ['draupr_plaster.png', 400.mm],
+        siding_light: ['draupr_siding_white.png', 600.mm],
         roof_shingle: ['draupr_roof_shingle.png', 600.mm]
       }.freeze
 

@@ -465,29 +465,50 @@ module Draupr
           edge.hidden=true;edge.soft=true;edge.smooth=true
         end
       end
-      def dormer_window_layout(width,height)
-        side_margin=[[width*0.22,70.mm].max,width*0.32].min
+      def dormer_window_layout(width,height,shutters=false)
+        side_ratio=shutters ? 0.29 : 0.22
+        side_limit=shutters ? 0.35 : 0.32
+        side_margin=[[width*side_ratio,70.mm].max,width*side_limit].min
         sill=[[height*0.20,35.mm].max,height*0.27].min
         head=[[height*0.18,35.mm].max,height*0.25].min
         window_width=width-2.0*side_margin;window_height=height-sill-head
         return nil if window_width<180.mm || window_height<120.mm
         {'x'=>side_margin,'z'=>sill,'width'=>window_width,'height'=>window_height}
       end
-      def build_dormer_window(entities,layout,wall_t,wall_height,materials)
+      def build_dormer_shutter(entities,key,x,z,w,h,wall_t,material)
+        face_y=-wall_t-25.mm;depth=9.mm;stile=[[[w*0.14,16.mm].max,26.mm].min,w*0.24].min;rail=[stile,22.mm].max
+        box(entities,'trim',"#{key}_left",p3(x,face_y,z),stile,depth,h,material)
+        box(entities,'trim',"#{key}_right",p3(x+w-stile,face_y,z),stile,depth,h,material)
+        box(entities,'trim',"#{key}_top",p3(x+stile,face_y,z+h-rail),w-2*stile,depth,rail,material)
+        box(entities,'trim',"#{key}_bottom",p3(x+stile,face_y,z),w-2*stile,depth,rail,material)
+        box(entities,'trim',"#{key}_middle",p3(x+stile,face_y,z+h*0.48-rail/2),w-2*stile,depth,rail,material)
+        inner_h=h-2*rail;count=[[(inner_h/48.mm).floor,5].max,12].min;step=inner_h/count.to_f;slat_h=[step*0.24,6.mm].max
+        count.times do |index|
+          slat_z=z+rail+step*(index+0.36)
+          box(entities,'trim',"#{key}_slat_#{index+1}",p3(x+stile,face_y-2.mm,slat_z),w-2*stile,depth+4.mm,slat_h,material)
+        end
+      end
+      def build_dormer_window(entities,layout,wall_t,wall_height,materials,shutters=false)
         x=layout['x'];z=layout['z'];w=layout['width'];h=layout['height'];frame=[[[w,h].min*0.055,18.mm].max,28.mm].min
-        box(entities,'wall','front_sill',p3(0,-wall_t,0),x*2+w,wall_t,z,materials[:wall])
-        box(entities,'wall','front_left',p3(0,-wall_t,z),x,wall_t,h,materials[:wall])
-        box(entities,'wall','front_right',p3(x+w,-wall_t,z),x,wall_t,h,materials[:wall])
-        box(entities,'wall','front_head',p3(0,-wall_t,z+h),x*2+w,wall_t,wall_height-z-h,materials[:wall])
+        box(entities,'siding','front_sill',p3(0,-wall_t,0),x*2+w,wall_t,z,materials[:siding])
+        box(entities,'siding','front_left',p3(0,-wall_t,z),x,wall_t,h,materials[:siding])
+        box(entities,'siding','front_right',p3(x+w,-wall_t,z),x,wall_t,h,materials[:siding])
+        box(entities,'siding','front_head',p3(0,-wall_t,z+h),x*2+w,wall_t,wall_height-z-h,materials[:siding])
         box(entities,'frame','window_left',p3(x,-wall_t-15.mm,z),frame,wall_t+25.mm,h,materials[:frame])
         box(entities,'frame','window_right',p3(x+w-frame,-wall_t-15.mm,z),frame,wall_t+25.mm,h,materials[:frame])
         box(entities,'frame','window_bottom',p3(x+frame,-wall_t-15.mm,z),w-2*frame,wall_t+25.mm,frame,materials[:frame])
         box(entities,'frame','window_top',p3(x+frame,-wall_t-15.mm,z+h-frame),w-2*frame,wall_t+25.mm,frame,materials[:frame])
         box(entities,'glass','window_glass',p3(x+frame,-wall_t-10.mm,z+frame),w-2*frame,10.mm,h-2*frame,materials[:glass])
         mullion=[frame*0.72,16.mm].max
-        box(entities,'frame','window_mullion',p3(x+w/2-mullion/2,-wall_t-16.mm,z+frame),mullion,wall_t+27.mm,h-2*frame,materials[:frame]) if w>850.mm
+        box(entities,'frame','window_mullion',p3(x+w/2-mullion/2,-wall_t-16.mm,z+frame),mullion,wall_t+27.mm,h-2*frame,materials[:frame]) if w>320.mm
         rail=[frame*0.72,16.mm].max
         box(entities,'frame','window_meeting_rail',p3(x+frame,-wall_t-17.mm,z+h*0.46-rail/2),w-2*frame,wall_t+28.mm,rail,materials[:frame]) if h>300.mm
+        if h>460.mm
+          glazing_bar=[rail*0.55,8.mm].max
+          [0.25,0.70].each_with_index do |ratio,index|
+            box(entities,'frame',"window_glazing_bar_#{index+1}",p3(x+frame,-wall_t-18.mm,z+h*ratio-glazing_bar/2),w-2*frame,wall_t+29.mm,glazing_bar,materials[:frame])
+          end
+        end
         casing=[[[w,h].min*0.055,22.mm].max,36.mm].min;face_y=-wall_t-24.mm;face_depth=10.mm
         box(entities,'trim','window_casing_left',p3(x-casing,face_y,z-casing),casing,face_depth,h+2*casing,materials[:trim])
         box(entities,'trim','window_casing_right',p3(x+w,face_y,z-casing),casing,face_depth,h+2*casing,materials[:trim])
@@ -496,17 +517,37 @@ module Draupr
         cap_depth=wall_t+30.mm
         box(entities,'trim','window_drip_cap',p3(x-casing-8.mm,-wall_t-26.mm,z+h+casing),w+2*casing+16.mm,cap_depth,10.mm,materials[:trim])
         box(entities,'trim','window_sill_projection',p3(x-casing-8.mm,-wall_t-28.mm,z-casing-14.mm),w+2*casing+16.mm,wall_t+36.mm,14.mm,materials[:trim])
+        if shutters
+          total_width=x*2+w;corner=[[total_width*0.018,24.mm].max,36.mm].min;gap=18.mm
+          available=x-casing-corner-2*gap;shutter_width=[[available*0.82,90.mm].max,w*0.30].min
+          if shutter_width>=80.mm
+            build_dormer_shutter(entities,'shutter_left',x-casing-gap-shutter_width,z-casing,shutter_width,h+2*casing,wall_t,materials[:trim])
+            build_dormer_shutter(entities,'shutter_right',x+w+casing+gap,z-casing,shutter_width,h+2*casing,wall_t,materials[:trim])
+          end
+        end
+      end
+      def dormer_roof_clearance_at(solution,x,thickness)
+        drops=solution['panels'].filter_map do |points|
+          xs=points.map(&:x);next unless x>=xs.min-0.5.mm && x<=xs.max+0.5.mm
+          normal=points[0].vector_to(points[1]).cross(points[0].vector_to(points[2]));next if normal.length<1e-9
+          normal.normalize!;thickness/[normal.z.abs,0.10].max
+        end
+        (drops.max || thickness)+2.mm
       end
       def build_dormer_front(entities,p,solution,wall_t,materials)
-        width=p['width'].to_f;height=solution['wall_height'].to_f;eave=solution['eave'].to_f
+        width=p['width'].to_f;eave=solution['eave'].to_f;thickness=p['thickness'].to_f
+        edge_clearance=[dormer_roof_clearance_at(solution,0.0,thickness),dormer_roof_clearance_at(solution,width,thickness)].max
+        height=solution['wall_height'].to_f-edge_clearance
+        raise 'The Dormer roof is too thick for the fitted front wall. Increase the footprint depth or reduce roof thickness. / ضخامت سقف برای دیوار جلوی دورمر زیاد است؛ عمق را افزایش یا ضخامت را کاهش دهید.' unless height>120.mm
         show_window=p['window']!=false && p['window'].to_s!='false'
-        layout=show_window ? dormer_window_layout(width,height) : nil
-        if layout;build_dormer_window(entities,layout,wall_t,height,materials)
-        else;box(entities,'wall','front_wall',p3(0,-wall_t,0),width,wall_t,height,materials[:wall]);end
-        profile=solution['profile'];crown=[p3(0,-wall_t,eave),p3(width,-wall_t,eave)]+profile[1...-1].to_a.reverse.map { |x,z| p3(x,-wall_t,z) }
-        if crown.length>=3 && crown.any? { |point| point.z>eave+1.mm }
-          part=Parts.make(entities,'wall','front_crown',materials[:wall]);face=part.entities.add_face(crown);raise 'Could not construct Dormer front crown.' unless face
-          face.material=materials[:wall];face.back_material=materials[:wall]
+        shutters=show_window && p.fetch('dormer_type','gabled').to_s=='gabled' && p['shutters']!=false && p['shutters'].to_s!='false' && width>=1000.mm && height>=350.mm
+        layout=show_window ? dormer_window_layout(width,height,shutters) : nil
+        if layout;build_dormer_window(entities,layout,wall_t,height,materials,shutters)
+        else;box(entities,'siding','front_wall',p3(0,-wall_t,0),width,wall_t,height,materials[:siding]);end
+        profile=solution['profile'];crown=[p3(0,-wall_t,height),p3(width,-wall_t,height)]+profile[1...-1].to_a.reverse.map { |x,z| p3(x,-wall_t,z-dormer_roof_clearance_at(solution,x,thickness)) }
+        if crown.length>=3 && crown.any? { |point| point.z>height+1.mm }
+          part=Parts.make(entities,'siding','front_crown',materials[:siding]);face=part.entities.add_face(crown);raise 'Could not construct Dormer front crown.' unless face
+          face.material=materials[:siding];face.back_material=materials[:siding]
           # The crown is drawn on the exterior plane at Y=-wall_t. Extrude it
           # toward Y=0, never outward in front of the window facade.
           inward=face.normal.y<0 ? -wall_t : wall_t
@@ -520,41 +561,25 @@ module Draupr
         box(entities,'trim','corner_return_left',p3(0,-wall_t,0),casing,wall_t+return_depth,height,materials[:trim])
         box(entities,'trim','corner_return_right',p3(width-casing,-wall_t,0),casing,wall_t+return_depth,height,materials[:trim])
       end
-      def build_dormer_cheeks(entities,width,solution,wall_t,material)
+      def build_dormer_cheeks(entities,width,solution,wall_t,thickness,material)
         join_y,join_z=solution['cheek_join'];eave=solution['eave'].to_f
         [[0.0,'left',wall_t],[width,'right',-wall_t]].each do |x,name,extrusion|
-          part=Parts.make(entities,'wall',"cheek_#{name}",material);face=part.entities.add_face(p3(x,0,0),p3(x,join_y,join_z),p3(x,0,eave));raise 'Could not construct solid Dormer cheek.' unless face
-          face.material=material;face.back_material=material;Parts.tag_face(face,'wall',"cheek_#{name}_face");face.pushpull(extrusion)
+          clearance=dormer_roof_clearance_at(solution,x,thickness);top_front=eave-clearance;top_rear=join_z-clearance
+          part=Parts.make(entities,'siding',"cheek_#{name}",material);face=part.entities.add_face(p3(x,0,0),p3(x,join_y,top_rear),p3(x,0,top_front));raise 'Could not construct solid Dormer cheek.' unless face
+          face.material=material;face.back_material=material;Parts.tag_face(face,'siding',"cheek_#{name}_face");face.pushpull(extrusion)
         end
       end
-      def build_dormer_front_details(entities,solution,thickness,fascia_width,fascia_depth,materials)
-        curved=solution['profile'].length>10;last_edge=solution['front_edges'].length-1
-        solution['front_edges'].each_with_index do |edge,index|
-          a=edge[0].offset(Z_AXIS,-thickness);b=edge[1].offset(Z_AXIS,-thickness);part=Parts.make(entities,'soffit',"front_soffit_#{index+1}",materials[:wall])
-          face=part.entities.add_face(a,b,p3(b.x,0,b.z),p3(a.x,0,a.z));raise 'Could not close Dormer front soffit.' unless face;face.material=materials[:wall];face.back_material=materials[:wall]
-          if curved
-            soften_dormer_station(part,a.x) if index>0
-            soften_dormer_station(part,b.x) if index<last_edge
-          end
-        end
+      def build_dormer_front_details(entities,solution,fascia_width,fascia_depth,materials)
+        curved=solution['profile'].length>10
         outer=solution['front_profile'].map { |x,z| p3(x,-solution['overhang'].to_f,z) }
         last_fascia=outer.length-2
         outer.each_cons(2).with_index do |(a,b),index|
-          lower_a=a.offset(Z_AXIS,-fascia_width);lower_b=b.offset(Z_AXIS,-fascia_width);part=Parts.make(entities,'trim',"rake_fascia_#{index+1}",materials[:trim])
-          face=part.entities.add_face(a,b,lower_b,lower_a);raise 'Could not construct Dormer rake fascia.' unless face;face.material=materials[:trim];face.back_material=materials[:trim];face.pushpull(-fascia_depth)
+          lower_a=a.offset(Z_AXIS,-fascia_width);lower_b=b.offset(Z_AXIS,-fascia_width);part=Parts.make(entities,'fascia',"rake_fascia_#{index+1}",materials[:fascia])
+          face=part.entities.add_face(a,b,lower_b,lower_a);raise 'Could not construct Dormer rake fascia.' unless face;face.material=materials[:fascia];face.back_material=materials[:fascia];face.pushpull(-fascia_depth)
           if curved
             soften_dormer_station(part,a.x) if index>0
             soften_dormer_station(part,b.x) if index<last_fascia
           end
-        end
-      end
-      def build_dormer_side_details(entities,width,solution,thickness,fascia_width,fascia_depth,materials)
-        overhang=solution['overhang'].to_f
-        solution['side_edges'].each_with_index do |edge,index|
-          outer_x,front_y,front_roof_z,rear_y,rear_roof_z,inner_rear_y,inner_front_roof_z,inner_rear_roof_z=edge;inner_x=index.zero? ? 0.0 : width;name=index.zero? ? 'left' : 'right';extrusion=index.zero? ? fascia_depth : -fascia_depth
-          drop=[thickness,18.mm].max;front_z=front_roof_z-drop;back_z=rear_roof_z-drop;inner_front_z=inner_front_roof_z-drop;inner_back_z=inner_rear_roof_z-drop
-          soffit=Parts.make(entities,'soffit',"eave_soffit_#{name}",materials[:wall]);sf=soffit.entities.add_face(p3(outer_x,front_y,front_z),p3(inner_x,front_y,inner_front_z),p3(inner_x,inner_rear_y,inner_back_z),p3(outer_x,rear_y,back_z));raise 'Could not close Dormer eave soffit.' unless sf;sf.material=materials[:wall];sf.back_material=materials[:wall]
-          fascia=Parts.make(entities,'trim',"eave_fascia_#{name}",materials[:trim]);ff=fascia.entities.add_face(p3(outer_x,front_y,front_roof_z),p3(outer_x,rear_y,rear_roof_z),p3(outer_x,rear_y,rear_roof_z-fascia_width),p3(outer_x,front_y,front_roof_z-fascia_width));raise 'Could not construct Dormer eave fascia.' unless ff;ff.material=materials[:trim];ff.back_material=materials[:trim];ff.pushpull(extrusion)
         end
       end
       def build_dormer_roof_shell(entities,type,solution,thickness,material)
@@ -573,12 +598,13 @@ module Draupr
       def build_dormer_procedural(p)
         solution=dormer_solution(p);group=root('Dormer',:roofs);width=p['width'].to_f;type=p.fetch('dormer_type','gabled').to_s
         front_window=p['window']!=false && p['window'].to_s!='false'
-        materials={wall:mat(p,'wall_material',:wall_finish),roof:mat(p,'roof_material',:roof_shingle),frame:mat(p,'frame_material',:mullion_dark),trim:mat(p,'trim_material',:trim_light),glass:mat(p,'glass_material',:glass_clear)}
+        materials={wall:mat(p,'wall_material',:wall_finish),siding:mat(p,'siding_material',:siding_light),roof:mat(p,'roof_material',:roof_shingle),frame:mat(p,'frame_material',:mullion_dark),trim:mat(p,'trim_material',:trim_light),fascia:mat(p,'fascia_material',:mullion_dark),glass:mat(p,'glass_material',:glass_clear)}
         wall_t=[[width*0.05,60.mm].max,120.mm].min;thickness=p['thickness'].to_f;fascia_width=[[width*0.022,26.mm].max,44.mm].min;fascia_depth=12.mm
-        build_dormer_front(group.entities,p,solution,wall_t,materials);build_dormer_cheeks(group.entities,width,solution,wall_t,materials[:wall])
-        build_dormer_front_details(group.entities,solution,thickness,fascia_width,fascia_depth,materials);build_dormer_side_details(group.entities,width,solution,thickness,fascia_width,fascia_depth,materials)
+        build_dormer_front(group.entities,p,solution,wall_t,materials);build_dormer_cheeks(group.entities,width,solution,wall_t,thickness,materials[:siding])
+        build_dormer_front_details(group.entities,solution,fascia_width,fascia_depth,materials)
         build_dormer_roof_shell(group.entities,type,solution,thickness,materials[:roof])
-        write(group,area_m2:width*solution['wall_height'].to_f*0.00064516,host_slope_rise_mm:p['host_slope_rise'].to_f*25.4,dormer_type:type,joined_depth_mm:solution['actual_depth']*25.4,roof_overhang_mm:solution['overhang'].to_f*25.4,reference_geometry:"#{type} exact host-plane intersection",drawn_depth_mm:solution['drawn_depth'].to_f*25.4,geometry_contract:solution['geometry_contract'],solid_cheeks:true,closed_soffits:true,physical_window_opening:front_window,window_reveals:front_window,fascia_width_mm:fascia_width*25.4,visual_refinement:'architectural-shell-v7',auto_fitted:solution['auto_fitted'],fit_scale:solution['fit_scale'])
+        shutters=front_window && type=='gabled' && p['shutters']!=false && p['shutters'].to_s!='false' && width>=1000.mm && solution['wall_height'].to_f>=350.mm
+        write(group,area_m2:width*solution['wall_height'].to_f*0.00064516,host_slope_rise_mm:p['host_slope_rise'].to_f*25.4,dormer_type:type,joined_depth_mm:solution['actual_depth']*25.4,roof_overhang_mm:solution['overhang'].to_f*25.4,reference_geometry:"#{type} exact host-plane intersection",drawn_depth_mm:solution['drawn_depth'].to_f*25.4,geometry_contract:solution['geometry_contract'],solid_cheeks:true,roof_shell_provides_soffit:true,separate_soffit_faces:false,shutters:shutters,siding_texture:true,roof_underside_clearance:true,physical_window_opening:front_window,window_reveals:front_window,fascia_width_mm:fascia_width*25.4,visual_refinement:'reference-gabled-v2',auto_fitted:solution['auto_fitted'],fit_scale:solution['fit_scale'])
       end
       def build_molding(p)
         g=root('Molding',:framing);m=mat(p,'material',:wall_finish)
