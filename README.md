@@ -40,13 +40,14 @@ The current source version is **4.1.29 Preview**. Recent Dormer work includes:
 
 ### Build an RBZ from source
 
-From the repository root:
+The GitHub source stores binary PNG assets as open Base64 data. Restore them first, then package the extension:
 
 ```bash
+python3 tools/materialize_assets.py
 zip -r Draupr_Studio.rbz Draupr.rb Draupr
 ```
 
-The archive root must contain both `Draupr.rb` and the `Draupr/` directory.
+The restoration script writes the cursor, icon, and texture PNGs to their required paths. The RBZ archive root must contain both `Draupr.rb` and the `Draupr/` directory.
 
 ## Repository layout
 

@@ -1,0 +1,54 @@
+[
+  {
+    "path": "Draupr/src/assets/cursor_align.png",
+    "source": "asset_01.b64"
+  },
+  {
+    "path": "Draupr/src/assets/cursor_draw.png",
+    "source": "asset_02.b64"
+  },
+  {
+    "path": "Draupr/src/assets/cursor_knife.png",
+    "source": "asset_03.b64"
+  },
+  {
+    "path": "Draupr/src/assets/cursor_trim.png",
+    "source": "asset_04.b64"
+  },
+  {
+    "path": "Draupr/src/assets/icon_16.png",
+    "source": "asset_05.b64"
+  },
+  {
+    "path": "Draupr/src/assets/icon_24.png",
+    "source": "asset_06.b64"
+  },
+  {
+    "path": "Draupr/src/assets/textures/draupr_brick.png",
+    "source": "asset_07.b64"
+  },
+  {
+    "path": "Draupr/src/assets/textures/draupr_concrete.png",
+    "source": "asset_08.b64"
+  },
+  {
+    "path": "Draupr/src/assets/textures/draupr_plaster.png",
+    "source": "asset_09.b64"
+  },
+  {
+    "path": "Draupr/src/assets/textures/draupr_roof_shingle.png",
+    "source": "asset_10.b64"
+  },
+  {
+    "path": "Draupr/src/assets/textures/draupr_timber.png",
+    "source": "asset_11.b64"
+  },
+  {
+    "path": "Draupr/src/assets/wall_16.png",
+    "source": "asset_12.b64"
+  },
+  {
+    "path": "Draupr/src/assets/wall_24.png",
+    "source": "asset_13.b64"
+  }
+]
