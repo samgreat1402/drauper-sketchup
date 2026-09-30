@@ -1,0 +1,9 @@
+{
+  "version": "4.1.26",
+  "status": "Preview",
+  "tool_count": 17,
+  "field_count": 283,
+  "workspace_count": 6,
+  "data_schema_version": 2,
+  "native_tested": false
+}

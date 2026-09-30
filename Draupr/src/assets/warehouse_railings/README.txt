@@ -1,0 +1,1 @@
+Place user-owned SketchUp models in the configured Local Railing Sources folder. Expected filenames: Railing_Metal.skp, Balusters.skp, Classical_Balusters.skp. No third-party SKP models are bundled with Draupr.
