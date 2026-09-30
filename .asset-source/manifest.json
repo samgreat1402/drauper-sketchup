@@ -40,15 +40,19 @@
     "source": "asset_10.b64"
   },
   {
-    "path": "Draupr/src/assets/textures/draupr_timber.png",
+    "path": "Draupr/src/assets/textures/draupr_siding_white.png",
     "source": "asset_11.b64"
   },
   {
-    "path": "Draupr/src/assets/wall_16.png",
+    "path": "Draupr/src/assets/textures/draupr_timber.png",
     "source": "asset_12.b64"
   },
   {
-    "path": "Draupr/src/assets/wall_24.png",
+    "path": "Draupr/src/assets/wall_16.png",
     "source": "asset_13.b64"
+  },
+  {
+    "path": "Draupr/src/assets/wall_24.png",
+    "source": "asset_14.b64"
   }
 ]
