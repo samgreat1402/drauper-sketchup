@@ -1,0 +1,26 @@
+{
+  "release": "4.1.9 Preview",
+  "passed": 19,
+  "failed": 0,
+  "checks": {
+    "release_4_1_9": true,
+    "blanket_opening_rejection_removed": true,
+    "wall_holes_loaded_for_split": true,
+    "opening_partition_helper": true,
+    "internal_node_segment_shift": true,
+    "post_cut_segment_shift": true,
+    "split_segment_station_rebase": true,
+    "through_opening_guard": true,
+    "child_openings_assigned": true,
+    "host_reference_relink": true,
+    "relink_inside_transaction": true,
+    "plane_snap_helper": true,
+    "snap_distance_threshold": true,
+    "snap_projected_to_plane": true,
+    "snap_used_for_level": true,
+    "snap_used_for_surface": true,
+    "native_marker_restored_conditionally": true,
+    "roof_envelope_cut_preserved": true,
+    "heal_and_attach_preserved": true
+  }
+}

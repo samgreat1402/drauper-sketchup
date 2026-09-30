@@ -1,0 +1,23 @@
+{
+  "version": "4.1.23",
+  "checks": {
+    "schema_default_window_enabled": true,
+    "legacy_missing_value_defaults_enabled": true,
+    "explicit_false_respected": true,
+    "fixed_height_suppression_removed": true,
+    "adaptive_sill_and_head": true,
+    "minimum_valid_wall_supported": true,
+    "physical_opening_and_reveals": true,
+    "metadata_matches_window_state": true
+  },
+  "wall_heights_simulated_mm": [
+    250,
+    300,
+    350,
+    420,
+    600,
+    1350
+  ],
+  "all_passed": true,
+  "native_tested": false
+}

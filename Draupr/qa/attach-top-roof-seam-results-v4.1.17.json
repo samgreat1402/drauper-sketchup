@@ -1,0 +1,14 @@
+{
+  "version": "4.1.17",
+  "checks": {
+    "intersection_helper": true,
+    "multi_surface_guard": true,
+    "quad_and_center_probes": true,
+    "top_and_base_constraints": true,
+    "roof_cuts_merged": true,
+    "simulated_gable_station": true
+  },
+  "passed": 6,
+  "total": 6,
+  "all_passed": true
+}

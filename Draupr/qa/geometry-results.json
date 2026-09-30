@@ -1,0 +1,111 @@
+{
+  "kind": "Python algorithm-port checks; not Ruby or SketchUp runtime tests",
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "No openings keeps complete interval",
+      "pass": true
+    },
+    {
+      "name": "Opening separates two piers",
+      "pass": true
+    },
+    {
+      "name": "Slivers below tolerance ignored",
+      "pass": true
+    },
+    {
+      "name": "Union of overlapping vertical ranges",
+      "pass": true
+    },
+    {
+      "name": "Two separated openings",
+      "pass": true
+    },
+    {
+      "name": "Equal clear curtain bays 5000/4",
+      "pass": true
+    },
+    {
+      "name": "Curtain width budget 5000/4",
+      "pass": true
+    },
+    {
+      "name": "Equal clear curtain bays 6100/5",
+      "pass": true
+    },
+    {
+      "name": "Curtain width budget 6100/5",
+      "pass": true
+    },
+    {
+      "name": "Equal clear curtain bays 1200/1",
+      "pass": true
+    },
+    {
+      "name": "Curtain width budget 1200/1",
+      "pass": true
+    },
+    {
+      "name": "Equal clear curtain bays 4000/7",
+      "pass": true
+    },
+    {
+      "name": "Curtain width budget 4000/7",
+      "pass": true
+    },
+    {
+      "name": "Window 0 mullions leaves clear panes",
+      "pass": true
+    },
+    {
+      "name": "Window 0 mullions area conservation",
+      "pass": true
+    },
+    {
+      "name": "Window 1 mullions leaves clear panes",
+      "pass": true
+    },
+    {
+      "name": "Window 1 mullions area conservation",
+      "pass": true
+    },
+    {
+      "name": "Window 2 mullions leaves clear panes",
+      "pass": true
+    },
+    {
+      "name": "Window 2 mullions area conservation",
+      "pass": true
+    },
+    {
+      "name": "Window 3 mullions leaves clear panes",
+      "pass": true
+    },
+    {
+      "name": "Window 3 mullions area conservation",
+      "pass": true
+    },
+    {
+      "name": "Stair reaches 3000 mm exactly",
+      "pass": true
+    },
+    {
+      "name": "Stair reaches 3200 mm exactly",
+      "pass": true
+    },
+    {
+      "name": "Stair reaches 2800 mm exactly",
+      "pass": true
+    },
+    {
+      "name": "Overhang does not accumulate 5000/400",
+      "pass": true
+    },
+    {
+      "name": "Overhang does not accumulate 6000/0",
+      "pass": true
+    }
+  ]
+}

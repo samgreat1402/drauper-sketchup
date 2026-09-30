@@ -1,0 +1,22 @@
+{
+  "version": "4.1.21",
+  "checks": {
+    "sample_reviewed_without_copying": true,
+    "all_nine_types_use_original_pipeline": true,
+    "exact_host_plane_intersections": true,
+    "all_roof_panels_planar": true,
+    "host_opening_uses_full_join_profile": true,
+    "dynamic_opening_centroid": true,
+    "solid_front_and_cheeks": true,
+    "physical_window_opening": true,
+    "window_reveals_and_mullion": true,
+    "roof_thickness": true,
+    "closed_soffits": true,
+    "rake_and_eave_fascia": true,
+    "catalog_preserved": true
+  },
+  "dormer_types_checked": 9,
+  "simulated_panels_checked": 72,
+  "all_passed": true,
+  "native_tested": false
+}

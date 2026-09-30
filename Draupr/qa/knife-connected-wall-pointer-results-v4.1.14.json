@@ -1,0 +1,24 @@
+{
+  "release": "4.1.14 Preview",
+  "passed": 17,
+  "failed": 0,
+  "checks": {
+    "release_4_1_14": true,
+    "optional_pick_aperture": true,
+    "twelve_pixel_knife_aperture": true,
+    "per_path_face_solver": true,
+    "per_path_transform": true,
+    "face_hit_projected_to_candidate_path": true,
+    "finite_segment_clamp": true,
+    "internal_before_endpoint": true,
+    "pick_order_tiebreak": true,
+    "display_surface_returned": true,
+    "preview_tracks_display_surface": true,
+    "zero_shift_guard": true,
+    "hover_click_ranked_resolver": true,
+    "junction_relink_preserved": true,
+    "opening_redistribution_preserved": true,
+    "attach_top_fix_preserved": true,
+    "roof_edge_cut_preserved": true
+  }
+}

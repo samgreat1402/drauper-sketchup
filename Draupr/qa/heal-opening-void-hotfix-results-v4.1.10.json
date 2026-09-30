@@ -1,0 +1,11 @@
+{
+  "release": "4.1.10 Preview",
+  "passed": 4,
+  "failed": 0,
+  "checks": {
+    "active_context_walls_included": true,
+    "selected_walls_included": true,
+    "wide_void_click_radius": true,
+    "background_hit_not_used_for_near_host": true
+  }
+}

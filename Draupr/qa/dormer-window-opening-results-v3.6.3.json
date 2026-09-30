@@ -1,0 +1,14 @@
+{
+  "release": "3.6.3 Preview",
+  "opaque_facade_face": 788,
+  "rough_opening_mm": [
+    -564.7,
+    564.7,
+    205.7,
+    1626.3
+  ],
+  "hole_loops": 1,
+  "glass_faces": 8,
+  "contract": "physical-inner-loop-v1",
+  "native_tested": false
+}

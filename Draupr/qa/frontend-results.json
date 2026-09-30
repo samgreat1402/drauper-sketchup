@@ -1,0 +1,242 @@
+{
+  "release": "4.1.5 Preview",
+  "kind": "Headless Chromium frontend rendering checks; not SketchUp native runtime tests",
+  "schema_tool_count": 17,
+  "schema_field_count": 282,
+  "passed": 51,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Release badge",
+      "pass": true,
+      "detail": "4.1.5 · Preview"
+    },
+    {
+      "name": "17 schema tools",
+      "pass": true,
+      "detail": "17"
+    },
+    {
+      "name": "282 schema fields",
+      "pass": true,
+      "detail": "282"
+    },
+    {
+      "name": "Frontend test hook",
+      "pass": true
+    },
+    {
+      "name": "Six workspaces",
+      "pass": true,
+      "detail": "create,edit,modify,materials,library,project"
+    },
+    {
+      "name": "Display unit choices",
+      "pass": true,
+      "detail": "mm,cm,m,in,ft,model"
+    },
+    {
+      "name": "Workspace create renders",
+      "pass": true
+    },
+    {
+      "name": "Workspace edit renders",
+      "pass": true
+    },
+    {
+      "name": "Workspace modify renders",
+      "pass": true
+    },
+    {
+      "name": "Workspace materials renders",
+      "pass": true
+    },
+    {
+      "name": "Workspace library renders",
+      "pass": true
+    },
+    {
+      "name": "Workspace project renders",
+      "pass": true
+    },
+    {
+      "name": "Seven Modify accordion groups",
+      "pass": true,
+      "detail": "7"
+    },
+    {
+      "name": "Modifier modifySplit renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifyTrim renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifyAlignBaseline renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifyJunction renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier attachTop renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier attachBase renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier detachBoundary renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifyStep renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifyHealOpening renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifySplayOpening renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifySweep renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifyDisassemble renders",
+      "pass": true
+    },
+    {
+      "name": "Modifier modifyEdgeDetail renders",
+      "pass": true
+    },
+    {
+      "name": "wall: all fields render",
+      "pass": true,
+      "detail": "19/19"
+    },
+    {
+      "name": "curtain_wall: all fields render",
+      "pass": true,
+      "detail": "23/23"
+    },
+    {
+      "name": "door: all fields render",
+      "pass": true,
+      "detail": "20/20"
+    },
+    {
+      "name": "window: all fields render",
+      "pass": true,
+      "detail": "19/19"
+    },
+    {
+      "name": "column: all fields render",
+      "pass": true,
+      "detail": "13/13"
+    },
+    {
+      "name": "foundation: all fields render",
+      "pass": true,
+      "detail": "13/13"
+    },
+    {
+      "name": "beam: all fields render",
+      "pass": true,
+      "detail": "12/12"
+    },
+    {
+      "name": "slab: all fields render",
+      "pass": true,
+      "detail": "13/13"
+    },
+    {
+      "name": "grid: all fields render",
+      "pass": true,
+      "detail": "14/14"
+    },
+    {
+      "name": "stair: all fields render",
+      "pass": true,
+      "detail": "22/22"
+    },
+    {
+      "name": "roof: all fields render",
+      "pass": true,
+      "detail": "19/19"
+    },
+    {
+      "name": "railing: all fields render",
+      "pass": true,
+      "detail": "20/20"
+    },
+    {
+      "name": "louver: all fields render",
+      "pass": true,
+      "detail": "14/14"
+    },
+    {
+      "name": "ramp: all fields render",
+      "pass": true,
+      "detail": "14/14"
+    },
+    {
+      "name": "skylight: all fields render",
+      "pass": true,
+      "detail": "14/14"
+    },
+    {
+      "name": "dormer: all fields render",
+      "pass": true,
+      "detail": "18/18"
+    },
+    {
+      "name": "molding: all fields render",
+      "pass": true,
+      "detail": "15/15"
+    },
+    {
+      "name": "Linear tools expose three path input modes",
+      "pass": true,
+      "detail": "draw,selected,pick"
+    },
+    {
+      "name": "Selected-edge mode exposes Generate action",
+      "pass": true
+    },
+    {
+      "name": "Workspace navigation fits 420px",
+      "pass": true,
+      "detail": "420/420"
+    },
+    {
+      "name": "Workspace navigation fits 610px",
+      "pass": true,
+      "detail": "610/610"
+    },
+    {
+      "name": "Workspace navigation fits 900px",
+      "pass": true,
+      "detail": "900/900"
+    },
+    {
+      "name": "Dormer gallery renders nine thumbnails",
+      "pass": true,
+      "detail": "9"
+    },
+    {
+      "name": "Persian RTL layout",
+      "pass": true
+    },
+    {
+      "name": "No frontend runtime errors",
+      "pass": true
+    }
+  ]
+}

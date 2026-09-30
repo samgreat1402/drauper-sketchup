@@ -1,0 +1,22 @@
+{
+  "release": "4.1.16 Preview",
+  "passed": 14,
+  "failed": 0,
+  "checks": {
+    "release_4_1_16": true,
+    "preselection_optional": true,
+    "no_activation_abort": true,
+    "stage_specific_status": true,
+    "first_click_requires_wall": true,
+    "first_click_sets_wall": true,
+    "second_click_reads_face": true,
+    "roof_uses_envelope_solver": true,
+    "ordinary_face_uses_exact_plane": true,
+    "escape_clears_then_exits": true,
+    "stage_hover_colors": true,
+    "nearest_surface_solver_preserved": true,
+    "knife_video_fix_preserved": true,
+    "heal_void_fix_preserved": true
+  },
+  "source_video_seconds": 28.629313
+}

@@ -1,0 +1,21 @@
+{
+  "version": "4.1.26",
+  "checks": {
+    "curved_roof_internal_edges_hidden": true,
+    "curved_roof_internal_edges_softened": true,
+    "curved_fascia_seams_hidden": true,
+    "curved_soffit_seams_hidden": true,
+    "perimeter_edges_preserved": true,
+    "straight_type_edges_preserved": true,
+    "trim_dimensions_rebalanced": true,
+    "trim_color_toned": true,
+    "material_roles_preserved": true
+  },
+  "curved_types_checked": [
+    "eyebrow",
+    "segmental",
+    "barrel"
+  ],
+  "all_passed": true,
+  "native_tested": false
+}

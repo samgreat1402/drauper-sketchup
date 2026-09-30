@@ -1,0 +1,20 @@
+{
+  "release": "3.6.1 Preview",
+  "glass_face_indices": [
+    177,
+    178,
+    384,
+    385,
+    427,
+    428,
+    433,
+    434
+  ],
+  "glass_face_count": 8,
+  "glass_default": "Draupr Glass - Clear Blue",
+  "glass_alpha": 0.27450980392156865,
+  "roof_default": "Draupr Roofing - Charcoal Shingle",
+  "roof_texture": "draupr_roof_shingle.png",
+  "roof_texture_real_width_mm": 600,
+  "native_tested": false
+}

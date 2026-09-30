@@ -1,0 +1,2710 @@
+{
+  "release": "3.3.0 Preview",
+  "passed": 540,
+  "failed": 0,
+  "max_join_ratio": 0.68,
+  "distinct_topologies": 9,
+  "cases": [
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.658,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.567,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.533,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.56,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.567,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.4,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.547,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.647,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.308,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.231,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.462,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.446,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.346,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.658,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.567,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.533,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.56,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.567,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.4,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.547,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.647,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.308,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.231,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.462,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.446,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.346,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.658,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.567,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.533,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.56,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.567,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.4,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.547,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.647,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.308,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.231,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.462,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.446,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.346,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.658,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.567,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.533,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.56,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.567,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.4,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.547,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.647,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.308,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.231,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.462,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.446,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.346,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.658,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.567,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.533,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.56,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.567,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.4,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.547,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.567,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.647,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.308,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.327,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.231,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.327,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.327,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.462,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.446,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.5,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.346,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.5,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.5,
+      "panels": 3
+    },
+    {
+      "type": "gabled",
+      "join_ratio": 0.67,
+      "panels": 2
+    },
+    {
+      "type": "hipped",
+      "join_ratio": 0.66,
+      "panels": 3
+    },
+    {
+      "type": "shed",
+      "join_ratio": 0.56,
+      "panels": 1
+    },
+    {
+      "type": "eyebrow",
+      "join_ratio": 0.55,
+      "panels": 20
+    },
+    {
+      "type": "segmental",
+      "join_ratio": 0.6,
+      "panels": 20
+    },
+    {
+      "type": "barrel",
+      "join_ratio": 0.63,
+      "panels": 20
+    },
+    {
+      "type": "flat",
+      "join_ratio": 0.48,
+      "panels": 1
+    },
+    {
+      "type": "pointed",
+      "join_ratio": 0.68,
+      "panels": 2
+    },
+    {
+      "type": "trapezoidal",
+      "join_ratio": 0.64,
+      "panels": 3
+    }
+  ],
+  "native_tested": false
+}

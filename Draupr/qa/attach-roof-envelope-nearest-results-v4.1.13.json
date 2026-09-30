@@ -1,0 +1,22 @@
+{
+  "release": "4.1.13 Preview",
+  "passed": 15,
+  "failed": 0,
+  "checks": {
+    "release_4_1_13": true,
+    "draupr_roof_uses_envelope": true,
+    "ordinary_face_uses_clicked_plane": true,
+    "all_roof_slopes_stored": true,
+    "nearest_surface_fallback_enabled": true,
+    "solver_version_4": true,
+    "surface_distance_helper": true,
+    "exact_containment_first": true,
+    "bounded_margin_second": true,
+    "nearest_slope_final_fallback": true,
+    "no_error_when_nearest_available": true,
+    "opening_piece_constraints_preserved": true,
+    "knife_overlap_fix_preserved": true,
+    "roof_edge_cut_preserved": true,
+    "heal_void_fix_preserved": true
+  }
+}

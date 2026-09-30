@@ -1,0 +1,15 @@
+{
+  "release": "3.6.4 Preview",
+  "removed_source_face": 788,
+  "replacement_panels": 4,
+  "opening_bounds_mm": [
+    -564.7,
+    564.7,
+    205.7,
+    1626.3
+  ],
+  "builder": "individual-face-add_face",
+  "glass_alpha": 0.27450980392156865,
+  "contract": "explicit-four-panel-opening-v1",
+  "native_tested": false
+}

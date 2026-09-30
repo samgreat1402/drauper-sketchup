@@ -1,0 +1,13 @@
+{
+  "version": "4.1.25",
+  "checks": {
+    "exterior_crown_plane_identified": true,
+    "face_normal_controls_pushpull_sign": true,
+    "extrusion_targets_local_y_zero": true,
+    "outward_wedge_removed": true,
+    "all_crowned_profiles_preserved": true,
+    "window_and_trim_clearance_preserved": true
+  },
+  "all_passed": true,
+  "native_tested": false
+}

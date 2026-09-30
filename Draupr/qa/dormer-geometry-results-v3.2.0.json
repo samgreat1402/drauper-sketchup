@@ -1,0 +1,657 @@
+{
+  "release": "3.2.0 Preview",
+  "passed": 81,
+  "failed": 0,
+  "cases": [
+    {
+      "type": "gabled",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 2,
+      "join_depth": 1260.0,
+      "front_base": -1027.8
+    },
+    {
+      "type": "hipped",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 3,
+      "join_depth": 1260.0,
+      "front_base": -1021.5
+    },
+    {
+      "type": "shed",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 1,
+      "join_depth": 1230.0,
+      "front_base": -1061.625
+    },
+    {
+      "type": "eyebrow",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -995.082
+    },
+    {
+      "type": "segmental",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -1027.8
+    },
+    {
+      "type": "barrel",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -1027.8
+    },
+    {
+      "type": "flat",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 1,
+      "join_depth": 1170.0,
+      "front_base": -907.5
+    },
+    {
+      "type": "pointed",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 2,
+      "join_depth": 1260.0,
+      "front_base": -1027.8
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 1500.0,
+      "host_ratio": 0.25,
+      "panels": 3,
+      "join_depth": 1260.0,
+      "front_base": -1027.8
+    },
+    {
+      "type": "gabled",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 2,
+      "join_depth": 1260.0,
+      "front_base": -890.04
+    },
+    {
+      "type": "hipped",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 3,
+      "join_depth": 1260.0,
+      "front_base": -878.7
+    },
+    {
+      "type": "shed",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 1,
+      "join_depth": 1230.0,
+      "front_base": -950.925
+    },
+    {
+      "type": "eyebrow",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -831.148
+    },
+    {
+      "type": "segmental",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -890.04
+    },
+    {
+      "type": "barrel",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -890.04
+    },
+    {
+      "type": "flat",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 1,
+      "join_depth": 1170.0,
+      "front_base": -673.5
+    },
+    {
+      "type": "pointed",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 2,
+      "join_depth": 1260.0,
+      "front_base": -890.04
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 1500.0,
+      "host_ratio": 0.45,
+      "panels": 3,
+      "join_depth": 1260.0,
+      "front_base": -890.04
+    },
+    {
+      "type": "gabled",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 2,
+      "join_depth": 1260.0,
+      "front_base": -683.4
+    },
+    {
+      "type": "hipped",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 3,
+      "join_depth": 1260.0,
+      "front_base": -664.5
+    },
+    {
+      "type": "shed",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 1,
+      "join_depth": 1230.0,
+      "front_base": -769.5
+    },
+    {
+      "type": "eyebrow",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -585.246
+    },
+    {
+      "type": "segmental",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -683.4
+    },
+    {
+      "type": "barrel",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 1260.0,
+      "front_base": -683.4
+    },
+    {
+      "type": "flat",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 1,
+      "join_depth": 1170.0,
+      "front_base": -322.5
+    },
+    {
+      "type": "pointed",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 2,
+      "join_depth": 1260.0,
+      "front_base": -683.4
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 1500.0,
+      "host_ratio": 0.75,
+      "panels": 3,
+      "join_depth": 1260.0,
+      "front_base": -683.4
+    },
+    {
+      "type": "gabled",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 2,
+      "join_depth": 2520.0,
+      "front_base": -855.6
+    },
+    {
+      "type": "hipped",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 3,
+      "join_depth": 2520.0,
+      "front_base": -843.0
+    },
+    {
+      "type": "shed",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 1,
+      "join_depth": 2460.0,
+      "front_base": -923.25
+    },
+    {
+      "type": "eyebrow",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": -790.164
+    },
+    {
+      "type": "segmental",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": -855.6
+    },
+    {
+      "type": "barrel",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": -855.6
+    },
+    {
+      "type": "flat",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 1,
+      "join_depth": 2340.0,
+      "front_base": -615.0
+    },
+    {
+      "type": "pointed",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 2,
+      "join_depth": 2520.0,
+      "front_base": -855.6
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 3000.0,
+      "host_ratio": 0.25,
+      "panels": 3,
+      "join_depth": 2520.0,
+      "front_base": -855.6
+    },
+    {
+      "type": "gabled",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 2,
+      "join_depth": 2520.0,
+      "front_base": -580.08
+    },
+    {
+      "type": "hipped",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 3,
+      "join_depth": 2520.0,
+      "front_base": -557.4
+    },
+    {
+      "type": "shed",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 1,
+      "join_depth": 2460.0,
+      "front_base": -585.0
+    },
+    {
+      "type": "eyebrow",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": -462.295
+    },
+    {
+      "type": "segmental",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": -580.08
+    },
+    {
+      "type": "barrel",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": -580.08
+    },
+    {
+      "type": "flat",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 1,
+      "join_depth": 2340.0,
+      "front_base": -147.0
+    },
+    {
+      "type": "pointed",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 2,
+      "join_depth": 2520.0,
+      "front_base": -580.08
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 3000.0,
+      "host_ratio": 0.45,
+      "panels": 3,
+      "join_depth": 2520.0,
+      "front_base": -580.08
+    },
+    {
+      "type": "gabled",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 2,
+      "join_depth": 2520.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "hipped",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 3,
+      "join_depth": 2520.0,
+      "front_base": -129.0
+    },
+    {
+      "type": "shed",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 1,
+      "join_depth": 2460.0,
+      "front_base": 153.0
+    },
+    {
+      "type": "eyebrow",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": 29.508
+    },
+    {
+      "type": "segmental",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "barrel",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 2520.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "flat",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 1,
+      "join_depth": 2340.0,
+      "front_base": 555.0
+    },
+    {
+      "type": "pointed",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 2,
+      "join_depth": 2520.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 3000.0,
+      "host_ratio": 0.75,
+      "panels": 3,
+      "join_depth": 2520.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "gabled",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 2,
+      "join_depth": 4200.0,
+      "front_base": -626.0
+    },
+    {
+      "type": "hipped",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 3,
+      "join_depth": 4200.0,
+      "front_base": -605.0
+    },
+    {
+      "type": "shed",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 1,
+      "join_depth": 4100.0,
+      "front_base": -667.0
+    },
+    {
+      "type": "eyebrow",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": -516.94
+    },
+    {
+      "type": "segmental",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": -626.0
+    },
+    {
+      "type": "barrel",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": -626.0
+    },
+    {
+      "type": "flat",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 1,
+      "join_depth": 3900.0,
+      "front_base": -225.0
+    },
+    {
+      "type": "pointed",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 2,
+      "join_depth": 4200.0,
+      "front_base": -626.0
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 5000.0,
+      "host_ratio": 0.25,
+      "panels": 3,
+      "join_depth": 4200.0,
+      "front_base": -626.0
+    },
+    {
+      "type": "gabled",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 2,
+      "join_depth": 4200.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "hipped",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 3,
+      "join_depth": 4200.0,
+      "front_base": -129.0
+    },
+    {
+      "type": "shed",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 1,
+      "join_depth": 4100.0,
+      "front_base": 153.0
+    },
+    {
+      "type": "eyebrow",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": 29.508
+    },
+    {
+      "type": "segmental",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "barrel",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "flat",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 1,
+      "join_depth": 3900.0,
+      "front_base": 555.0
+    },
+    {
+      "type": "pointed",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 2,
+      "join_depth": 4200.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 5000.0,
+      "host_ratio": 0.45,
+      "panels": 3,
+      "join_depth": 4200.0,
+      "front_base": -166.8
+    },
+    {
+      "type": "gabled",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 2,
+      "join_depth": 4200.0,
+      "front_base": 522.0
+    },
+    {
+      "type": "hipped",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 3,
+      "join_depth": 4200.0,
+      "front_base": 585.0
+    },
+    {
+      "type": "shed",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 1,
+      "join_depth": 4100.0,
+      "front_base": 1383.0
+    },
+    {
+      "type": "eyebrow",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": 849.18
+    },
+    {
+      "type": "segmental",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": 522.0
+    },
+    {
+      "type": "barrel",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 20,
+      "join_depth": 4200.0,
+      "front_base": 522.0
+    },
+    {
+      "type": "flat",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 1,
+      "join_depth": 3900.0,
+      "front_base": 1725.0
+    },
+    {
+      "type": "pointed",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 2,
+      "join_depth": 4200.0,
+      "front_base": 522.0
+    },
+    {
+      "type": "trapezoidal",
+      "depth": 5000.0,
+      "host_ratio": 0.75,
+      "panels": 3,
+      "join_depth": 4200.0,
+      "front_base": 522.0
+    }
+  ],
+  "distinct_profile_signatures": 8,
+  "note": "Pure geometry contract; SketchUp native smoke test still required."
+}

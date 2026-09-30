@@ -1,0 +1,19 @@
+{
+  "version": "4.1.20",
+  "checks": {
+    "host_envelope_used": true,
+    "proportional_fit": true,
+    "pointed_factor": true,
+    "minimum_wall_guard": true,
+    "shallow_footprint_error": true,
+    "gabled_template_fitted": true,
+    "shed_not_double_height": true,
+    "all_simulated_tops_below_host": true,
+    "catalog_preserved": true
+  },
+  "simulated_valid_cases": 36,
+  "passed": 9,
+  "total": 9,
+  "all_passed": true,
+  "native_tested": false
+}

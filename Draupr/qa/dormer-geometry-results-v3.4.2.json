@@ -1,0 +1,8 @@
+{
+  "release": "3.4.2 Preview",
+  "passed": 540,
+  "failed": 0,
+  "literal_dimensions_preserved": true,
+  "drawn_depth_can_be_less_than_join": true,
+  "native_tested": false
+}

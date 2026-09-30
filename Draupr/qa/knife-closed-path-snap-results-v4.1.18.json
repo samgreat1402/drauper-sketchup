@@ -1,0 +1,15 @@
+{
+  "version": "4.1.18",
+  "checks": {
+    "knife_can_read_closed": true,
+    "closing_segment_used": true,
+    "split_outputs_open": true,
+    "fallback_24px": true,
+    "direct_pick_priority": true,
+    "no_raw_hit_shift": true,
+    "closed_split_valid": true
+  },
+  "passed": 7,
+  "total": 7,
+  "all_passed": true
+}

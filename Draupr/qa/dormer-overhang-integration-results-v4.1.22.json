@@ -1,0 +1,18 @@
+{
+  "version": "4.1.22",
+  "checks": {
+    "lateral_roof_overhang_integrated": true,
+    "profile_slope_continued": true,
+    "no_extra_coplanar_roof_seams": true,
+    "front_fascia_uses_extended_profile": true,
+    "side_soffit_uses_inner_and_outer_edges": true,
+    "side_fascia_matches_outer_roof_edge": true,
+    "host_opening_footprint_preserved": true,
+    "all_nine_types_checked": true,
+    "all_roof_panels_planar": true
+  },
+  "dormer_types_checked": 9,
+  "simulated_panels_checked": 72,
+  "all_passed": true,
+  "native_tested": false
+}

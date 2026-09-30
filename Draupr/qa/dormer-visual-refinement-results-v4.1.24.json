@@ -1,0 +1,18 @@
+{
+  "version": "4.1.24",
+  "checks": {
+    "window_proportions_rebalanced": true,
+    "sash_members_reduced": true,
+    "meeting_rail_added": true,
+    "outer_casing_added": true,
+    "drip_cap_and_sill_added": true,
+    "corner_returns_added": true,
+    "separate_trim_material": true,
+    "trim_material_role": true,
+    "rake_and_eave_fascia_use_trim": true,
+    "ui_guidance_updated": true
+  },
+  "field_count": 283,
+  "all_passed": true,
+  "native_tested": false
+}

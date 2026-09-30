@@ -1,0 +1,9 @@
+{
+  "release": "3.5.0 Preview",
+  "passed": 80,
+  "failed": 0,
+  "footprint_depth_is_real": true,
+  "ridge_ends_at_footprint": true,
+  "proportional_autofit": true,
+  "native_tested": false
+}

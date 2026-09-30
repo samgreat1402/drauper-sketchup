@@ -1,0 +1,11 @@
+*.rbz
+*.skp
+*.skb
+*.log
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+/data/

@@ -1,0 +1,30 @@
+{
+  "release": "4.0.0 Preview",
+  "scope": "integrated P0/P1/P2 run",
+  "frontend": {
+    "passed": 37,
+    "failed": 0
+  },
+  "static_checks": {
+    "release_4_0_0": true,
+    "preview_status": true,
+    "native_tested_false": true,
+    "data_schema_2": true,
+    "frontend_37_of_37": true,
+    "safe_tool_deactivation": true,
+    "coordinate_contract": true,
+    "path_frame_contract": true,
+    "object_index": true,
+    "persistent_host_pid": true,
+    "read_only_host_resolution": true,
+    "library_format_4": true,
+    "library_checksum_validation": true,
+    "grid_aa": true,
+    "dormer_blockers_removed": true,
+    "testup_suite": true,
+    "phase_report": true
+  },
+  "native_tested": false,
+  "native_gate": "Run NATIVE_ACCEPTANCE.md and qa/testup/test_kernel_v400.rb inside SketchUp before Stable promotion",
+  "generated_at": "2026-09-28T21:34:10.229943+00:00"
+}
