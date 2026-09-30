@@ -1,0 +1,24 @@
+{
+  "version": "4.1.28",
+  "checks": {
+    "host_integrated_geometry_preserved": true,
+    "narrower_vertical_window": true,
+    "divided_light_window": true,
+    "paired_louvered_shutters": true,
+    "horizontal_siding_reveals": true,
+    "dark_roof_fascia_separated": true,
+    "light_facade_trim_preserved": true,
+    "solid_tapered_cheeks_preserved": true,
+    "optional_gutters_preserved": true,
+    "shutters_restricted_to_gabled": true
+  },
+  "new_controls": [
+    "shutters",
+    "siding_detail",
+    "gutters",
+    "fascia_material"
+  ],
+  "field_count": 288,
+  "all_passed": true,
+  "native_tested": false
+}

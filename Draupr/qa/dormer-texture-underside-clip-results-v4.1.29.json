@@ -1,0 +1,19 @@
+{
+  "version": "4.1.29",
+  "checks": {
+    "gutter_geometry_removed": true,
+    "gutter_controls_removed": true,
+    "siding_board_geometry_removed": true,
+    "seamless_siding_texture_added": true,
+    "siding_material_field_added": true,
+    "front_wall_clipped_to_roof_underside": true,
+    "crown_vertices_clipped_to_roof_underside": true,
+    "cheek_edges_clipped_to_roof_underside": true,
+    "panel_normal_clearance_used": true,
+    "coplanar_tolerance_mm": 2,
+    "minimum_usable_front_wall_mm": 120
+  },
+  "field_count": 286,
+  "all_passed": true,
+  "native_tested": false
+}

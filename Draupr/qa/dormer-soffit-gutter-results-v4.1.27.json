@@ -1,0 +1,18 @@
+{
+  "version": "4.1.27",
+  "checks": {
+    "duplicate_front_soffit_removed": true,
+    "duplicate_side_soffit_removed": true,
+    "roof_solid_underside_retained": true,
+    "side_fascia_boxes_removed": true,
+    "left_and_right_gutters_added": true,
+    "gutter_open_channel_profile": true,
+    "gutter_follows_sloped_eave": true,
+    "rear_intersection_clearance_mm": 65,
+    "dedicated_gutter_material": true,
+    "front_rake_fascia_preserved": true
+  },
+  "field_count": 284,
+  "all_passed": true,
+  "native_tested": false
+}
