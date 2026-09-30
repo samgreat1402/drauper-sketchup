@@ -1,0 +1,35 @@
+{
+  "release": "3.2.2 Preview",
+  "references": {
+    "Untitled.skp": {
+      "bytes": 128824,
+      "sha256": "3df7fc335749a8fcc44d5a0a316621d51f3cfcee280525d85b1c9312e45b5154"
+    },
+    "dormer.skp": {
+      "bytes": 215974,
+      "sha256": "aa858d002ff37cb8dc1ca25a4cb4120a039da527b441a60af43dd2b87399eb72"
+    },
+    "dormer_2.skp": {
+      "bytes": 463269,
+      "sha256": "f6626438d371ca74cd3d837b12e3f755495d80d9517d1fd2a69ed2d30e6ef1e5"
+    },
+    "Dormer_1.skp": {
+      "bytes": 1252606,
+      "sha256": "2a30c4b0fe7977111d6dfb86e49ae02f173ff9f1344dfdd3f492ba45858e71fd"
+    }
+  },
+  "findings": [
+    "Full front fa\u00e7ade below a projecting roof",
+    "Lateral and front roof overhangs",
+    "Short tapered cheek walls",
+    "Visible fascia/thick roof edge",
+    "Compact subordinate placement on host roof"
+  ],
+  "picker_repair": [
+    "Direct InputPoint roof-face recovery",
+    "World-space normal evaluation",
+    "Automatic reversed-winding correction",
+    "Analytical all-visible-roofs fallback"
+  ],
+  "native_tested": false
+}

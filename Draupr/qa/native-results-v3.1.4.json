@@ -1,0 +1,11 @@
+{
+  "version": "3.1.4",
+  "source": "user-reported native SketchUp screenshot",
+  "status": "failed_before_geometry_fixtures",
+  "failure": "ft: display/input round trip changed length",
+  "diagnosis": "The four-decimal feet display of 1000 mm is 3.2808 ft. Parsing that rounded display differs by about 0.012 mm, exceeding the v3.1.4 assertion tolerance of 0.01 mm.",
+  "production_conversion_defect": false,
+  "resolved_in": "3.1.5",
+  "resolution": "Use per-unit tolerances derived from four-decimal display precision; feet tolerance is 0.02 mm.",
+  "native_tested": false
+}

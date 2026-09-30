@@ -1,0 +1,8 @@
+{
+  "version": "3.1.9",
+  "source": "user screenshot and accepted design",
+  "failure": "Independent segment molding sweeps produced butt joints/overlaps; linear tools had no selected-edge or click-to-pick path workflow.",
+  "resolved_in": "3.1.10",
+  "resolution": "Continuous native molding sweep with mitered corners; Draw Path, Selected Edges, and Pick Connected Path input modes for seven linear tool families; copied parametric path storage.",
+  "native_tested": false
+}

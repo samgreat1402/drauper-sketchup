@@ -1,0 +1,22 @@
+{
+  "release": "4.1.12 Preview",
+  "passed": 15,
+  "failed": 0,
+  "checks": {
+    "release_4_1_12": true,
+    "all_pick_paths_evaluated": true,
+    "duplicate_objects_removed": true,
+    "supported_path_validation": true,
+    "finite_screen_projection": true,
+    "endpoint_margin_computed": true,
+    "internal_candidate_priority": true,
+    "screen_distance_tiebreak": true,
+    "hover_uses_ranked_pick": true,
+    "click_uses_same_ranked_pick": true,
+    "true_endpoint_guard_preserved": true,
+    "hosted_opening_partition_preserved": true,
+    "roof_edge_removal_preserved": true,
+    "attach_exact_face_preserved": true,
+    "heal_void_fix_preserved": true
+  }
+}

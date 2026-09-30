@@ -1,0 +1,24 @@
+{
+  "release": "4.1.1 Preview",
+  "issue": "Native smoke-test Dormer fixture omitted host-derived slope values",
+  "reported_result": {
+    "version": "4.1.0",
+    "passed": 19,
+    "failed": 1
+  },
+  "correction": "Synthetic standalone and catalog Dormers now receive deterministic pitched-host values; zero-slope production rejection remains enabled.",
+  "static_checks": {
+    "release_4_1_1": true,
+    "schema_tool_count_17": true,
+    "schema_field_count_282": true,
+    "generic_fixture_uses_pitched_contract": true,
+    "catalog_fixture_uses_pitched_contract": true,
+    "zero_slope_regression_added": true,
+    "production_flat_guard_preserved": true,
+    "frontend_51_of_51": true,
+    "native_tested_false": true
+  },
+  "native_rerun_required": true,
+  "native_tested": false,
+  "generated_at": "2026-09-29T09:18:09.685010+00:00"
+}

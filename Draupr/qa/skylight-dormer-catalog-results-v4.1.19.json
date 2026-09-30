@@ -1,0 +1,28 @@
+{
+  "version": "4.1.19",
+  "dormer_types": [
+    "gabled",
+    "hipped",
+    "shed",
+    "eyebrow",
+    "segmental",
+    "barrel",
+    "flat",
+    "pointed",
+    "trapezoidal"
+  ],
+  "checks": {
+    "roof_face_seeded": true,
+    "nine_schema_types": true,
+    "non_gabled_dispatch": true,
+    "hipped_panels": true,
+    "flat_rear_apron": true,
+    "curved_profiles": true,
+    "procedural_solution_complete": true,
+    "panel_smoke_test": true
+  },
+  "passed": 8,
+  "total": 8,
+  "all_passed": true,
+  "native_tested": false
+}

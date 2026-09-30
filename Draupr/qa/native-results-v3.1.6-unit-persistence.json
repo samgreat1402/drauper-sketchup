@@ -1,0 +1,9 @@
+{
+  "version": "3.1.6",
+  "source": "user report",
+  "failure": "Closing and reopening Draupr resets the selected Input/display unit.",
+  "diagnosis": "Application preferences used the same identifier as the HtmlDialog window preferences and legacy string decoding fell back when a backend returned unquoted strings.",
+  "resolved_in": "3.1.7",
+  "resolution": "Dedicated Draupr_Studio_Preferences store, automatic migration, prefixed JSON values, tolerant legacy decoding, write/read verification, and runtime-reload native fixture.",
+  "native_tested": false
+}

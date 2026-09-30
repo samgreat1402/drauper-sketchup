@@ -1,0 +1,8 @@
+{
+  "reported_version": "3.1.15",
+  "fixed_in": "3.1.16 Preview",
+  "reported_error": "Trapezoidal Dormer footprint is too shallow. Draw at least 4.0935 m uphill.",
+  "cause": "The drawn depth was incorrectly enforced as the maximum host-intersection depth.",
+  "repair": "Valley/opening geometry now extends automatically to the analytical roof intersection; the actual roof boundary remains the limit.",
+  "native_tested": false
+}

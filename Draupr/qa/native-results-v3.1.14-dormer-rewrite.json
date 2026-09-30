@@ -1,0 +1,14 @@
+{
+  "version": "3.1.14",
+  "source": "three user screenshots",
+  "failure": "Dormer forms remained detached/incorrect, editing made the selected object stale, and roof picking blocked a second Dormer.",
+  "root_causes": [
+    "Rectangular host holes were unrelated to type-specific roof intersections",
+    "Height/rise/depth were accepted even when the Dormer could not reach the host plane",
+    "Editing erased the roof and then reused the erased object",
+    "Only the top PickHelper route was searched"
+  ],
+  "resolved_in": "3.1.15",
+  "resolution": "Full hosted-Dormer rewrite using planar type panels, host-plane valley polygons, atomic edit/rebuild, and all-route picking.",
+  "native_tested": false
+}

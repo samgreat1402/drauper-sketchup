@@ -1,0 +1,9 @@
+{
+  "version": "3.1.8",
+  "source": "user screenshot and report",
+  "failure": "Molding followed only the first two clicked points and ignored the third click / second path pass.",
+  "diagnosis": "A single SketchUp Follow Me call could report success while stopping at the first polyline corner.",
+  "resolved_in": "3.1.9",
+  "resolution": "Each click-to-click segment is now swept with its own native Follow Me operation inside one parametric molding run; all path points and total length remain stored.",
+  "native_tested": false
+}

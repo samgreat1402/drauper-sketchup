@@ -1,0 +1,12 @@
+{
+  "reported_version": "3.1.17",
+  "fixed_in": "3.2.0 Preview",
+  "evidence": "Six user screenshots showed stretched roof strips, wedges, oversized end caps, and wall height measured entirely above the host plane.",
+  "research": [
+    "Autodesk: build walls and Dormer roof, join roofs, then derive opening from roof/wall edges.",
+    "JLC: Dormers must remain subordinate and properly nested in the primary roof.",
+    "This Old House: Gabled=two slopes, Hipped=three slopes, Shed=single front-draining slope, Eyebrow=low continuous wave."
+  ],
+  "repair": "Complete type-specific topology rewrite with bounded analytical host intersections and below-roof front-wall penetration.",
+  "native_tested": false
+}

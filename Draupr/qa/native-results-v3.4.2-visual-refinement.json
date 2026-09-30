@@ -1,0 +1,21 @@
+{
+  "release": "3.4.2 Preview",
+  "changes": {
+    "overhang_mm": [
+      50,
+      100
+    ],
+    "fascia_width_mm": [
+      30,
+      52
+    ],
+    "fascia_projection_mm": 16,
+    "facade_casing_mm": [
+      32,
+      60
+    ],
+    "new_default_roof_thickness_mm": 45
+  },
+  "host_architecture_changed": false,
+  "native_tested": false
+}

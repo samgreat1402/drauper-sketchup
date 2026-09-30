@@ -1,0 +1,13 @@
+{
+  "release": "3.4.1 Preview",
+  "reported_area": "front roof/cheek junction circled in native screenshot",
+  "repairs": [
+    "solid inward cheek walls",
+    "front soffit closure",
+    "lateral eave soffit closure",
+    "front rake fascia",
+    "side eave fascia"
+  ],
+  "host_architecture_changed": false,
+  "native_tested": false
+}

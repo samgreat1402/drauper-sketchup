@@ -1,0 +1,19 @@
+{
+  "release": "4.1.4 Preview",
+  "passed": 12,
+  "failed": 0,
+  "checks": {
+    "release_4_1_4": true,
+    "old_roof_boundary_error_removed": true,
+    "roof_polygon_clipping_present": true,
+    "roof_no_overlap_guard_present": true,
+    "knife_inputpoint_snap_removed": true,
+    "knife_screen_path_projection": true,
+    "knife_hover_click_same_solver": true,
+    "knife_solid_centerline": true,
+    "knife_diagonals_removed": true,
+    "cursor_hotspots_preserved": true,
+    "clip_partial_overlap": true,
+    "clip_full_miss": true
+  }
+}

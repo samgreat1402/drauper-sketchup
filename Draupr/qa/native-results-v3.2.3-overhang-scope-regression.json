@@ -1,0 +1,8 @@
+{
+  "release": "3.2.3 Preview",
+  "reported_error": "undefined local variable or method `ov' for Draupr::Core::Builders:Module",
+  "root_cause": "build_dormer referenced dormer_solution local variable ov while writing metadata",
+  "repair": "dormer_solution returns overhang; build_dormer reads solution['overhang']",
+  "static_scope_gate": true,
+  "native_tested": false
+}

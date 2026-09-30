@@ -1,0 +1,24 @@
+{
+  "release": "4.1.10 Preview",
+  "passed": 17,
+  "failed": 0,
+  "checks": {
+    "release_4_1_10": true,
+    "boundary_hole_edge_detected": true,
+    "outer_side_cutter_constructed": true,
+    "outer_side_region_erased": true,
+    "boundary_reveal_not_recreated": true,
+    "exact_clicked_face_plane": true,
+    "roof_envelope_route_removed": true,
+    "target_metadata_preserved": true,
+    "screen_path_fallback": true,
+    "face_solver_still_preferred": true,
+    "no_face_error_removed": true,
+    "false_endpoint_override": true,
+    "finite_screen_segments": true,
+    "hosted_opening_split_preserved": true,
+    "true_endpoint_guard_preserved": true,
+    "snap_marker_preserved": true,
+    "heal_and_attach_openings_preserved": true
+  }
+}

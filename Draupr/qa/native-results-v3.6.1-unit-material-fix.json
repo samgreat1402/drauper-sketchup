@@ -1,0 +1,15 @@
+{
+  "release": "3.6.1 Preview",
+  "dormer_unit_contract": "source_mm * target_inches/source_mm",
+  "object_library_schema": 3,
+  "materials": [
+    "front",
+    "back",
+    "inherited",
+    "rgb",
+    "alpha",
+    "texture_file",
+    "texture_size"
+  ],
+  "native_tested": false
+}

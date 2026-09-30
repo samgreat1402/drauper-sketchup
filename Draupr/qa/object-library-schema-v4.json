@@ -1,0 +1,34 @@
+{
+  "format": 4,
+  "min_readable": 1,
+  "required": [
+    "schema",
+    "source",
+    "origin",
+    "geometry",
+    "parametric",
+    "materials",
+    "thumbnail",
+    "host_behavior",
+    "bodies",
+    "draupr_items"
+  ],
+  "validation": [
+    "25 MB load limit",
+    "100000 face limit",
+    "5000 vertices per face",
+    "256 holes per face",
+    "1000 materials",
+    "finite coordinates",
+    "geometry SHA-256",
+    "texture SHA-256",
+    "material collision isolation",
+    "face normal restoration",
+    "tag restoration"
+  ],
+  "backward_compatible": [
+    1,
+    2,
+    3
+  ]
+}

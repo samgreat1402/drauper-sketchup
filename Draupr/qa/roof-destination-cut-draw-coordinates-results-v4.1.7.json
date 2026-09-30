@@ -1,0 +1,23 @@
+{
+  "release": "4.1.7 Preview",
+  "passed": 16,
+  "failed": 0,
+  "checks": {
+    "release_4_1_7": true,
+    "explicit_planar_region_cutter": true,
+    "boundary_edges_inserted": true,
+    "coplanar_faces_only": true,
+    "contained_faces_only": true,
+    "top_and_underside_cut": true,
+    "silent_cut_failure_blocked": true,
+    "reveal_faces_preserved": true,
+    "level_uses_pickray_plane": true,
+    "no_vertical_z_reprojection": true,
+    "surface_uses_visible_face_path": true,
+    "nested_face_transform": true,
+    "duplicate_inputpoint_marker_removed": true,
+    "draw_hotspot_centered": true,
+    "knife_rewrite_preserved": true,
+    "opening_seam_fix_preserved": true
+  }
+}

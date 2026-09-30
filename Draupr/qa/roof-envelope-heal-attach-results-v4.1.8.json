@@ -1,0 +1,24 @@
+{
+  "release": "4.1.8 Preview",
+  "passed": 17,
+  "failed": 0,
+  "checks": {
+    "release_4_1_8": true,
+    "destination_convex_envelope": true,
+    "all_source_strips_feed_envelope": true,
+    "single_complete_destination_cut": true,
+    "explicit_top_bottom_cutter_preserved": true,
+    "heal_opening_object_path": true,
+    "heal_wall_nearest_record": true,
+    "heal_click_void_fallback": true,
+    "heal_rebuilds_host": true,
+    "heal_deletes_linked_object": true,
+    "old_attach_opening_guard_removed": true,
+    "variable_opening_piece_builder": true,
+    "constraint_only_on_outer_boundaries": true,
+    "opening_segmentation_used_with_constraints": true,
+    "attached_opening_seams_hidden": true,
+    "draw_coordinate_fix_preserved": true,
+    "knife_fix_preserved": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "version": "3.1.5",
+  "source": "user screenshot",
+  "failure": "Wall junctions currently support straight, two-point walls only.",
+  "diagnosis": "The wall path drawing tool stored each bent chain as one multi-point wall object while the junction solver required standalone two-point walls.",
+  "resolved_in": "3.1.6",
+  "resolution": "Open non-curved paths create standalone segments; existing open multi-point paths convert transactionally on junction commit.",
+  "native_tested": false
+}

@@ -1,0 +1,10 @@
+{
+  "version": "3.1.2",
+  "source": "user-reported native SketchUp smoke test",
+  "passed": 18,
+  "failed": 1,
+  "failure": "A molding run needs at least two distinct path points.",
+  "diagnosis": "The generic smoke fixture omitted molding path_points. Production molding validation behaved correctly.",
+  "resolved_in": "3.1.3",
+  "native_tested": false
+}

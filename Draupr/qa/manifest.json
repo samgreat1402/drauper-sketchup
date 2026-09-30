@@ -1,0 +1,821 @@
+{
+  "release": "4.1.2 Preview",
+  "native_tested": false,
+  "tool_count": 17,
+  "field_count": 282,
+  "workspace_count": 6,
+  "data_schema_version": 2,
+  "object_library_format": 4,
+  "modifier_groups": 7,
+  "modifier_actions": 13,
+  "hotfix": "Bounded roof envelope, L-wall trim, and Knife rewrite",
+  "file_count_excluding_manifest": 161,
+  "generated_at": "2026-09-29T09:31:13.229197+00:00",
+  "files": [
+    {
+      "path": "DRAUPR_BUILD_REPORT.md",
+      "sha256": "11865c9b224b6bd0d079dcce52524c6196a9ed444091cd238f666782a08c00e1",
+      "bytes": 15333
+    },
+    {
+      "path": "DRAUPR_DEVELOPER_GUIDE.md",
+      "sha256": "4dfae8d2c51ce2e9e0a81a001b954e1d25dec06d91f9328d18a2cc79a6c4cde6",
+      "bytes": 31762
+    },
+    {
+      "path": "Draupr/main.rb",
+      "sha256": "e2cc0bd311cf6e2cc306cd70f3a4524145c6b8312284c756410479e423e54559",
+      "bytes": 3134
+    },
+    {
+      "path": "Draupr/qa/MODIFY_SUITE_V410.md",
+      "sha256": "f4649d14586c06724abb635ab9513d1178f7cec14401bedea6fffc895a526dd8",
+      "bytes": 1619
+    },
+    {
+      "path": "Draupr/qa/NATIVE_ACCEPTANCE.md",
+      "sha256": "2c66df1932849829df7e194085ac311256d53d06f589228549c39ebe1214e042",
+      "bytes": 2419
+    },
+    {
+      "path": "Draupr/qa/NATIVE_DORMER_FIXTURE_V411.md",
+      "sha256": "2bb377ce6bc4673aee562a965bd9658cc586c67ef4fbcebe975481af60317cec",
+      "bytes": 970
+    },
+    {
+      "path": "Draupr/qa/ROOF_ENVELOPE_L_TRIM_V412.md",
+      "sha256": "a6930aadfb7217da3a9f28aff2bfbaff8f2ce4a21adb0e2cbdfed4ba7e048674",
+      "bytes": 1472
+    },
+    {
+      "path": "Draupr/qa/THREE_PHASE_REBUILD.md",
+      "sha256": "f744a293a329e2fea99c830b744b32ea19e213cf4964026523e17aedeca86f88",
+      "bytes": 2020
+    },
+    {
+      "path": "Draupr/qa/bridge-contract.json",
+      "sha256": "6c10ac3424897ae89e13379243652df3ef9d2d03abfa70411b0cfe405887aa76",
+      "bytes": 773
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.2.0.json",
+      "sha256": "f52ecff3600561546619ee48dee2e5fb4e559ecc1880376f684fdb217cef319a",
+      "bytes": 13261
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.2.1.json",
+      "sha256": "b1b4a3259343b9b2d0f327399478b2d9c77be1b793f51f53e8049135f008cb1d",
+      "bytes": 13626
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.2.2.json",
+      "sha256": "cf8a16624b0fe20c9a898008c2ed9a10989354b7fe8a74a54f7b5cf2c5a82ae0",
+      "bytes": 13626
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.2.3.json",
+      "sha256": "a0d4585738e2f40e0ef7e6ef1d8ac0e4c1d7551e3d5c601cdf24896e1f2e1f15",
+      "bytes": 13626
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.3.0.json",
+      "sha256": "9b909aa52170fd84f9b8e7b04230ded9b4155621f297d84790fecf05b852e8bf",
+      "bytes": 44457
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.4.0.json",
+      "sha256": "be89dc22e122e4f8a2b8008042798b0af21bf0d79bd0e471a73286986084f4ea",
+      "bytes": 176
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.4.1.json",
+      "sha256": "a8b866d9b44d9da404534f6a6efe4aae0a17dd6e55c87b57b595c8f8bb1c3849",
+      "bytes": 176
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.4.2.json",
+      "sha256": "a6c42166f892a2c23d10a6224e458326d9d154bdb1f252180e8c66518b15c520",
+      "bytes": 176
+    },
+    {
+      "path": "Draupr/qa/dormer-geometry-results-v3.5.0.json",
+      "sha256": "3a9cbf885790c49e18a6eaa9c223ed99542fe79e0c9c7c3e782be8e49d91a90e",
+      "bytes": 192
+    },
+    {
+      "path": "Draupr/qa/dormer-material-results-v3.6.1.json",
+      "sha256": "d7841239cf2cad26cd2e5de3aaf069c33de9e6c2acf578fddc246c86c4b27365",
+      "bytes": 409
+    },
+    {
+      "path": "Draupr/qa/dormer-window-opening-results-v3.6.3.json",
+      "sha256": "a07c8d64159ebeda96b082b64a7803ac1f02781a6aa51dd70d126de2ecb605d7",
+      "bytes": 241
+    },
+    {
+      "path": "Draupr/qa/dormer-window-opening-results-v3.6.4.json",
+      "sha256": "415de7b0b3f2574f6ef81acd126b020a8f1ffa9600cc68dd2d82739bc84e9633",
+      "bytes": 318
+    },
+    {
+      "path": "Draupr/qa/frontend-results.json",
+      "sha256": "871288009a0a816e93cd6372532cab9ddc41677ea1d350453c7e9c7344c5bfa8",
+      "bytes": 4903
+    },
+    {
+      "path": "Draupr/qa/geometry-results.json",
+      "sha256": "ebac81c0888796b75f9ddba9ef58a29131c8d8cef64353b4d20f8e4fcfb9eba9",
+      "bytes": 2255
+    },
+    {
+      "path": "Draupr/qa/integrated-results-v4.0.0.json",
+      "sha256": "e5c71a2b041c75d44015cde019a6bc2a9c7ee020884c5e8c66861c36193220f0",
+      "bytes": 877
+    },
+    {
+      "path": "Draupr/qa/legacy/README.md",
+      "sha256": "deef79a4eb927ac94c4eaeefa409b445d72c6402f0e0ef0233a0c0f45247987a",
+      "bytes": 196
+    },
+    {
+      "path": "Draupr/qa/legacy/browser-results-13-tool.json",
+      "sha256": "4d9bc28af1ba28d87dc802cc370979b21996d46054bd6b87089b820079670f44",
+      "bytes": 18230
+    },
+    {
+      "path": "Draupr/qa/legacy/contract-results-13-tool.json",
+      "sha256": "4ae7c91b8cde3c4ca7a4aef3f49aca533e8da245d1918b22400f303425f15af1",
+      "bytes": 5000
+    },
+    {
+      "path": "Draupr/qa/modifier-suite-results-v4.1.0.json",
+      "sha256": "8f6a60e49f043b97fa3ecbf3c42de2639727680a3b45e45453983f5c07b3a540",
+      "bytes": 976
+    },
+    {
+      "path": "Draupr/qa/native-fixture-hotfix-results-v4.1.1.json",
+      "sha256": "4cd8a691019651e3c798d99d10c5fa5dbf4d6daae83820d44e009e7ad2791685",
+      "bytes": 843
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.10-dormer-rebuild.json",
+      "sha256": "d4d67abd7cdf045ebafabbe5f045fc687c6bea33a35196c36eae0c8f335f55be",
+      "bytes": 440
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.11-multiple-dormers-planarity.json",
+      "sha256": "990524d7e88b4215c861c6c2977b87c38650ba6e3bd4de2ae9a302897792e0a1",
+      "bytes": 479
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.12-hipped-dormer-planarity.json",
+      "sha256": "a7b49b791ca8854fae98269b66d8a8255a3cb9e35824824a196bcdf6633522a3",
+      "bytes": 513
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.13-hosts-syntax-error.json",
+      "sha256": "df03d213a5f6efd3d70694f020ee81199ceb5332b98b6cf0a6a9fa3f12dc8bf9",
+      "bytes": 451
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.14-dormer-rewrite.json",
+      "sha256": "fb8957a1dba7a5d59cfa0bd61691c95183ced62db261ea39314266f4bf39eaa1",
+      "bytes": 711
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.15-dormer-depth-regression.json",
+      "sha256": "37a42ad24da8650f4f53584b31386aea19e073b8209532e0574057ff490433e5",
+      "bytes": 433
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.16-dormer-edit-pick-regression.json",
+      "sha256": "1943d737b5009cae61fef5537c83bcb4be5ec94b96cb5b89280d54eeb19a62c4",
+      "bytes": 329
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.17-all-dormer-shapes-regression.json",
+      "sha256": "04c6e6c4c15f6189b20b0d552fe3b83b288cbb31f4c9083ddd40568c56b07d17",
+      "bytes": 712
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.2.json",
+      "sha256": "964edd4854a3d781e943c6c0a6b647fa6bde294a5fd2e051f2e7e1478f884e2f",
+      "bytes": 357
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.4.json",
+      "sha256": "ce3ff2541e886cfcf9226da421ce99dea3361e9b224014820786fc5fef23cb13",
+      "bytes": 578
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.5-wall-path.json",
+      "sha256": "045504d14ea35020d9645c99da8f11d193c98d11bb56a8adb61b6984f2ad9ee1",
+      "bytes": 496
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.5.json",
+      "sha256": "c2f242aa79c95e0403bcc79001838fff4d138b92048ee51c0abb46193701339e",
+      "bytes": 502
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.6-unit-persistence.json",
+      "sha256": "ba82ca5b07cfb9f232b59b868d1c6a45a50692acb41f01616e9fa17f98d9b260",
+      "bytes": 563
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.7-preference-write.json",
+      "sha256": "c994762f70a7e49bc301d678aef8d8a33a13ff4bfe5e8f0cb82813aaa35d73ad",
+      "bytes": 508
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.8-molding-multisegment.json",
+      "sha256": "85e25406a4fa086f21191a166ada685b86edf849c9015abd15aa2ff48ecb51be",
+      "bytes": 534
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.1.9-linear-path-input.json",
+      "sha256": "901033cbcba9ae453d1f8787476acc03529746e5b843e7e2a0b09afd7f64709d",
+      "bytes": 477
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.2.1-dormer-exposure-regression.json",
+      "sha256": "89734e68ab80f2ac4dabe8b80517c2e8bf2db60c81fe90a5402491f0579a60aa",
+      "bytes": 583
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.2.2-reference-dormer-picker-regression.json",
+      "sha256": "43bfb08893eec8eaf70839e3aef33d93fb46598834e3858ec553d5f0c8d9463f",
+      "bytes": 1051
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.2.3-overhang-scope-regression.json",
+      "sha256": "51afc99102f0e4602a41ddc5949f4d25ab94a96ed33ca8e4067db369faa9a4d3",
+      "bytes": 374
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.3.0-bounded-dormer-regression.json",
+      "sha256": "b238bc7eb360f8895c4c367b63bde8aabd884e8ecba540544719ca661af7551e",
+      "bytes": 554
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.4.1-dormer-closure-regression.json",
+      "sha256": "2e662f1ab851f2b6aa905b212a4c58154b63be644678488c50f04359a8b13b2a",
+      "bytes": 337
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.4.2-visual-refinement.json",
+      "sha256": "f1cca03fd146ea663588122e5b0cd93719add7d0123112e9b300f225e5778bda",
+      "bytes": 340
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.5.0-reference-rebuild.json",
+      "sha256": "8043cca39e83ca22639301722353901e5db09a44e9365aa38428a906e06431fa",
+      "bytes": 306
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.6.0-user-skp-dormer.json",
+      "sha256": "7142b6167be518f7a5dcd942052001da226727a4c08a0da0a30bcc93c2d598de",
+      "bytes": 199
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.6.1-unit-material-fix.json",
+      "sha256": "d8a7ba19e7970deb66f03c5328c7a52ea8668f083773b8ebed0e70a61bc66b85",
+      "bytes": 281
+    },
+    {
+      "path": "Draupr/qa/native-results-v3.6.2-syntax-hotfix.json",
+      "sha256": "c0834dc4215f713644806b1ec2fa9af25d8469626eb454ed4762210698ad6e5f",
+      "bytes": 274
+    },
+    {
+      "path": "Draupr/qa/native_dormer_v340_audit.rb",
+      "sha256": "7066d6180aa9e6469d597e126050ad2b710b53ffb8b0f63e4b7a70055a81e4ad",
+      "bytes": 1411
+    },
+    {
+      "path": "Draupr/qa/object-library-schema-v3.json",
+      "sha256": "7cf7fb7e425b42fcfdf7d29de5c4e4919e174b5cc5e2b84df36076b5075b2982",
+      "bytes": 269
+    },
+    {
+      "path": "Draupr/qa/object-library-schema-v4.json",
+      "sha256": "b46e2bf492e30e130a38b70d999c42db336e0d41361098276c178ede0f42abbd",
+      "bytes": 588
+    },
+    {
+      "path": "Draupr/qa/roof-envelope-knife-hotfix-results-v4.1.2.json",
+      "sha256": "9abce04c06293ca1b8c114542e2da587ed494202a5295c0be9df6c41fa9f1250",
+      "bytes": 1376
+    },
+    {
+      "path": "Draupr/qa/run_frontend_qa.js",
+      "sha256": "56ece9f1994c093f1dc43f34b37080875f30067f56053580b9acfd74cda9c6ed",
+      "bytes": 4955
+    },
+    {
+      "path": "Draupr/qa/schema-audit.json",
+      "sha256": "fc305142d374273f7a3bb3f9b1e47221bb4f41df8aa71fbe327385bed6cb783f",
+      "bytes": 802
+    },
+    {
+      "path": "Draupr/qa/sync_release.py",
+      "sha256": "ea74f18fecaaec7aa8a984eb4f63487d72ce587828bee9944fe8ffbbaa25b7be",
+      "bytes": 3430
+    },
+    {
+      "path": "Draupr/qa/testup/test_kernel_v400.rb",
+      "sha256": "c2886d7a50febe3772afbb4f89f9ffb22432af415da23e8436098e9c80756df9",
+      "bytes": 775
+    },
+    {
+      "path": "Draupr/qa/testup/test_modifier_regressions_v412.rb",
+      "sha256": "e02373ddd3e7cbceca771ad64b76e7d0382fdbe0321a53efc4b69be26f1ec7d8",
+      "bytes": 916
+    },
+    {
+      "path": "Draupr/qa/testup/test_modifier_suite_v410.rb",
+      "sha256": "e9ea4e9f88e7fd4bb2049872311519fca7a4b4288f0ed61828db6296d3032320",
+      "bytes": 714
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v320.py",
+      "sha256": "ed63a36d885d595c13083f6d34503ec85a2d7ff4e9c6110682a2e1991818d873",
+      "bytes": 3808
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v321.py",
+      "sha256": "ba558e1a70fe3479dddc4b79c7da7cd565bfb7160e3174a8a62e1e2539e7574d",
+      "bytes": 3309
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v322.py",
+      "sha256": "2b207833b15eb20b1b62904f1b368aa7e5f6bef959e2b186ba9e0b407ab8dcf5",
+      "bytes": 3309
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v323.py",
+      "sha256": "0d5f2e1be3aeeba1527ee7fc9ab81646bba979f4e0b183b15b2032a6240e1cc8",
+      "bytes": 3309
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v330.py",
+      "sha256": "2eab1aa3e98e11dcfa81f19f714ad2c510a004e6a82cd176c870a858b96a7cb9",
+      "bytes": 3455
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v340.py",
+      "sha256": "ac4086535003d4a54139447498b0397db325d46c0091287a46a1b50ba0d10812",
+      "bytes": 1567
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v341.py",
+      "sha256": "3fd4e607687db0f4bfd0798612d999fe637faca0a19053f3ace5f385595d70ae",
+      "bytes": 1567
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v342.py",
+      "sha256": "86f3dabdce0e7b659c2d624d48b29f6fa8f71f08366f02c43c5270b6d7fcd591",
+      "bytes": 1567
+    },
+    {
+      "path": "Draupr/qa/verify_dormer_geometry_v350.py",
+      "sha256": "b96f3612b0a5add5d8f13341a302a8115f1d41a8ba53481146012950c6eac65b",
+      "bytes": 997
+    },
+    {
+      "path": "Draupr/src/assets/cursor_align.png",
+      "sha256": "5af39697d35794e1b1ca43bc9cd1f738eec6b196f6ff3ea428765fde34c5d575",
+      "bytes": 195
+    },
+    {
+      "path": "Draupr/src/assets/cursor_draw.png",
+      "sha256": "8b80cf02599a62c7a6934d43093a8bac2952181e2b8c7dc6ee0a239d83aab693",
+      "bytes": 449
+    },
+    {
+      "path": "Draupr/src/assets/cursor_knife.png",
+      "sha256": "d3830595099b2ec24f1b53983d16bbdba346ce08e181253e1b3715eba1acc21b",
+      "bytes": 280
+    },
+    {
+      "path": "Draupr/src/assets/cursor_trim.png",
+      "sha256": "309c61b205c711d9378670eb9d94b693ca41f0325e523465b91273dc7b5c8cbc",
+      "bytes": 323
+    },
+    {
+      "path": "Draupr/src/assets/dormer_reference_template_v1.json",
+      "sha256": "c7cc323336ce519b4b3110ab19bcdde74b0f9975633b8f67fa17e63bb7f3f25b",
+      "bytes": 146495
+    },
+    {
+      "path": "Draupr/src/assets/icon_16.png",
+      "sha256": "2bbe970379f8b739bcf623827d744c683d191431142ef9d8237b78ff57de2e25",
+      "bytes": 172
+    },
+    {
+      "path": "Draupr/src/assets/icon_24.png",
+      "sha256": "9ca1e63e2513ca9712cdb55a070e896dc797072460fda6fecdfdcaebb1512828",
+      "bytes": 201
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_arch.svg",
+      "sha256": "7c07c9b819bab0fd38c84ac31a9687483e45e8c6c7fde6a66fae0076399d1232",
+      "bytes": 1326
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_cross_circle.svg",
+      "sha256": "7d405aca4f21d9090eecccdad98b2aee20b9b8cf3830ab06d78e917b8e381dcb",
+      "bytes": 1219
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_diamond.svg",
+      "sha256": "4db25783e21f71203e5d4408085e049dff2882a0431bb4283b81c12899e4655c",
+      "bytes": 1404
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_double.svg",
+      "sha256": "058e723b47e5a494a814a82c6668a66e14ee41343c0b033583596d86bfc62611",
+      "bytes": 992
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_greek.svg",
+      "sha256": "790defa931db4ec043f82cd5dd540760eb1abcd4cfdb6d288acd000bfe2e383c",
+      "bytes": 1120
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_ring.svg",
+      "sha256": "de2f3f83bfa3b2e1455a2a1567ee52ad3a7541b7a12876d55782c1ba9d7f4339",
+      "bytes": 1320
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_scroll.svg",
+      "sha256": "54e87e7596075aa3b7a75a6e8b8e41f96f2ca7e0bf6912e4ce22a24cc88efddb",
+      "bytes": 1008
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_spear.svg",
+      "sha256": "e34b1fd30902d059fe588809c2cb13271728f690f0a581257207a06fca3e647f",
+      "bytes": 1876
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_square.svg",
+      "sha256": "83fe9db92a4470582bcc8795fe96b7a9b81e6ab91019414ddc63655402a36f19",
+      "bytes": 994
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/classic_turned.svg",
+      "sha256": "51a0e40f12da010eb13851e2c628be5d7b65f91dbdb9403e88c1d4c8948c62b1",
+      "bytes": 1104
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_cable.svg",
+      "sha256": "9956c8ac60a052cd2d0b21112caf3083fa5930bcb92a2f35925fba52c51a49aa",
+      "bytes": 1063
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_cross.svg",
+      "sha256": "ac6ce0d14559755e729fb4cb08ca282490373a1516a486e29c10f2558025cc43",
+      "bytes": 862
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_diamond.svg",
+      "sha256": "35c99a32baf1ca8289e21e08b59ba534619cd00d0a2d66a6b389ff911ff379c5",
+      "bytes": 913
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_glass_frameless.svg",
+      "sha256": "e5ae36676bc91a41b7ccc7e3bd506f0fabfc7600f089746908f9258c31378fbf",
+      "bytes": 558
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_glass_posts.svg",
+      "sha256": "150a07d45db07cd67136821a343a456e5c3b9f4759543e18f7870275487a212e",
+      "bytes": 692
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_grid.svg",
+      "sha256": "5d6ba95fe087f736f2611bf9b1d94e94248969910915b416b09faa9289e39126",
+      "bytes": 1127
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_horizontal_5.svg",
+      "sha256": "cf37ecaadec860254598e5af6d28bd02b89c68726d07e106815016b1ee32c8a2",
+      "bytes": 728
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_horizontal_8.svg",
+      "sha256": "d963c2dc8f1326b28eaf4e7eaeed422b1059b1ac2bd0ec4ce520fdfaa4731256",
+      "bytes": 929
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_vertical_bold.svg",
+      "sha256": "bdd4d49cb15613d31932d97fdc75573b8fb6a67a48d6725260766fedc52a338a",
+      "bytes": 926
+    },
+    {
+      "path": "Draupr/src/assets/railing_presets/modern_vertical_slim.svg",
+      "sha256": "24016e915e3fe4efc923b04f188517990091a352945d2911eecf301f22d6f931",
+      "bytes": 1328
+    },
+    {
+      "path": "Draupr/src/assets/textures/draupr_brick.png",
+      "sha256": "11e3780d8e6efe58df83eb08672d58ab06bb3bec0c037c7bf00a0b0f9c51a8b9",
+      "bytes": 1626
+    },
+    {
+      "path": "Draupr/src/assets/textures/draupr_concrete.png",
+      "sha256": "8b228c150c01153d4c7c541c8e7e01be3964cf3149829a57000e528d31fb2626",
+      "bytes": 65085
+    },
+    {
+      "path": "Draupr/src/assets/textures/draupr_plaster.png",
+      "sha256": "d7210c1f7e38920d06de67d2efbaf3e7a2b643589aea8e2b27709cc0113b8958",
+      "bytes": 52873
+    },
+    {
+      "path": "Draupr/src/assets/textures/draupr_roof_shingle.png",
+      "sha256": "ac9302ff548a5d63260e33e128fdada710592f1d6e487dbe98991e21b32be923",
+      "bytes": 238877
+    },
+    {
+      "path": "Draupr/src/assets/textures/draupr_timber.png",
+      "sha256": "f5b0389c2639ebbe997ce90fa3ebbb367928d9b90633f1efb4c7656183c4e50c",
+      "bytes": 58621
+    },
+    {
+      "path": "Draupr/src/assets/wall_16.png",
+      "sha256": "bff593627252258b793191f2be4f40ac3047e2e37e56430671ece4ac19276b09",
+      "bytes": 166
+    },
+    {
+      "path": "Draupr/src/assets/wall_24.png",
+      "sha256": "068acff9ecb9beb663e9a8df0adb0085b08418d4df76107d4daa01d152cafb4a",
+      "bytes": 180
+    },
+    {
+      "path": "Draupr/src/assets/warehouse_railings/README.txt",
+      "sha256": "1f923676e82bfee1d517c188abe747c7f076d4906954173965035a3adc2473d8",
+      "bytes": 211
+    },
+    {
+      "path": "Draupr/src/assets/warehouse_railings/local_classical_baluster.svg",
+      "sha256": "67d5b2f129ffe55b8c365a559a1941b0b14e26573997659dbab077de002df1b5",
+      "bytes": 431
+    },
+    {
+      "path": "Draupr/src/assets/warehouse_railings/local_metal_module.svg",
+      "sha256": "9b0fa5f441a6ffe807d041d91a1e0cb53cf83f1387b8876d73da0d86ef10c07e",
+      "bytes": 326
+    },
+    {
+      "path": "Draupr/src/assets/warehouse_railings/local_turned_baluster.svg",
+      "sha256": "07315edba0b1ee96dd49137af88a478cc184bd0f46dc8e576f36ecc13051b531",
+      "bytes": 381
+    },
+    {
+      "path": "Draupr/src/config/release.json",
+      "sha256": "13d0c93cbc04977b23bf6e4e1d1978fa0082106ffb82b29042bc67a907a43516",
+      "bytes": 168
+    },
+    {
+      "path": "Draupr/src/config/schema.json",
+      "sha256": "eef9c6bd654af0394f072f11ffcae5525c61ee01e5e9dc82a22bd8b7b56cda10",
+      "bytes": 106817
+    },
+    {
+      "path": "Draupr/src/core/builders.rb",
+      "sha256": "d672eabbfd20d183380a71a6858b7e9cf189aa1a650e6957bd1c641b5a542790",
+      "bytes": 19141
+    },
+    {
+      "path": "Draupr/src/core/builders_architecture.rb",
+      "sha256": "e825cc25dc0e47569d59dc379ac9ccce76592dce16046a56925cb2fdc8fd5e9b",
+      "bytes": 42398
+    },
+    {
+      "path": "Draupr/src/core/data_schema.rb",
+      "sha256": "6c47458bdc411fbbb26946c5f241fdc99e86b06edceb168a0fc7e49338eedea8",
+      "bytes": 266
+    },
+    {
+      "path": "Draupr/src/core/diag.rb",
+      "sha256": "65ae39e1f4a25bb1e867b1732bda085f67fb8fcfd138a16b8267e330f1499317",
+      "bytes": 1051
+    },
+    {
+      "path": "Draupr/src/core/geometry.rb",
+      "sha256": "8195888f415689adfc1e1331f9b97956ab459ea8bea32335170f2eae8c5840cf",
+      "bytes": 6520
+    },
+    {
+      "path": "Draupr/src/core/hosts.rb",
+      "sha256": "563f724f1906df55a234fb41b2125b836214a3e872f63ebdb45d8413fda225e5",
+      "bytes": 18250
+    },
+    {
+      "path": "Draupr/src/core/i18n.rb",
+      "sha256": "833d7554b3f74963de3e685a5121c31e48f93129a1af09700a269de4ff38278f",
+      "bytes": 400
+    },
+    {
+      "path": "Draupr/src/core/library_service.rb",
+      "sha256": "2c886a4064599e970769a805ef34fbf8163501154d2e2a2e729fe94e9eead57f",
+      "bytes": 22962
+    },
+    {
+      "path": "Draupr/src/core/material_service.rb",
+      "sha256": "d945c62048356252e3c75f96cef8c77f820e2fded417119bc57ecb56b5977297",
+      "bytes": 7875
+    },
+    {
+      "path": "Draupr/src/core/materials.rb",
+      "sha256": "54542d85fca37b11fae0b3a29f8a337b4af74e048ba072bcf288b95612cde41d",
+      "bytes": 3277
+    },
+    {
+      "path": "Draupr/src/core/metadata.rb",
+      "sha256": "ff9ed85babb1afa3ea69f1dd9236b682d2f134ad4c5c969f290a0f707ea59242",
+      "bytes": 544
+    },
+    {
+      "path": "Draupr/src/core/modifier_suite.rb",
+      "sha256": "c2b87f3a9c118d64cfd94c28ff80e979927c0567e01ae76762ec28d530517241",
+      "bytes": 25707
+    },
+    {
+      "path": "Draupr/src/core/modify_tools.rb",
+      "sha256": "faa6a291a169115447494bd79377a911028853ab012af1b5ffe450623bcc9042",
+      "bytes": 5865
+    },
+    {
+      "path": "Draupr/src/core/molding_profiles.rb",
+      "sha256": "27dbc75bb8fdd51bcb749a17eaa3eca4e2cdeb0698cdee8828e4b6d7153c0ef6",
+      "bytes": 17359
+    },
+    {
+      "path": "Draupr/src/core/object_index.rb",
+      "sha256": "d34c74eaf224e5af2524695d24d14b17549f0ae061de84b568bbd56652e23b16",
+      "bytes": 1277
+    },
+    {
+      "path": "Draupr/src/core/objects.rb",
+      "sha256": "8f2d22b8b05d83d058c540f38d8e7a8c5463096a5909d2f50d90b7e5a7b1a3ee",
+      "bytes": 12172
+    },
+    {
+      "path": "Draupr/src/core/parameters.rb",
+      "sha256": "8f5f6647ed04a581f001e66706c0e55677a909ac3db7f7b311297e04ed27f8b4",
+      "bytes": 9764
+    },
+    {
+      "path": "Draupr/src/core/parts.rb",
+      "sha256": "52c227a3b0d476068a05b385bddfa23a9eb41d18b096c5ab778077a8fc62e44d",
+      "bytes": 4828
+    },
+    {
+      "path": "Draupr/src/core/path_frames.rb",
+      "sha256": "5b166fe8c04485da11d2b4a38cca65c436b2402224ab4a9346f84f6755f67514",
+      "bytes": 1773
+    },
+    {
+      "path": "Draupr/src/core/preferences.rb",
+      "sha256": "29d5db38a3b7dca9afbe74727523deffcf604a720f43b8050e077f51e34f7df4",
+      "bytes": 4112
+    },
+    {
+      "path": "Draupr/src/core/project.rb",
+      "sha256": "cae98a7ada0eca14f131854fed22167db209aa22f461209c7b71f0aa165dcf07",
+      "bytes": 6634
+    },
+    {
+      "path": "Draupr/src/core/railing_presets.rb",
+      "sha256": "e7851d444686c41fee6470856687a9f490869c24278923c9ac9adb3ce6882145",
+      "bytes": 1874
+    },
+    {
+      "path": "Draupr/src/core/reports.rb",
+      "sha256": "f3bad74726ddb492db3067298674960049a89dad72b8fdc9c340043ee436b523",
+      "bytes": 15565
+    },
+    {
+      "path": "Draupr/src/core/roof_tools.rb",
+      "sha256": "52d7d1b7fea3e16f4066d4f50f1cfd988abd33bcb9d323e57309b7d9ad8ff6ce",
+      "bytes": 14149
+    },
+    {
+      "path": "Draupr/src/core/scenes.rb",
+      "sha256": "15d50f6390fbcd8fbe186a079132caae39178b13149be2cb5ffee437754fcc64",
+      "bytes": 2081
+    },
+    {
+      "path": "Draupr/src/core/settings.rb",
+      "sha256": "1070d3df35a55429ffaf60023b482ed8484395d1566179fb6e6dedbd08f5ce97",
+      "bytes": 757
+    },
+    {
+      "path": "Draupr/src/core/tags.rb",
+      "sha256": "369c5f085d6df99fc0d307fc4aed2690d472fcffb5bbe9440a73ec9656244a96",
+      "bytes": 1454
+    },
+    {
+      "path": "Draupr/src/core/transforms.rb",
+      "sha256": "1e1553252f66f0a9a554cd522108e2ee0021a55f7a1eeae19285ee633615c0d9",
+      "bytes": 1415
+    },
+    {
+      "path": "Draupr/src/core/wall_connections.rb",
+      "sha256": "bd209334cb781c58617d055d6220142b807de56a70abdbacc5bc97d95730925e",
+      "bytes": 3000
+    },
+    {
+      "path": "Draupr/src/core/wall_junctions.rb",
+      "sha256": "ba14da905a4d630d055f92da09b94f546dba1781284e227637ce20f9aa4e77f9",
+      "bytes": 12695
+    },
+    {
+      "path": "Draupr/src/core/walls.rb",
+      "sha256": "a826943104a7dca5f285f275657ec3e52c97961a6c801c8c8060730ad4a31447",
+      "bytes": 12063
+    },
+    {
+      "path": "Draupr/src/core/warehouse_railings.rb",
+      "sha256": "56d73f3877d45dda0dfc74625954935b75ae962d9014845c4228be3db3bba677",
+      "bytes": 10653
+    },
+    {
+      "path": "Draupr/src/studio/draw_tool.rb",
+      "sha256": "e6d4e939ad870a1065a86ffe7552a25bc0e4cfa28ae0fcdb51ac1d91f2709dc6",
+      "bytes": 20243
+    },
+    {
+      "path": "Draupr/src/studio/modifier_pickers.rb",
+      "sha256": "a7f3c57a7a382a43959f250a75aeeb2600e5149e63e0cca368f7b654d6d4633f",
+      "bytes": 14375
+    },
+    {
+      "path": "Draupr/src/studio/pickers.rb",
+      "sha256": "1107df26c2f6d77a17d042c556d5bb7395d02fb2880f57082b402789701a08b8",
+      "bytes": 37309
+    },
+    {
+      "path": "Draupr/src/tools/walls/wall_carve.rb",
+      "sha256": "d879e4e1ee78eea84cca33cbc1d37cf55d480b71d3739465242720559e2c6bda",
+      "bytes": 11183
+    },
+    {
+      "path": "Draupr/src/ui/dialog.rb",
+      "sha256": "6343bbac862154c8791d552decf455e471b0dea51865885029c6099442b5557b",
+      "bytes": 20392
+    },
+    {
+      "path": "Draupr/src/ui/dormer_types.js",
+      "sha256": "c4d7ffff763f35e7893961f9307c4a2cc826a404e14f87a4f3c498d1e5c66e61",
+      "bytes": 1099
+    },
+    {
+      "path": "Draupr/src/ui/i18n.js",
+      "sha256": "9ded0e9c9449235c18990215698cc228560ef35fa49b5c270b1981d9cca04cf8",
+      "bytes": 10414
+    },
+    {
+      "path": "Draupr/src/ui/molding_profiles.js",
+      "sha256": "3227d34424a6b3be6a8c55dd64d09366f33e079abc3e9088a2b2aaae0e79e041",
+      "bytes": 16269
+    },
+    {
+      "path": "Draupr/src/ui/panel.html",
+      "sha256": "741b84abcd89f84ffb54f289a6334d009e6efecd51e11e3c31b2efc4ce7f7f8d",
+      "bytes": 15540
+    },
+    {
+      "path": "Draupr/src/ui/railing_presets.js",
+      "sha256": "2351d885abaf7e859c978a20b01a8fd7a384ca680c65f33557b6fa80d7bd1ff7",
+      "bytes": 2898
+    },
+    {
+      "path": "Draupr/src/ui/schema.js",
+      "sha256": "14a9c5dad3529617e17a3d08eb8e91c86090bf7a45d092dbd0b66971a3101016",
+      "bytes": 106841
+    },
+    {
+      "path": "Draupr/src/ui/studio.css",
+      "sha256": "b02fb295d4ce895ff7b41f0b8af6c3e467a39f11726f4ae9fce58d93ea8020cd",
+      "bytes": 13278
+    },
+    {
+      "path": "Draupr/src/ui/studio.js",
+      "sha256": "55a330d6a6e7a7984959048bab837649036785650d339d801878709629e8ad87",
+      "bytes": 52296
+    },
+    {
+      "path": "Draupr.rb",
+      "sha256": "e4eed6dae462a5c4d29179936978d8b8e9c29cc2298416c1989a0decc5f299ba",
+      "bytes": 958
+    },
+    {
+      "path": "README.md",
+      "sha256": "926d9707616d35fa7fba102a72e7ba4c211b7aedcb0d6a92cea5a6d1bdb09ad3",
+      "bytes": 12632
+    }
+  ]
+}

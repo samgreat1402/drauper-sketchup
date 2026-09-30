@@ -1,0 +1,21 @@
+{
+  "release": "4.1.6 Preview",
+  "passed": 13,
+  "failed": 0,
+  "checks": {
+    "release_4_1_6": true,
+    "visible_face_required": true,
+    "pickray_face_intersection": true,
+    "unsnapped_local_probe": true,
+    "finite_segment_projection": true,
+    "screen_overlap_solver_removed": true,
+    "hover_click_same_solver": true,
+    "bounded_cross_section": true,
+    "single_solid_indicator": true,
+    "large_plane_outline_removed": true,
+    "endpoint_guard_preserved": true,
+    "opening_seam_fix_preserved": true,
+    "roof_clip_preserved": true
+  },
+  "video_duration_seconds": 27.2
+}

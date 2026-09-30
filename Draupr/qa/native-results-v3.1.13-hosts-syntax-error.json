@@ -1,0 +1,9 @@
+{
+  "version": "3.1.13",
+  "source": "SketchUp 2026 extension error report",
+  "failure": "SyntaxError in core/hosts.rb line 91: unexpected semicolon, expecting closing parenthesis.",
+  "root_cause": "The second vector_to call inside cross was missing its final closing parenthesis.",
+  "resolved_in": "3.1.14",
+  "resolution": "Restored the missing parenthesis and added archive-level malformed cross/vector_to scanning.",
+  "native_tested": false
+}

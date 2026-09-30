@@ -1,0 +1,20 @@
+{
+  "format": 3,
+  "min_readable": 1,
+  "required": [
+    "schema",
+    "source",
+    "origin",
+    "geometry",
+    "parametric",
+    "materials",
+    "thumbnail",
+    "host_behavior",
+    "bodies",
+    "draupr_items"
+  ],
+  "backward_compatible": [
+    1,
+    2
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "version": "3.1.12",
+  "source": "user report",
+  "failure": "Hipped Dormer failed on first creation with Points are not planar.",
+  "root_cause": "The side roof quadrilateral used a full-height front ridge and a 72%-height rear ridge while the outer eave stayed level, making four non-coplanar points.",
+  "resolved_in": "3.1.13",
+  "resolution": "The Hipped Dormer now has a level ridge, explicit panel-planarity validation, and native construction coverage for all nine types.",
+  "native_tested": false
+}

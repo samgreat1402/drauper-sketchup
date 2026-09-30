@@ -1,0 +1,18 @@
+{
+  "release": "4.1.5 Preview",
+  "passed": 11,
+  "failed": 0,
+  "checks": {
+    "release_4_1_5": true,
+    "dedicated_seam_cleanup": true,
+    "vertical_edges_only": true,
+    "internal_cut_stations_only": true,
+    "wall_ends_preserved": true,
+    "edges_hidden_not_erased": true,
+    "all_layer_pieces_processed": true,
+    "door_window_shared_recut_path": true,
+    "roof_clip_preserved": true,
+    "knife_rewrite_preserved": true,
+    "cursor_hotspots_preserved": true
+  }
+}

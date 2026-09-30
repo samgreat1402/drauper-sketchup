@@ -1,0 +1,14 @@
+{
+  "reported_version": "3.1.16",
+  "fixed_in": "3.1.17 Preview",
+  "errors": [
+    "Object no longer exists. Refresh selection.",
+    "Click a visible Draupr roof slope."
+  ],
+  "repairs": [
+    "live selection rebinding",
+    "opening-UUID host repair",
+    "all-visible-roofs ray intersection"
+  ],
+  "native_tested": false
+}

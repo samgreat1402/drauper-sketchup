@@ -1,0 +1,34 @@
+{
+  "release": "4.1.0 Preview",
+  "scope": "Full Modify BIM editing suite",
+  "frontend": {
+    "passed": 51,
+    "failed": 0
+  },
+  "static_checks": {
+    "release_4_1_0": true,
+    "preview_status": true,
+    "native_tested_false": true,
+    "frontend_51_of_51": true,
+    "seven_modifier_groups": true,
+    "split_assembly": true,
+    "trim_extend": true,
+    "baseline_align": true,
+    "attach_top_base": true,
+    "dynamic_boundary_sync": true,
+    "wall_steps": true,
+    "foundation_steps": true,
+    "junction_modes": true,
+    "opening_heal_splay": true,
+    "nine_point_registration": true,
+    "molding_returns": true,
+    "disassemble": true,
+    "edge_details": true,
+    "bilingual_routes": true,
+    "testup_suite": true,
+    "suite_report": true
+  },
+  "native_tested": false,
+  "native_gate": "Run NATIVE_ACCEPTANCE.md and qa/testup/test_modifier_suite_v410.rb inside SketchUp before Stable promotion",
+  "generated_at": "2026-09-29T06:01:45.157237+00:00"
+}

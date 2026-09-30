@@ -1,0 +1,9 @@
+{
+  "version": "3.1.7",
+  "source": "user-reported SketchUp error",
+  "failure": "Could not persist Draupr preference: units",
+  "diagnosis": "The strict write/read equality check rejected SketchUp preference strings when the backend returned a wrapped representation.",
+  "resolved_in": "3.1.8",
+  "resolution": "Plain native strings, conservative Draupr section with studio_ keys, recursive legacy unwrapping, session-memory fallback, and non-blocking persistence diagnostics.",
+  "native_tested": false
+}

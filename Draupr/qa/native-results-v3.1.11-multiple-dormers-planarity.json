@@ -1,0 +1,9 @@
+{
+  "version": "3.1.11",
+  "source": "user screenshot",
+  "failure": "A second hosted dormer failed with Click a Draupr roof face / Points are not planar.",
+  "root_cause": "Persisted floating-point opening corners were reused without canonical reprojection after the first roof rebuild.",
+  "resolved_in": "3.1.12",
+  "resolution": "Canonical face index plus exact plane reprojection on placement and every roof recut; two-opening regression added.",
+  "native_tested": false
+}

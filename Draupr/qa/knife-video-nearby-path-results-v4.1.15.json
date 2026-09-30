@@ -1,0 +1,24 @@
+{
+  "release": "4.1.15 Preview",
+  "passed": 16,
+  "failed": 0,
+  "checks": {
+    "release_4_1_15": true,
+    "normal_pick_paths_retained": true,
+    "root_nearby_objects": true,
+    "active_context_nearby_objects": true,
+    "selected_nearby_objects": true,
+    "large_wall_search_radius": true,
+    "face_hit_preferred": true,
+    "nearby_screen_projection": true,
+    "fallback_cut_plane_intersection": true,
+    "pointer_surface_preview": true,
+    "core_half_mm_guard": true,
+    "no_five_mm_guard": true,
+    "internal_candidate_priority": true,
+    "connected_peer_relink_preserved": true,
+    "hosted_opening_relink_preserved": true,
+    "attach_top_fix_preserved": true
+  },
+  "source_video_seconds": 19.9333
+}

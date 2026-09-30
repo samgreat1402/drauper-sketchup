@@ -1,0 +1,37 @@
+{
+  "release": "4.1.2 Preview",
+  "fixes": [
+    "Attach Top uses complete bounded roof underside envelope instead of one extrapolated slope",
+    "L-wall Trim/Extend removes stale overlap trims and checks only the selected endpoint junction",
+    "Knife cursor hotspot moved to blade tip",
+    "Knife split rewritten with cut-plane preview, endpoint clearance, junction redistribution, peer relinking, and segment override preservation"
+  ],
+  "static_checks": {
+    "release_4_1_2": true,
+    "roof_uses_complete_envelope": true,
+    "roof_uses_underside_offset": true,
+    "roof_surfaces_are_bounded": true,
+    "roof_caps_are_triangulated": true,
+    "roof_sync_rebuilds_envelope": true,
+    "trim_rejects_only_selected_join": true,
+    "trim_removes_stale_overlap_cuts": true,
+    "knife_station_solver": true,
+    "knife_endpoint_clearance": true,
+    "knife_preserves_endpoint_metadata": true,
+    "knife_relinks_joined_peer": true,
+    "knife_preserves_segment_overrides": true,
+    "knife_full_plane_preview": true,
+    "knife_no_silent_error": true,
+    "knife_hotspot_at_blade_tip": true,
+    "legacy_split_uses_rewrite": true,
+    "frontend_51_of_51": true,
+    "native_tested_false": true
+  },
+  "frontend": {
+    "passed": 51,
+    "failed": 0
+  },
+  "native_rerun_required": true,
+  "native_tested": false,
+  "generated_at": "2026-09-29T09:31:13.223948+00:00"
+}

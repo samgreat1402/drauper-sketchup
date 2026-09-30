@@ -1,0 +1,8 @@
+{
+  "version": "3.1.10",
+  "source": "user screenshots and accepted rebuild",
+  "failure": "Dormer appeared as a detached miniature house rather than a roof-integrated dormer.",
+  "resolved_in": "3.1.11",
+  "resolution": "Roof-only two-click footprint placement, automatic host opening, vertical front, slope-trimmed cheeks, no rear wall/floor, nine parametric dormer types, and original SVG thumbnail gallery.",
+  "native_tested": false
+}

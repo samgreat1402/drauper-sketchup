@@ -1,0 +1,1090 @@
+{
+  "passed": 271,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Bridge handshake",
+      "pass": true
+    },
+    {
+      "name": "wall creation field count",
+      "pass": true
+    },
+    {
+      "name": "wall.length",
+      "pass": true
+    },
+    {
+      "name": "wall.height",
+      "pass": true
+    },
+    {
+      "name": "wall.thickness",
+      "pass": true
+    },
+    {
+      "name": "wall.alignment",
+      "pass": true
+    },
+    {
+      "name": "wall.wall_type",
+      "pass": true
+    },
+    {
+      "name": "wall.assembly",
+      "pass": true
+    },
+    {
+      "name": "wall.cavity_width",
+      "pass": true
+    },
+    {
+      "name": "wall.inner_thickness",
+      "pass": true
+    },
+    {
+      "name": "wall.outer_thickness",
+      "pass": true
+    },
+    {
+      "name": "wall.core_material",
+      "pass": true
+    },
+    {
+      "name": "wall.inner_material",
+      "pass": true
+    },
+    {
+      "name": "wall.outer_material",
+      "pass": true
+    },
+    {
+      "name": "wall.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "wall.level_id",
+      "pass": true
+    },
+    {
+      "name": "wall.z_offset",
+      "pass": true
+    },
+    {
+      "name": "wall.rotation",
+      "pass": true
+    },
+    {
+      "name": "wall.name",
+      "pass": true
+    },
+    {
+      "name": "wall.mark",
+      "pass": true
+    },
+    {
+      "name": "wall.tag",
+      "pass": true
+    },
+    {
+      "name": "wall native command route",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall creation field count",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.width",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.height",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.grid_mode",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.grid_x",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.grid_y",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.count_x",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.count_y",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.distribution",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.mullion_width",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.mullion_depth",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.transom_width",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.glass_thickness",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.glass_material",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.mullion_material",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.transom_material",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.panel_material",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.level_id",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.z_offset",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.rotation",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.name",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.mark",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall.tag",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall native command route",
+      "pass": true
+    },
+    {
+      "name": "door creation field count",
+      "pass": true
+    },
+    {
+      "name": "door.width",
+      "pass": true
+    },
+    {
+      "name": "door.height",
+      "pass": true
+    },
+    {
+      "name": "door.depth",
+      "pass": true
+    },
+    {
+      "name": "door.frame",
+      "pass": true
+    },
+    {
+      "name": "door.host_offset",
+      "pass": true
+    },
+    {
+      "name": "door.flip",
+      "pass": true
+    },
+    {
+      "name": "door.leaf_thickness",
+      "pass": true
+    },
+    {
+      "name": "door.swing_angle",
+      "pass": true
+    },
+    {
+      "name": "door.handing",
+      "pass": true
+    },
+    {
+      "name": "door.frame_material",
+      "pass": true
+    },
+    {
+      "name": "door.leaf_material",
+      "pass": true
+    },
+    {
+      "name": "door.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "door.level_id",
+      "pass": true
+    },
+    {
+      "name": "door.z_offset",
+      "pass": true
+    },
+    {
+      "name": "door.rotation",
+      "pass": true
+    },
+    {
+      "name": "door.name",
+      "pass": true
+    },
+    {
+      "name": "door.mark",
+      "pass": true
+    },
+    {
+      "name": "door.tag",
+      "pass": true
+    },
+    {
+      "name": "door native command route",
+      "pass": true
+    },
+    {
+      "name": "window creation field count",
+      "pass": true
+    },
+    {
+      "name": "window.width",
+      "pass": true
+    },
+    {
+      "name": "window.height",
+      "pass": true
+    },
+    {
+      "name": "window.sill",
+      "pass": true
+    },
+    {
+      "name": "window.depth",
+      "pass": true
+    },
+    {
+      "name": "window.frame",
+      "pass": true
+    },
+    {
+      "name": "window.host_offset",
+      "pass": true
+    },
+    {
+      "name": "window.flip",
+      "pass": true
+    },
+    {
+      "name": "window.mullions",
+      "pass": true
+    },
+    {
+      "name": "window.glass_thickness",
+      "pass": true
+    },
+    {
+      "name": "window.frame_material",
+      "pass": true
+    },
+    {
+      "name": "window.glass_material",
+      "pass": true
+    },
+    {
+      "name": "window.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "window.level_id",
+      "pass": true
+    },
+    {
+      "name": "window.z_offset",
+      "pass": true
+    },
+    {
+      "name": "window.rotation",
+      "pass": true
+    },
+    {
+      "name": "window.name",
+      "pass": true
+    },
+    {
+      "name": "window.mark",
+      "pass": true
+    },
+    {
+      "name": "window.tag",
+      "pass": true
+    },
+    {
+      "name": "window native command route",
+      "pass": true
+    },
+    {
+      "name": "column creation field count",
+      "pass": true
+    },
+    {
+      "name": "column.shape",
+      "pass": true
+    },
+    {
+      "name": "column.width",
+      "pass": true
+    },
+    {
+      "name": "column.depth",
+      "pass": true
+    },
+    {
+      "name": "column.radius",
+      "pass": true
+    },
+    {
+      "name": "column.height",
+      "pass": true
+    },
+    {
+      "name": "column.material",
+      "pass": true
+    },
+    {
+      "name": "column.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "column.level_id",
+      "pass": true
+    },
+    {
+      "name": "column.z_offset",
+      "pass": true
+    },
+    {
+      "name": "column.rotation",
+      "pass": true
+    },
+    {
+      "name": "column.name",
+      "pass": true
+    },
+    {
+      "name": "column.mark",
+      "pass": true
+    },
+    {
+      "name": "column.tag",
+      "pass": true
+    },
+    {
+      "name": "column native command route",
+      "pass": true
+    },
+    {
+      "name": "foundation creation field count",
+      "pass": true
+    },
+    {
+      "name": "foundation.width",
+      "pass": true
+    },
+    {
+      "name": "foundation.depth",
+      "pass": true
+    },
+    {
+      "name": "foundation.height",
+      "pass": true
+    },
+    {
+      "name": "foundation.material",
+      "pass": true
+    },
+    {
+      "name": "foundation.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "foundation.level_id",
+      "pass": true
+    },
+    {
+      "name": "foundation.z_offset",
+      "pass": true
+    },
+    {
+      "name": "foundation.rotation",
+      "pass": true
+    },
+    {
+      "name": "foundation.name",
+      "pass": true
+    },
+    {
+      "name": "foundation.mark",
+      "pass": true
+    },
+    {
+      "name": "foundation.tag",
+      "pass": true
+    },
+    {
+      "name": "foundation native command route",
+      "pass": true
+    },
+    {
+      "name": "beam creation field count",
+      "pass": true
+    },
+    {
+      "name": "beam.length",
+      "pass": true
+    },
+    {
+      "name": "beam.width",
+      "pass": true
+    },
+    {
+      "name": "beam.height",
+      "pass": true
+    },
+    {
+      "name": "beam.alignment",
+      "pass": true
+    },
+    {
+      "name": "beam.material",
+      "pass": true
+    },
+    {
+      "name": "beam.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "beam.level_id",
+      "pass": true
+    },
+    {
+      "name": "beam.z_offset",
+      "pass": true
+    },
+    {
+      "name": "beam.rotation",
+      "pass": true
+    },
+    {
+      "name": "beam.name",
+      "pass": true
+    },
+    {
+      "name": "beam.mark",
+      "pass": true
+    },
+    {
+      "name": "beam.tag",
+      "pass": true
+    },
+    {
+      "name": "beam native command route",
+      "pass": true
+    },
+    {
+      "name": "slab creation field count",
+      "pass": true
+    },
+    {
+      "name": "slab.width",
+      "pass": true
+    },
+    {
+      "name": "slab.depth",
+      "pass": true
+    },
+    {
+      "name": "slab.thickness",
+      "pass": true
+    },
+    {
+      "name": "slab.top_material",
+      "pass": true
+    },
+    {
+      "name": "slab.underside_material",
+      "pass": true
+    },
+    {
+      "name": "slab.edge_material",
+      "pass": true
+    },
+    {
+      "name": "slab.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "slab.level_id",
+      "pass": true
+    },
+    {
+      "name": "slab.z_offset",
+      "pass": true
+    },
+    {
+      "name": "slab.rotation",
+      "pass": true
+    },
+    {
+      "name": "slab.name",
+      "pass": true
+    },
+    {
+      "name": "slab.mark",
+      "pass": true
+    },
+    {
+      "name": "slab.tag",
+      "pass": true
+    },
+    {
+      "name": "slab native command route",
+      "pass": true
+    },
+    {
+      "name": "grid creation field count",
+      "pass": true
+    },
+    {
+      "name": "grid.spacing_x",
+      "pass": true
+    },
+    {
+      "name": "grid.spacing_y",
+      "pass": true
+    },
+    {
+      "name": "grid.count_x",
+      "pass": true
+    },
+    {
+      "name": "grid.count_y",
+      "pass": true
+    },
+    {
+      "name": "grid.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "grid.level_id",
+      "pass": true
+    },
+    {
+      "name": "grid.z_offset",
+      "pass": true
+    },
+    {
+      "name": "grid.rotation",
+      "pass": true
+    },
+    {
+      "name": "grid.name",
+      "pass": true
+    },
+    {
+      "name": "grid.mark",
+      "pass": true
+    },
+    {
+      "name": "grid.tag",
+      "pass": true
+    },
+    {
+      "name": "grid native command route",
+      "pass": true
+    },
+    {
+      "name": "stair creation field count",
+      "pass": true
+    },
+    {
+      "name": "stair.sizing_mode",
+      "pass": true
+    },
+    {
+      "name": "stair.floor_height",
+      "pass": true
+    },
+    {
+      "name": "stair.steps",
+      "pass": true
+    },
+    {
+      "name": "stair.riser",
+      "pass": true
+    },
+    {
+      "name": "stair.tread",
+      "pass": true
+    },
+    {
+      "name": "stair.width",
+      "pass": true
+    },
+    {
+      "name": "stair.turn",
+      "pass": true
+    },
+    {
+      "name": "stair.landing_depth",
+      "pass": true
+    },
+    {
+      "name": "stair.tread_thickness",
+      "pass": true
+    },
+    {
+      "name": "stair.railing",
+      "pass": true
+    },
+    {
+      "name": "stair.rail_height",
+      "pass": true
+    },
+    {
+      "name": "stair.material",
+      "pass": true
+    },
+    {
+      "name": "stair.tread_material",
+      "pass": true
+    },
+    {
+      "name": "stair.rail_material",
+      "pass": true
+    },
+    {
+      "name": "stair.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "stair.level_id",
+      "pass": true
+    },
+    {
+      "name": "stair.z_offset",
+      "pass": true
+    },
+    {
+      "name": "stair.rotation",
+      "pass": true
+    },
+    {
+      "name": "stair.name",
+      "pass": true
+    },
+    {
+      "name": "stair.mark",
+      "pass": true
+    },
+    {
+      "name": "stair.tag",
+      "pass": true
+    },
+    {
+      "name": "stair native command route",
+      "pass": true
+    },
+    {
+      "name": "roof creation field count",
+      "pass": true
+    },
+    {
+      "name": "roof.style",
+      "pass": true
+    },
+    {
+      "name": "roof.width",
+      "pass": true
+    },
+    {
+      "name": "roof.depth",
+      "pass": true
+    },
+    {
+      "name": "roof.sizing_mode",
+      "pass": true
+    },
+    {
+      "name": "roof.rise",
+      "pass": true
+    },
+    {
+      "name": "roof.pitch_deg",
+      "pass": true
+    },
+    {
+      "name": "roof.ridge_axis",
+      "pass": true
+    },
+    {
+      "name": "roof.thickness",
+      "pass": true
+    },
+    {
+      "name": "roof.overhang",
+      "pass": true
+    },
+    {
+      "name": "roof.top_material",
+      "pass": true
+    },
+    {
+      "name": "roof.underside_material",
+      "pass": true
+    },
+    {
+      "name": "roof.edge_material",
+      "pass": true
+    },
+    {
+      "name": "roof.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "roof.level_id",
+      "pass": true
+    },
+    {
+      "name": "roof.z_offset",
+      "pass": true
+    },
+    {
+      "name": "roof.rotation",
+      "pass": true
+    },
+    {
+      "name": "roof.name",
+      "pass": true
+    },
+    {
+      "name": "roof.mark",
+      "pass": true
+    },
+    {
+      "name": "roof.tag",
+      "pass": true
+    },
+    {
+      "name": "roof native command route",
+      "pass": true
+    },
+    {
+      "name": "railing creation field count",
+      "pass": true
+    },
+    {
+      "name": "railing.length",
+      "pass": true
+    },
+    {
+      "name": "railing.height",
+      "pass": true
+    },
+    {
+      "name": "railing.post_spacing",
+      "pass": true
+    },
+    {
+      "name": "railing.post_diameter",
+      "pass": true
+    },
+    {
+      "name": "railing.rail_width",
+      "pass": true
+    },
+    {
+      "name": "railing.rail_thickness",
+      "pass": true
+    },
+    {
+      "name": "railing.post_material",
+      "pass": true
+    },
+    {
+      "name": "railing.rail_material",
+      "pass": true
+    },
+    {
+      "name": "railing.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "railing.level_id",
+      "pass": true
+    },
+    {
+      "name": "railing.z_offset",
+      "pass": true
+    },
+    {
+      "name": "railing.rotation",
+      "pass": true
+    },
+    {
+      "name": "railing.name",
+      "pass": true
+    },
+    {
+      "name": "railing.mark",
+      "pass": true
+    },
+    {
+      "name": "railing.tag",
+      "pass": true
+    },
+    {
+      "name": "railing native command route",
+      "pass": true
+    },
+    {
+      "name": "louver creation field count",
+      "pass": true
+    },
+    {
+      "name": "louver.width",
+      "pass": true
+    },
+    {
+      "name": "louver.height",
+      "pass": true
+    },
+    {
+      "name": "louver.count",
+      "pass": true
+    },
+    {
+      "name": "louver.blade_depth",
+      "pass": true
+    },
+    {
+      "name": "louver.blade_thickness",
+      "pass": true
+    },
+    {
+      "name": "louver.blade_angle",
+      "pass": true
+    },
+    {
+      "name": "louver.material",
+      "pass": true
+    },
+    {
+      "name": "louver.placement_mode",
+      "pass": true
+    },
+    {
+      "name": "louver.level_id",
+      "pass": true
+    },
+    {
+      "name": "louver.z_offset",
+      "pass": true
+    },
+    {
+      "name": "louver.rotation",
+      "pass": true
+    },
+    {
+      "name": "louver.name",
+      "pass": true
+    },
+    {
+      "name": "louver.mark",
+      "pass": true
+    },
+    {
+      "name": "louver.tag",
+      "pass": true
+    },
+    {
+      "name": "louver native command route",
+      "pass": true
+    },
+    {
+      "name": "create active workspace",
+      "pass": true
+    },
+    {
+      "name": "edit active workspace",
+      "pass": true
+    },
+    {
+      "name": "materials active workspace",
+      "pass": true
+    },
+    {
+      "name": "library active workspace",
+      "pass": true
+    },
+    {
+      "name": "project active workspace",
+      "pass": true
+    },
+    {
+      "name": "wall edit parity",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall edit parity",
+      "pass": true
+    },
+    {
+      "name": "door edit parity",
+      "pass": true
+    },
+    {
+      "name": "window edit parity",
+      "pass": true
+    },
+    {
+      "name": "column edit parity",
+      "pass": true
+    },
+    {
+      "name": "foundation edit parity",
+      "pass": true
+    },
+    {
+      "name": "beam edit parity",
+      "pass": true
+    },
+    {
+      "name": "slab edit parity",
+      "pass": true
+    },
+    {
+      "name": "grid edit parity",
+      "pass": true
+    },
+    {
+      "name": "stair edit parity",
+      "pass": true
+    },
+    {
+      "name": "roof edit parity",
+      "pass": true
+    },
+    {
+      "name": "railing edit parity",
+      "pass": true
+    },
+    {
+      "name": "louver edit parity",
+      "pass": true
+    },
+    {
+      "name": "Dirty fields only",
+      "pass": true
+    },
+    {
+      "name": "Selection pin protects unsaved edits",
+      "pass": true
+    },
+    {
+      "name": "Original edit target retained",
+      "pass": true
+    },
+    {
+      "name": "Unchanged stair choices retained",
+      "pass": true
+    },
+    {
+      "name": "No extra fields applied",
+      "pass": true
+    },
+    {
+      "name": "Mixed-value state",
+      "pass": true
+    },
+    {
+      "name": "Batch edit scope",
+      "pass": true
+    },
+    {
+      "name": "Material scope explicit",
+      "pass": true
+    },
+    {
+      "name": "Defaults roles use creation kind",
+      "pass": true
+    },
+    {
+      "name": "Defaults assignment updates live draft",
+      "pass": true
+    },
+    {
+      "name": "Defaults disable geometry UV angle",
+      "pass": true
+    },
+    {
+      "name": "Panel type callback",
+      "pass": true
+    },
+    {
+      "name": "Preset modal",
+      "pass": true
+    },
+    {
+      "name": "Preset config saved",
+      "pass": true
+    },
+    {
+      "name": "RTL enabled",
+      "pass": true
+    },
+    {
+      "name": "Persian navigation",
+      "pass": true
+    },
+    {
+      "name": "Dark theme",
+      "pass": true
+    },
+    {
+      "name": "Responsive width",
+      "pass": true
+    },
+    {
+      "name": "Object names are escaped",
+      "pass": true
+    }
+  ]
+}

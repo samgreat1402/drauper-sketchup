@@ -1,0 +1,8 @@
+{
+  "reported_version": "3.2.0",
+  "fixed_in": "3.2.1 Preview",
+  "evidence": "Three SketchUp screenshots showed roof planes and window walls almost completely buried below the primary roof, while the Hipped type was too low and appeared detached.",
+  "root_cause": "v3.2.0 forced every analytical intersection inside the clicked depth, reducing visible eave and crown heights to a few hundred millimeters.",
+  "repair": "Wall Height now drives visible eave exposure. Analytical joins may extend in a controlled range up to 2.02 times the clicked depth.",
+  "native_tested": false
+}

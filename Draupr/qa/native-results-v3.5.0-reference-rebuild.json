@@ -1,0 +1,12 @@
+{
+  "release": "3.5.0 Preview",
+  "target": "compact reference-like Gabled Dormer",
+  "contracts": [
+    "real footprint depth",
+    "proportional wall/rise autofit",
+    "ridge terminates at host roof",
+    "clipped solid cheeks",
+    "stable repeat insertion and editing"
+  ],
+  "native_tested": false
+}

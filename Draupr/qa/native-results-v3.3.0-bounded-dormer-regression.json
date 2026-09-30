@@ -1,0 +1,14 @@
+{
+  "release": "3.3.0 Preview",
+  "evidence": "User screenshots showed long tunnels/strips for Hipped, curved, and Pointed types plus repeated host-picking rejection.",
+  "replacement": "Hard-envelope Dormer bodies with visible dimensions fitted to host rise and preselected-host picking.",
+  "contracts": [
+    "actual_depth <= 0.90 * drawn_depth",
+    "front_base == 0",
+    "wall_height == visible eave",
+    "roof rise capped per type",
+    "selected Draupr roof has picker priority",
+    "screen-space face fallback"
+  ],
+  "native_tested": false
+}

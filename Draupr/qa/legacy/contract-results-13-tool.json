@@ -1,0 +1,267 @@
+{
+  "passed": 65,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Ruby and UI consume equivalent schema",
+      "pass": true
+    },
+    {
+      "name": "13 tools",
+      "pass": true
+    },
+    {
+      "name": "wall builder present",
+      "pass": true
+    },
+    {
+      "name": "wall unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "wall role core resolves",
+      "pass": true
+    },
+    {
+      "name": "wall role inner resolves",
+      "pass": true
+    },
+    {
+      "name": "wall role outer resolves",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall builder present",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall role glass resolves",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall role mullion resolves",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall role transom resolves",
+      "pass": true
+    },
+    {
+      "name": "curtain_wall role infill resolves",
+      "pass": true
+    },
+    {
+      "name": "door builder present",
+      "pass": true
+    },
+    {
+      "name": "door unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "door role frame resolves",
+      "pass": true
+    },
+    {
+      "name": "door role leaf resolves",
+      "pass": true
+    },
+    {
+      "name": "window builder present",
+      "pass": true
+    },
+    {
+      "name": "window unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "window role frame resolves",
+      "pass": true
+    },
+    {
+      "name": "window role glass resolves",
+      "pass": true
+    },
+    {
+      "name": "column builder present",
+      "pass": true
+    },
+    {
+      "name": "column unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "column role structure resolves",
+      "pass": true
+    },
+    {
+      "name": "foundation builder present",
+      "pass": true
+    },
+    {
+      "name": "foundation unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "foundation role structure resolves",
+      "pass": true
+    },
+    {
+      "name": "beam builder present",
+      "pass": true
+    },
+    {
+      "name": "beam unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "beam role structure resolves",
+      "pass": true
+    },
+    {
+      "name": "slab builder present",
+      "pass": true
+    },
+    {
+      "name": "slab unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "slab role top resolves",
+      "pass": true
+    },
+    {
+      "name": "slab role underside resolves",
+      "pass": true
+    },
+    {
+      "name": "slab role edge resolves",
+      "pass": true
+    },
+    {
+      "name": "grid builder present",
+      "pass": true
+    },
+    {
+      "name": "grid unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "stair builder present",
+      "pass": true
+    },
+    {
+      "name": "stair unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "stair role structure resolves",
+      "pass": true
+    },
+    {
+      "name": "stair role tread resolves",
+      "pass": true
+    },
+    {
+      "name": "stair role railing resolves",
+      "pass": true
+    },
+    {
+      "name": "roof builder present",
+      "pass": true
+    },
+    {
+      "name": "roof unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "roof role top resolves",
+      "pass": true
+    },
+    {
+      "name": "roof role underside resolves",
+      "pass": true
+    },
+    {
+      "name": "roof role edge resolves",
+      "pass": true
+    },
+    {
+      "name": "railing builder present",
+      "pass": true
+    },
+    {
+      "name": "railing unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "railing role post resolves",
+      "pass": true
+    },
+    {
+      "name": "railing role rail resolves",
+      "pass": true
+    },
+    {
+      "name": "louver builder present",
+      "pass": true
+    },
+    {
+      "name": "louver unique parameter keys",
+      "pass": true
+    },
+    {
+      "name": "louver role blade resolves",
+      "pass": true
+    },
+    {
+      "name": "UI asset dialog.rb",
+      "pass": true
+    },
+    {
+      "name": "UI asset panel.html",
+      "pass": true
+    },
+    {
+      "name": "UI asset studio.js",
+      "pass": true
+    },
+    {
+      "name": "UI asset schema.js",
+      "pass": true
+    },
+    {
+      "name": "UI asset i18n.js",
+      "pass": true
+    },
+    {
+      "name": "UI asset studio.css",
+      "pass": true
+    },
+    {
+      "name": "Loader version",
+      "pass": true
+    },
+    {
+      "name": "No native booleans in active core",
+      "pass": true
+    },
+    {
+      "name": "studio.js JavaScript parse",
+      "pass": true
+    },
+    {
+      "name": "schema.js JavaScript parse",
+      "pass": true
+    },
+    {
+      "name": "i18n.js JavaScript parse",
+      "pass": true
+    }
+  ],
+  "native_ruby_parse": "Not run: Ruby is unavailable in the build sandbox."
+}

@@ -1,0 +1,16 @@
+{
+  "version": "3.1.5",
+  "source": "user-reported native SketchUp smoke test",
+  "passed": 23,
+  "failed": 0,
+  "confirmed": [
+    "release/schema parity",
+    "input/display unit round trip",
+    "17 tool create/edit fixtures",
+    "wall junction fixture",
+    "hosted window fixture",
+    "transaction rollback"
+  ],
+  "note": "This smoke result does not cover interactive Undo/Redo, save/reopen, host movement, migrations, cross-version/platform, or visual acceptance.",
+  "native_tested": false
+}

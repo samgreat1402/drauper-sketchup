@@ -1,0 +1,8 @@
+{
+  "release": "3.6.2 Preview",
+  "reported_runtime": "SketchUp 26.2.243 / Ruby 3.2.2",
+  "fixed_file": "src/core/library_service.rb",
+  "removed_expression": "tr(backslash, '/')",
+  "replacement": "['_textures', texture_file].join('/')",
+  "native_retest_required": true
+}
