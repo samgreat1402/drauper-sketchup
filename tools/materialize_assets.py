@@ -3,7 +3,7 @@ import base64, json
 root = Path(__file__).resolve().parents[1]
 manifest_path = root / '.asset-source' / 'manifest.json'
 if not manifest_path.exists():
-    raise SystemExit(0)
+    raise SystemExit('Missing .asset-source/manifest.json')
 for item in json.loads(manifest_path.read_text()):
     target = root / item['path']
     target.parent.mkdir(parents=True, exist_ok=True)

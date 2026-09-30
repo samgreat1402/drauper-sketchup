@@ -1,5 +1,5 @@
 window.DRAUPR_SCHEMA = {
-  "version": "4.1.26",
+  "version": "4.1.29",
   "schemaVersion": 1,
   "tools": [
     {
@@ -3375,11 +3375,27 @@ window.DRAUPR_SCHEMA = {
           "section": "geometry"
         },
         {
+          "key": "shutters",
+          "label": "Louvered Shutters",
+          "fa": "کرکره‌های لووردار",
+          "type": "boolean",
+          "default": true,
+          "section": "geometry"
+        },
+        {
           "key": "wall_material",
           "label": "Wall Material",
           "fa": "متریال دیوار",
           "type": "material",
           "default": "Draupr Finish - Soft Plaster",
+          "section": "materials"
+        },
+        {
+          "key": "siding_material",
+          "label": "Dormer Siding Material",
+          "fa": "متریال نمای دورمر",
+          "type": "material",
+          "default": "Draupr Siding - Warm White",
           "section": "materials"
         },
         {
@@ -3404,6 +3420,14 @@ window.DRAUPR_SCHEMA = {
           "fa": "متریال تزئینات و فاشیا",
           "type": "material",
           "default": "Draupr Trim - Warm White",
+          "section": "materials"
+        },
+        {
+          "key": "fascia_material",
+          "label": "Roof Fascia Material",
+          "fa": "متریال فاشیای سقف",
+          "type": "material",
+          "default": "Draupr Mullion - Graphite",
           "section": "materials"
         },
         {
@@ -3494,6 +3518,12 @@ window.DRAUPR_SCHEMA = {
           "key": "wall_material"
         },
         {
+          "id": "siding",
+          "label": "Dormer Siding",
+          "fa": "نمای دورمر",
+          "key": "siding_material"
+        },
+        {
           "id": "roof",
           "label": "Roof",
           "fa": "سقف",
@@ -3507,9 +3537,15 @@ window.DRAUPR_SCHEMA = {
         },
         {
           "id": "trim",
-          "label": "Trim and Fascia",
-          "fa": "تزئینات و فاشیا",
+          "label": "Facade Trim",
+          "fa": "تزئینات نما",
           "key": "trim_material"
+        },
+        {
+          "id": "fascia",
+          "label": "Roof Fascia",
+          "fa": "فاشیای سقف",
+          "key": "fascia_material"
         },
         {
           "id": "glass",
@@ -3518,8 +3554,8 @@ window.DRAUPR_SCHEMA = {
           "key": "glass_material"
         }
       ],
-      "hint": "Draw the real footprint on a roof. All nine Dormer types use roof-hosted parametric geometry, a physical roof opening, adaptive front window, and separate frame and trim finishes.",
-      "faHint": "محدوده واقعی را روی سقف رسم کنید. هر نه نوع دورمر از هندسه پارامتریک متصل به سقف، بازشوی واقعی، پنجره جلویی تطبیقی و متریال‌های جداگانه قاب و تزئینات استفاده می‌کنند."
+      "hint": "Draw the real footprint on a roof. The reference-style Gabled Dormer uses a divided-light window, louvered shutters, seamless horizontal-siding texture, dark roof fascia, and walls clipped below the true roof underside. Gutters are not generated.",
+      "faHint": "محدوده واقعی را روی سقف رسم کنید. دورمر شیروانی مرجع دارای پنجره تقسیم‌بندی‌شده، کرکره لووردار، تکسچر یکپارچه نمای افقی، فاشیای تیره و دیوارهای کوتاه‌شده تا زیرسطح واقعی سقف است. گاتر ساخته نمی‌شود."
     },
     {
       "id": "molding",
