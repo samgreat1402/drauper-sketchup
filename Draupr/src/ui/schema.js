@@ -1,5 +1,5 @@
 window.DRAUPR_SCHEMA = {
-  "version": "4.1.29",
+  "version": "4.1.39",
   "schemaVersion": 1,
   "tools": [
     {

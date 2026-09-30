@@ -40,7 +40,7 @@ module Draupr
       cmd=::UI::Command.new(name,&action);cmd.tooltip=name;cmd.status_bar_text=name
       file=name.include?('Wall') ? 'wall' : 'icon'
       cmd.small_icon=File.join(SRC,'assets',"#{file}_16.png");cmd.large_icon=File.join(SRC,'assets',"#{file}_24.png")
-      # Only the Studio launcher goes on the toolbar; the rest stay in the Extensions menu.
+      # The unified vertical Studio is the native toolbar launcher.
       menu.add_item(cmd);toolbar.add_item(cmd) if name=='Open Draupr Studio'
     end
     menu.add_separator

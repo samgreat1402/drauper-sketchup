@@ -1,0 +1,140 @@
+{
+  "version": "4.1.39",
+  "buttons": 18,
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "modifySplit",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifyTrim",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifyAlignBaseline",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "alignFaces",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifyJunction",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "wallTrim",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "attachTop",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "attachBase",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "detachBoundary",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifyStep",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifyHealOpening",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifySplayOpening",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifySweep",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifyDisassemble",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "modifyEdgeDetail",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "roofIntersection",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "roofValley",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    },
+    {
+      "id": "roofJoin",
+      "html": true,
+      "frontend": true,
+      "bridge": true,
+      "implementation": true
+    }
+  ],
+  "regressions": {
+    "interactive_edge_picker": true,
+    "arbitrary_edge_orientation": true,
+    "railing_returns_consumed": true,
+    "detach_noop_blocked": true
+  }
+}

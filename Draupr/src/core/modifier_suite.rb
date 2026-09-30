@@ -139,6 +139,34 @@ module Draupr
         base_left=Geom::Point3d.new(cut.x,cut.y,bottom).offset(side,left);base_right=Geom::Point3d.new(cut.x,cut.y,bottom).offset(side,right);top_right=Geom::Point3d.new(base_right.x,base_right.y,top);top_left=Geom::Point3d.new(base_left.x,base_left.y,top)
         [base_left,base_right,top_right,top_left]
       end
+      # Returns the visible knife station rather than the centre of an oversized
+      # cutting plane. For roof-attached walls the top is evaluated at this exact
+      # station, so the indicator cannot extend to the wall's global/ridge height.
+      def split_preview_line(object,local,display_world=nil)
+        solution=knife_solution(object,local);cut=solution[:cut];points=solution[:points];index=solution[:index];p=solution[:p]
+        direction=points[index].vector_to(points[index+1]);direction.normalize!;side=Z_AXIS.cross(direction);side=Y_AXIS.clone if side.length<1e-8;side.normalize!
+        anchor=cut.clone
+        if display_world
+          display_local=Transforms.world_point_to_local(object,display_world);lateral=cut.vector_to(display_local).dot(side)
+          if solution[:kind]=='wall'
+            lo,hi=Geometry.alignment_offsets(p['thickness'].to_f,p['alignment']);lateral=[[lateral,lo].max,hi].min
+          else
+            limit=[[p['thickness'].to_f,p['width'].to_f,p['depth'].to_f].max/2.0,25.mm].max;lateral=[[lateral,-limit].max,limit].min
+          end
+          anchor=cut.offset(side,lateral)
+        end
+        bounds=object.definition.bounds;bottom=[bounds.min.z,anchor.z].min;top=bounds.max.z
+        if solution[:kind]=='wall'
+          overrides=p['segment_height_overrides']||{};height=overrides.fetch(index.to_s,overrides.fetch(index,p['height'])).to_f
+          bottom=Walls.boundary_z(p['base_constraint'],anchor,anchor.z)
+          top=Walls.boundary_z(p['top_constraint'],anchor,anchor.z+height)
+        end
+        raise bilingual('The knife station has no visible height.','محل برش ارتفاع قابل مشاهده‌ای ندارد.') if top-bottom<=1.mm
+        [Geom::Point3d.new(anchor.x,anchor.y,bottom),Geom::Point3d.new(anchor.x,anchor.y,top)]
+      rescue StandardError
+        guide=split_preview_path(object,local)
+        [Geometry.midpoint(guide[0],guide[1]),Geometry.midpoint(guide[2],guide[3])]
+      end
       def trim_path_to_plane(object,local_click,world_plane)
         kind,p,points=path_points!(object);first=local_click.distance(points.first)<=local_click.distance(points.last);endpoint=first ? points.first : points.last;neighbor=first ? points[1] : points[-2]
         raise bilingual('Pick close to the first or last path segment.','نزدیک اولین یا آخرین بخش مسیر کلیک کنید.') if points.length>2 && nearest_on_path(points,local_click)[1].between?(1,points.length-3)
@@ -191,7 +219,9 @@ module Draupr
         Transactions.run("Attach wall #{boundary}") { rebuild_parametric(wall,'wall',p,true) };true
       end
       def detach_boundaries(wall)
-        _kind,p=ensure_editable!(wall,['wall']);p.delete('top_constraint');p.delete('base_constraint');Transactions.run('Detach wall boundaries') { rebuild_parametric(wall,'wall',p,true) };true
+        _kind,p=ensure_editable!(wall,['wall'])
+        raise bilingual('This wall has no attached top or base boundary.','این دیوار مرز بالا یا پایین متصل ندارد.') unless p['top_constraint'] || p['base_constraint']
+        p.delete('top_constraint');p.delete('base_constraint');Transactions.run('Detach wall boundaries') { rebuild_parametric(wall,'wall',p,true) };true
       end
       def step_at(object,local,delta)
         kind,p,points=path_points!(object);raise bilingual('Remove hosted openings before stepping this wall.','پیش از پله‌دار کردن دیوار، بازشوهای متصل را حذف کنید.') if kind=='wall' && !Walls.holes(object).empty?
@@ -246,20 +276,36 @@ module Draupr
           ObjectIndex.invalidate
         end;true
       end
-      def detail_edges(edges,style,size)
-        raise bilingual('Select one or more edges first.','ابتدا یک یا چند لبه انتخاب کنید.') if edges.empty?;raise bilingual('Detail size must be positive.','اندازه جزئیات باید مثبت باشد.') unless size.to_f>0
+      def detail_segments(segments,style,size)
+        raise bilingual('Click or preselect one or more visible edges first.','ابتدا یک یا چند لبه قابل مشاهده را کلیک یا انتخاب کنید.') if segments.empty?;raise bilingual('Detail size must be positive.','اندازه جزئیات باید مثبت باشد.') unless size.to_f>0
+        created=0
         Transactions.run("Create #{style} edge detail") do
           root=Sketchup.active_model.active_entities.add_group;root.name="Draupr #{style.capitalize} Edge Detail";material=Materials.by_name_or_default(nil,:concrete)
-          edges.each_with_index do |edge,index|
-            a=edge.start.position;b=edge.end.position;vector=a.vector_to(b);next if vector.length<1.mm
-            if style.to_s=='bullnose';Builders.bar_between(root.entities,'detail',"bullnose_#{index}",a,b,size.to_f/2,size.to_f/2,material)
+          segments.each_with_index do |(a,b),index|
+            vector=a.vector_to(b);next if vector.length<1.mm
+            length=vector.length;direction=vector.clone;direction.normalize!
+            reference=[X_AXIS,Y_AXIS,Z_AXIS].min_by { |axis| direction.dot(axis).abs }
+            side=reference.cross(direction);next if side.length<1e-9;side.normalize!
+            up=direction.cross(side);next if up.length<1e-9;up.normalize!
+            if style.to_s=='bullnose'
+              part=Parts.cylinder(root.entities,'detail',"bullnose_#{index}",ORIGIN,size.to_f/2,length,material,24)
+              part.transformation=Geom::Transformation.axes(a,side,up,direction);created+=1
             else
-              direction=vector.normalize;side=Z_AXIS.cross(direction);side=Y_AXIS.clone if side.length<1e-8;side.normalize!;part=Parts.make(root.entities,'detail',"chamfer_#{index}",material);face=part.entities.add_face(a,a.offset(side,size),a.offset(Z_AXIS,-size));face.pushpull(vector.length) if face
+              part=Parts.make(root.entities,'detail',"chamfer_#{index}",material)
+              face=part.entities.add_face(a,a.offset(side,size),a.offset(up,size))
+              if face
+                face.reverse! if face.normal.dot(direction)<0
+                face.pushpull(length);created+=1
+              end
             end
           end
+          raise bilingual('No usable edge longer than 1 mm was found.','هیچ لبه قابل استفاده بلندتر از ۱ میلی‌متر پیدا نشد.') if created==0
           root.set_attribute('Draupr_Detail','style',style.to_s);root.set_attribute('Draupr_Detail','size',size.to_f)
           selection=Sketchup.active_model.selection;selection.clear;selection.add(root)
         end;true
+      end
+      def detail_edges(edges,style,size)
+        detail_segments(edges.map { |edge| [edge.start.position,edge.end.position] },style,size)
       end
       def resolved_target_plane(record)
         target=record.is_a?(Hash) ? record['target'] : nil;return nil unless target.is_a?(Hash) && target['persistent_id']

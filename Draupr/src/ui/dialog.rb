@@ -39,7 +39,7 @@ module Draupr
           @dialog.bring_to_front;event('workspace',{'workspace'=>workspace}) if workspace;return
         end
         @ready=false;@initial_workspace=workspace
-        dlg=::UI::HtmlDialog.new(dialog_title:'Draupr Studio',preferences_key:'com.draupr.studio',scrollable:false,resizable:true,width:610,height:820,min_width:420,min_height:560,style: ::UI::HtmlDialog::STYLE_DIALOG)
+        dlg=::UI::HtmlDialog.new(dialog_title:'Draupr Studio',preferences_key:'com.draupr.studio',scrollable:false,resizable:true,width:480,height:840,min_width:390,min_height:580,style: ::UI::HtmlDialog::STYLE_DIALOG)
         @dialog=dlg
         dlg.add_action_callback('studioCommand') { |_context,raw| command(raw) }
         dlg.set_on_closed do
@@ -203,7 +203,12 @@ module Draupr
         when 'modifyDisassemble'
           raise 'Confirm the one-way disassembly first. / ابتدا جداسازی یک‌طرفه را تأیید کنید.' unless d['confirmed']==true;objects=d.fetch('ids',[]).map { |id| Core::Objects.get(id) };Core::ModifyTools.disassemble(objects);true
         when 'modifyEdgeDetail'
-          style=d['style'].to_s;raise 'Choose chamfer or bullnose. / پخ یا گرده را انتخاب کنید.' unless %w[chamfer bullnose].include?(style);Core::ModifyTools.detail_edges(Sketchup.active_model.selection.grep(Sketchup::Edge),style,Core::Parameters.length(d['size']||'20 mm'));true
+          style=d['style'].to_s;raise 'Choose chamfer or bullnose. / پخ یا گرده را انتخاب کنید.' unless %w[chamfer bullnose].include?(style)
+          size=Core::Parameters.length(d['size']||'20 mm');raise 'Detail size must be positive. / اندازه جزئیات باید مثبت باشد.' unless size>0
+          edges=Sketchup.active_model.selection.grep(Sketchup::Edge)
+          if edges.empty?;Sketchup.active_model.select_tool(Studio::EdgeDetailTool.new(style,size))
+          else;Core::ModifyTools.detail_edges(edges,style,size);end
+          true
         when 'edit'
           Sketchup.active_model.select_tool(nil);Core::Objects.edit_many(d.fetch('ids',[]),d.fetch('changes',{}));selection
         when 'previewEdit'

@@ -120,7 +120,8 @@ module Draupr
       def onMouseMove(_flags,x,y,view)
         pick=ModifierPicking.knife_pick(view,x,y);@object=pick&&pick[0];@local=pick&&pick[1];@display_world=pick&&pick[2];@guide=nil;@error=nil
         if @object&&@local
-          @guide=Core::ModifyTools.split_preview_path(@object,@local).map { |point| point.transform(@object.transformation).transform(Sketchup.active_model.edit_transform) }
+          transform=Core::Transforms.entity_to_world(@object)
+          @guide=Core::ModifyTools.split_preview_line(@object,@local,@display_world).map { |point| point.transform(transform) }
           Sketchup.set_status_text('Knife ready: click to create two independent parametric objects. / چاقو آماده است؛ برای ساخت دو آبجکت پارامتریک مستقل کلیک کنید.')
         end;view.invalidate
       rescue StandardError=>error
@@ -133,9 +134,8 @@ module Draupr
       rescue StandardError=>error;@error=error.message;UI::Dialog.notify(error.message,'error');view.invalidate;end
       def draw(view)
         return unless @guide
-        bottom=Geom::Point3d.new((@guide[0].x+@guide[1].x)/2.0,(@guide[0].y+@guide[1].y)/2.0,(@guide[0].z+@guide[1].z)/2.0)
-        top=Geom::Point3d.new((@guide[2].x+@guide[3].x)/2.0,(@guide[2].y+@guide[3].y)/2.0,(@guide[2].z+@guide[3].z)/2.0)
-        view.line_stipple='';view.drawing_color=[235,45,45];view.line_width=6;view.draw(GL_LINES,[bottom,top])
+        view.line_stipple='';view.drawing_color=[235,45,45];view.line_width=5;view.draw(GL_LINES,@guide)
+        view.draw_points([@display_world],10,2,[255,220,70]) if @display_world
       end
     end
 
@@ -163,7 +163,7 @@ module Draupr
       def onCancel(_reason,view);if @reference;@reference=nil;else;Sketchup.active_model.select_tool(nil);end;view.invalidate;end
       def onMouseMove(_flags,x,y,view);@path=Picking.path(view,x,y);view.invalidate;end
       def onLButtonDown(_flags,x,y,view)
-        object=ModifierPicking.object_at(view,x,y);raise Core::I18n.message('Pick a supported Draupr path.','یک مسیر پشتیبانی‌شده Draupr انتخاب کنید.') unless object;Core::ModifyTools.path_points!(object)
+        object=ModifierPicking.object_at(view,x,y);raise Core::I18n.message('Pick a Draupr Wall, Curtain Wall, Beam, Railing, Louver, Molding, or Strip Foundation path—not an ordinary SketchUp group.','یک مسیر پارامتریک پشتیبانی‌شده Draupr انتخاب کنید، نه گروه معمولی SketchUp.') unless object;Core::ModifyTools.path_points!(object)
         if @reference;Core::ModifyTools.align_baselines(@reference,object);@reference=nil;UI::Dialog.notify(Core::I18n.message('Baselines aligned.','خطوط مبنا هم‌راستا شدند.'),'success')
         else;@reference=object;Sketchup.set_status_text('Reference baseline set. Click the path to move. / خط مبنا تنظیم شد؛ مسیر قابل‌حرکت را کلیک کنید.');end;view.invalidate
       rescue StandardError=>error;UI::Dialog.notify(error.message,'error');end
@@ -254,6 +254,40 @@ module Draupr
         Core::ModifyTools.modify_sweep(object,@options['anchor'],@options['flip']==true,@options['startReturn']==true,@options['endReturn']==true,@options['returnLength']);UI::Dialog.notify(Core::I18n.message('Sweep updated.','مسیر پروفیل به‌روزرسانی شد.'),'success');view.invalidate
       rescue StandardError=>error;UI::Dialog.notify(error.message,'error');end
       def draw(view);Picking.wire_bounds(view,@path,[35,150,215]);end
+    end
+
+    class EdgeDetailTool
+      def initialize(style,size);@style=style.to_s;@size=size.to_f;@path=[];@segment=nil;end
+      def activate
+        Sketchup.set_status_text("Edge #{@style.capitalize}: click a visible edge. Repeat or press Esc to exit. / روی یک لبه قابل مشاهده کلیک کنید.")
+      end
+      def onSetCursor;id=ModifyCursor.trim;id ? (::UI.set_cursor(id);true) : false;end
+      def onCancel(_reason,view);Sketchup.active_model.select_tool(nil);view.invalidate;end
+      def edge_segment(path)
+        edge=path.reverse.find { |entity| entity.is_a?(Sketchup::Edge) };return nil unless edge
+        index=path.index(edge);edit=Sketchup.active_model.edit_transform;transform=edit
+        path[0...index].each { |entity| transform=transform*entity.transformation if entity.respond_to?(:transformation) }
+        active_inverse=edit.inverse
+        [edge.start.position.transform(transform).transform(active_inverse),edge.end.position.transform(transform).transform(active_inverse)]
+      end
+      def onMouseMove(_flags,x,y,view)
+        @path=Picking.path(view,x,y);@segment=edge_segment(@path);view.invalidate
+      rescue StandardError
+        @path=[];@segment=nil;view.invalidate
+      end
+      def onLButtonDown(_flags,x,y,view)
+        @path=Picking.path(view,x,y);@segment=edge_segment(@path)
+        raise Core::I18n.message('Click a visible edge.','روی یک لبه قابل مشاهده کلیک کنید.') unless @segment
+        Core::ModifyTools.detail_segments([@segment],@style,@size)
+        UI::Dialog.notify(Core::I18n.message("#{@style.capitalize} edge detail created.",'جزئیات لبه ایجاد شد.'),'success')
+        @segment=nil;view.invalidate
+      rescue StandardError=>error;UI::Dialog.notify(error.message,'error');end
+      def draw(view)
+        Picking.wire_bounds(view,@path,[235,140,25]) unless @path.empty?
+        return unless @segment
+        edit=Sketchup.active_model.edit_transform
+        view.drawing_color=[235,140,25];view.line_width=6;view.draw(GL_LINES,@segment.map { |point| point.transform(edit) })
+      end
     end
   end
 end

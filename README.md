@@ -3,7 +3,7 @@
 **Draupr Studio** is a free and open-source parametric architectural modeling extension for SketchUp. It provides intelligent architectural objects, hosted relationships, material workflows, editing tools, and bilingual English–Persian support.
 
 [![License: GPL v3+](https://img.shields.io/badge/License-GPLv3%2B-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-4.1.29%20Preview-orange.svg)](Draupr/src/config/release.json)
+[![Release](https://img.shields.io/badge/release-4.1.39%20Preview-orange.svg)](Draupr/src/config/release.json)
 [![Native testing](https://img.shields.io/badge/native%20testing-required-red.svg)](Draupr/qa/NATIVE_ACCEPTANCE.md)
 
 > **Project status: Preview.** The source is published for testing and contribution. Review the native acceptance checklist before using Draupr in production work.
@@ -16,11 +16,12 @@
 - Nine roof-hosted Dormer types with physical roof openings and editable materials.
 - Material assignment, reusable presets, object library, project levels, quantities, and reports.
 - English and Persian user interface with RTL support.
+- Unified tabbed vertical Studio with icon-first creation and modifier tools, accessible hover labels, and the complete editing, material, library, and project interface.
 - SketchUp-native Undo/Redo transactions and persistent parametric metadata.
 
 ## Current preview
 
-The current source version is **4.1.29 Preview**. Recent Dormer work includes:
+The current source version is **4.1.39 Preview**. Recent work includes an original 41-icon CAD/BIM family with function-specific architectural symbols, a high-contrast workspace rail, and the corrected face-aligned Knife indicator, plus:
 
 - exact host-roof plane intersections;
 - adaptive divided-light windows and optional Gabled shutters;

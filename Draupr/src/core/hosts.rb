@@ -145,13 +145,35 @@ module Draupr
           aa=pa.map { |point| Geom::Vector3d.new(point.x,point.y,point.z).dot(axis) };bb=pb.map { |point| Geom::Vector3d.new(point.x,point.y,point.z).dot(axis) };[aa.max,bb.max].min-[aa.min,bb.min].max>0.5.mm
         end
       end
+      # Return the usable uphill distance on the selected roof face at one
+      # across-slope station. This lets a Dormer preserve its requested height
+      # by extending its rear join beyond the sketched minimum footprint, but
+      # never beyond the actual host face (for example across the main ridge).
+      def roof_face_uphill_depth(quad,origin,xaxis,yaxis,station)
+        hits=[]
+        quad.each_with_index do |a,index|
+          b=quad[(index+1)%quad.length]
+          av=origin.vector_to(a);bv=origin.vector_to(b)
+          au=av.dot(xaxis);bu=bv.dot(xaxis);ad=av.dot(yaxis);bd=bv.dot(yaxis)
+          if (bu-au).abs<1e-8
+            hits.concat([ad,bd]) if (station-au).abs<=0.5.mm
+            next
+          end
+          t=(station-au)/(bu-au)
+          hits << ad+(bd-ad)*t if t>=-1e-7 && t<=1.0+1e-7
+        end
+        hits.select { |distance| distance>1.mm }.min
+      end
       def roof_object_placement(kind,p,roof,rec)
         o=Geom::Point3d.new(*rec['o']);x=Geom::Vector3d.new(*rec['x']);surface_y=Geom::Vector3d.new(*rec['y'])
         if kind.to_s=='dormer'
           horizontal_y=Geom::Vector3d.new(surface_y.x,surface_y.y,0);raise 'This roof face is too steep for a dormer.' if horizontal_y.length<0.05
           horizontal_factor=horizontal_y.length;horizontal_y.normalize!;horizontal_y.reverse! if horizontal_y.dot(surface_y)<0
           depth=rec['d'].to_f*horizontal_factor;host_rise=rec['d'].to_f*surface_y.z
-          q=p.merge('width'=>rec['w'].to_f,'depth'=>depth,'host_slope_rise'=>host_rise,'host_slope'=>host_rise/[depth,0.0001].max,'host_surface_factor'=>horizontal_factor,'placement_mode'=>'surface','z_offset'=>0.0,'rotation'=>0.0)
+          quad=Builders.roof_faces(Objects.params(roof))[rec['face'].to_i]
+          available_surface=quad && [0.0,rec['w'].to_f].filter_map { |station| roof_face_uphill_depth(quad,o,x,surface_y,station) }.min
+          max_depth=available_surface ? [available_surface*horizontal_factor-30.mm,depth].max : depth
+          q=p.merge('width'=>rec['w'].to_f,'depth'=>depth,'host_max_depth'=>max_depth,'host_slope_rise'=>host_rise,'host_slope'=>host_rise/[depth,0.0001].max,'host_surface_factor'=>horizontal_factor,'placement_mode'=>'surface','z_offset'=>0.0,'rotation'=>0.0)
           [q,roof.transformation*Geom::Transformation.axes(o,x,horizontal_y,Z_AXIS)]
         else
           q=p.merge('width'=>rec['w'].to_f,'depth'=>rec['d'].to_f,'placement_mode'=>'surface','z_offset'=>0.0,'rotation'=>0.0)

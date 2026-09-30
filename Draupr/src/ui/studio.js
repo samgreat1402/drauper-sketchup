@@ -3,8 +3,98 @@
 const $=id=>document.getElementById(id), schema=window.DRAUPR_SCHEMA, tools=Object.fromEntries(schema.tools.map(t=>[t.id,t]));
 const E={create:'Create',edit:'Edit',materials:'Materials',library:'Library',project:'Project',geometry:'Geometry',placement:'Placement',advanced:'Advanced',draw:'Draw',place:'Place',noSelection:'Select a Draupr object in the model.',selection:'selected',mixed:'— Mixed —',ready:'Ready',connected:'Connected',preview:'Preview',all:'All',model:'In model',recent:'Recent',favorites:'Favorites',useMaterial:'Use this material',editMaterial:'Edit / duplicate',favorite:'Favorite',materialName:'Material name',color:'Color',opacity:'Opacity (%)',duplicateMaterial:'Create an independent duplicate first',duplicateName:'Duplicate name',sharedConfirm:'I understand this changes EVERY use of the shared material.',textureWidth:'Real texture width',textureHeight:'Real texture height',name:'Name',loadPreset:'Load',rename:'Rename',noPresets:'No saved presets yet.',reports:'Reports',health:'Model health',settings:'Settings',type:'Type',level:'Level',area:'Area (m²)',volume:'Volume (m³)',length:'Length',active:'Active',line:'Two endpoints',path:'Connected path',rectangle:'Opposite corners',rotated:'Rotated · three clicks',direction:'Position + direction',point:'Single point',host:'On a wall',onRoof:'On a roof',drawHint:'Click in the model. Type exact dimensions + Enter. Esc steps back.',noMaterial:'Choose a material first.',searchMaterials:'Find a material…',searchPresets:'Find a preset…',deleteConfirm:'Delete selected objects and any openings linked to selected walls? SketchUp Undo is available.',healConfirm:'Close all openings and remove the opening objects linked to these walls?',saved:'Saved',applied:'Changes applied',toolActive:'Tool active — click in the model.',changes:'changed',noChanges:'No changes to apply.',previewHint:'Wireframe preview. Click in the model or press Esc to exit.',usingDefaults:'Defaults for next object',selectPart:'Choose a part',nominalSize:'Nominal dimensions',choose:'Choose',readOnlyHosted:'Placement is controlled by the host wall.',cancelled:'Cancelled',done:'Done',presetName:'Preset name',missing:'Missing',objectLibrary:'Object Library',saveObject:'Save selection',browse:'Browse…',noObjects:'No saved objects yet.',sharedFolder:'SHARED FOLDER',openFolder:'Open folder',uncategorized:'Uncategorized',category:'Category',tags:'Tags',description:'Description',rotation:'Rotation (°)',scale:'Scale',exportMaterials:'Material totals CSV',exportLevels:'Level totals CSV',alignSurface:'Align to picked face',replace:'Replace',replaceConfirm:'Replace the one selected group or component?',roofIntersection:'Intersection guides',roofValley:'Valley flashing',roofJoin:'Join roof edge to face',modify:'Modify',modifyTools:'SELECTION TOOLS',align:'Align',alignFaces:'Align faces' ,walls:'Walls',roofs:'Roofs',wallTrim:'Trim / Extend to Corner',wallSplit:'Split wall',modifyHint:'Wall Corner: click the piece of each wall to keep; right-click for Butt, Miter, Square Off, and priority. Roof Join: click source edge, then target face.',builtInProfiles:'Built-in profiles',railingPresets:'Railing presets',localRailingSources:'LOCAL COMPONENT SOURCES',railingSourceModels:'Railing Source Models',railingSourceHint:'Draupr reads user-owned SKP files from this folder. Models are not included in the extension.',validSources:'valid sources',missingSources:'missing sources',dormerTypes:'Dormer types',drawPath:'Draw path',selectedEdges:'Selected edges',pickConnectedPath:'Pick connected path',generateFromPath:'Generate from path',pickPath:'Pick path',selectedEdgesHint:'Select one connected edge chain in SketchUp, then click Generate.',pickPathHint:'Click an edge or SketchUp curve to generate the object from its connected path.',topologyPath:'Topology & Path',splitAssembly:'Split Assembly / Knife',trimBoundary:'Trim / Extend to Boundary',alignBaseline:'Align Baseline',junctionsCorners:'Junctions & Corners',junctionSwitcher:'Junction Type',boundariesHeights:'Boundaries & Heights',attachTop:'Attach Top to Face',attachBase:'Attach Base to Face',detachBoundary:'Detach Boundaries',stepHeight:'Wall / Foundation Step',aperturesOpenings:'Apertures & Openings',healOpening:'Heal One Opening',splayOpening:'Splay / Deep Reveal',profilesSweeps:'Profiles & Sweeps',profileRegistration:'Registration, Flip & Returns',architecturalDetail:'Architectural Detailing',disassembleParts:'Disassemble to Parts',edgeDetail:'Edge Chamfer / Bullnose'};
 document.querySelectorAll('[data-i18n]').forEach(el=>{E[el.dataset.i18n]??=el.textContent.trim()});
-const iconPaths={create:'M12 3v18M3 12h18',edit:'M4 20l4-1L20 7l-3-3L5 16zM14 7l3 3',materials:'M12 3l9 9-9 9-9-9zM3 12h18',library:'M4 4h5v16H4zM11 4h4v16h-4zM18 5l3 14',modify:'M4 20l4-1L20 7l-3-3L5 16zM14 7l3 3',project:'M4 20V5h10v15M14 10h6v10M8 9h2M8 13h2M8 17h2',wall:'M3 6h18v14H3zM3 13h18M10 6v7M15 13v7',curtain_wall:'M3 4h18v16H3zM9 4v16M15 4v16M3 12h18',door:'M5 21V3h14v18M14 13h1',window:'M4 4h16v16H4zM12 4v16M4 12h16',column:'M8 4h8v16H8zM5 3h14M5 21h14',foundation:'M3 15h18v5H3zM9 4h6v11',beam:'M3 7l16-3 2 5-16 3zM5 12v5l16-3V9M3 7v5',slab:'M3 12l12-7 7 4-12 7zM3 12v4l7 4 12-7V9M10 16v4',grid:'M6 3v18M12 3v18M18 3v18M3 6h18M3 12h18M3 18h18',stair:'M3 20h5v-5h5v-5h5V5h4M3 20L21 3',roof:'M2 13l10-9 10 9M5 11v9h14v-9M9 20v-6h6v6',railing:'M3 7h18M4 7v14M12 7v14M20 7v14',louver:'M3 5h18M3 9h18M3 13h18M3 17h18M3 21h18'};
-const icon=k=>`<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="${iconPaths[k]||iconPaths.create}"/></svg>`;
+const iconPaths={
+ create:'M12 3v18M3 12h18',
+ edit:'M4 5h9v9H4zM10 20l3-.7L21 11l-3-3-8.3 8.3zM16 10l3 3',
+ modify:'M14 5a5 5 0 0 0-6 6l-5 5 5 5 5-5a5 5 0 0 0 6-6l-3 1-3-3z',
+ materials:'M4 14l7-7 7 7-7 7zM8 5l9 9M19 16c2 2 2 4 0 5-2-1-2-3 0-5',
+ library:'M4 4h5v16H4zM11 4h4v16h-4zM17 5l3-1 3 15-3 1z',
+ project:'M3 21V6h12v15M15 11h6v10M7 10h3M7 14h3M7 18h3M17 15h2M17 18h2M6 3h6',
+ wall:'M3 7l13-3 5 3v12L8 22l-5-3zM8 10v12M8 10l13-3',
+ curtain_wall:'M3 5l14-2 4 2v15L7 22l-4-2zM7 7v15M14 4v16M3 12l18-1M3 17l18-2',
+ door:'M5 21V3h14v18M8 21V6h8v15M8 6l8 2M13 14h.1',
+ window:'M4 5l13-2 3 2v14L7 21l-3-2zM7 7v14M13 4v16M4 12l16-1',
+ column:'M8 4h8M7 7h10M9 7v11M15 7v11M7 18h10M8 21h8',
+ foundation:'M10 3h4v9M6 12h12l3 8H3zM6 16h12',
+ beam:'M5 4h14v4h-5v8h5v4H5v-4h5V8H5z',
+ slab:'M3 10l13-5 5 4-13 5zM3 10v5l5 4 13-5V9M8 14v5',
+ grid:'M7 3v18M17 3v18M3 7h18M3 17h18M5 5l4 4M15 15l4 4',
+ stair:'M3 20h4v-4h4v-4h4V8h4V4M14 5h5v5M19 5l-8 8',
+ roof:'M2 14l10-9 10 9M5 13l7-5 7 5v7H5zM12 8v12',
+ railing:'M3 6h18M4 6v15M20 6v15M8 9v12M12 9v12M16 9v12M3 10h18',
+ louver:'M5 4v16M19 4v16M5 7h14M6 11l12-3M6 15l12-3M6 19l12-3',
+ ramp:'M3 20h18M4 17l16-9v9M13 8h7v7M20 8l-9 6',
+ skylight:'M3 18L9 5h12l-6 13zM8 15l4-7h6l-4 7zM12 8l2 7',
+ dormer:'M2 19l6-12 14 4M7 14l5-7 6 5v8H7zM12 7v13M9 16h6',
+ molding:'M3 20h18M5 20V6h14v5h-8v5h5v4M8 9h8'
+};
+const actionIconPaths={
+ modifySplit:'M3 6h18v12H3zM12 3v5M12 10v4M12 16v5M8 4l8 16',
+ modifyTrim:'M4 6v12h8M18 4v16M11 12h9M16 8l4 4-4 4',
+ modifyAlignBaseline:'M3 19h18M5 6h6v7H5zM14 9h5v6h-5zM8 13v6M16 15v4',
+ alignFaces:'M4 6h7v12H4zM15 4h5v12h-5zM11 9h4M12 7l3 2-3 2M15 14h-4M14 12l-3 2 3 2',
+ modifyJunction:'M4 4v16h5v-6h11V9H9V4z',
+ wallTrim:'M4 5v14h8M20 5v14h-8M9 12h6M7 9l3 3-3 3M17 9l-3 3 3 3',
+ attachTop:'M3 7l9-4 9 4M6 10v10h12V10M9 12l3-4 3 4M12 8v8',
+ attachBase:'M5 4v12h14V4M3 20h18M9 13l3 4 3-4M12 8v9',
+ detachBoundary:'M3 5l9-3 9 3M6 11v10h12V11M8 8h8M9 12l3-3 3 3',
+ modifyStep:'M3 20h5v-5h5v-5h5V5h3M5 7h8l3-3M13 7l3 3',
+ modifyHealOpening:'M3 5h18v14H3zM8 9h8v7H8zM8 12h8M12 9v7',
+ modifySplayOpening:'M3 5h18v14H3zM8 8l8-2v12l-8-2zM8 8v8',
+ modifySweep:'M4 19V9h6v6h4V7h6M16 4l4 3-4 3M7 12h3M12 15h3',
+ modifyDisassemble:'M9 9h6v6H9zM9 9L4 4M15 9l5-5M9 15l-5 5M15 15l5 5M4 4h4M4 4v4M20 4h-4M20 4v4M4 20h4M4 20v-4M20 20h-4M20 20v-4',
+ modifyEdgeDetail:'M4 20V4h16M4 20h16M13 4l7 7M20 11a9 9 0 0 1-9 9',
+ roofIntersection:'M2 15l8-8 6 6 6-6M3 9l9 10L21 9M12 19V9',
+ roofValley:'M3 7l9 11 9-11M3 18l9-5 9 5M12 7v11',
+ roofJoin:'M2 17l8-9 5 5 7-7M10 8v12M15 13v7M7 16l3-3 3 3'
+};
+const iconLayers={
+ create:{action:'M12 5v14M5 12h14'},
+ edit:{target:'M10 20l3-.7L21 11',action:'M16 10l3 3'},
+ modify:{target:'M3 16l5 5 5-5',action:'M14 5a5 5 0 0 0-6 6M19 10l-3 1-3-3'},
+ materials:{target:'M4 14l7-7 7 7-7 7z',action:'M19 16c2 2 2 4 0 5-2-1-2-3 0-5'},
+ library:{target:'M11 4h4v16',action:'M17 5l3-1 3 15-3 1'},
+ project:{target:'M15 11h6v10',add:'M6 3h6'},
+ wall:{target:'M3 7l13-3 5 3M8 10l13-3M8 10v12'},
+ curtain_wall:{glass:'M7 7l7-2v6l-7 1zM7 13l7-1v8l-7 2zM15 5l6 2v4l-6 0zM15 12h6v8l-6 0z',target:'M7 7v15M14 4v16M3 12l18-1'},
+ door:{target:'M8 21V6h8v15M8 6l8 2',action:'M13 14h.1'},
+ window:{glass:'M7 7l6-2v7l-6 1zM14 5l6 2v4l-6 1zM7 14l6-1v7l-6 1zM14 13l6-1v7l-6 1z',target:'M7 7v14M13 4v16M4 12l16-1'},
+ column:{target:'M9 7v11M15 7v11',add:'M7 7h10M7 18h10'},
+ foundation:{target:'M6 12h12l3 8H3z',add:'M10 3h4v9'},
+ beam:{target:'M10 8h4v8h-4z',add:'M5 4h14v4M5 16h14v4'},
+ slab:{glass:'M3 10l13-5 5 4-13 5z',target:'M3 10v5l5 4 13-5V9'},
+ grid:{target:'M7 3v18M17 3v18M3 7h18M3 17h18',action:'M5 5l4 4M15 15l4 4'},
+ stair:{target:'M3 20h4v-4h4v-4h4V8h4V4',action:'M14 5h5v5M19 5l-8 8'},
+ roof:{glass:'M2 14l10-9 10 9-10-6z',target:'M5 13l7-5 7 5M12 8v12'},
+ railing:{target:'M3 6h18M3 10h18M4 6v15M20 6v15',add:'M8 9v12M12 9v12M16 9v12'},
+ louver:{target:'M6 11l12-3M6 15l12-3M6 19l12-3',action:'M5 7h14'},
+ ramp:{target:'M4 17l16-9v9',action:'M13 8h7v7M20 8l-9 6'},
+ skylight:{glass:'M8 15l4-7h6l-4 7z',target:'M3 18L9 5h12l-6 13z'},
+ dormer:{glass:'M9 16h6v4H9z',target:'M7 14l5-7 6 5v8H7z',action:'M2 19l6-12 14 4'},
+ molding:{target:'M5 20V6h14v5h-8v5h5v4',action:'M8 9h8'}
+};
+const actionIconLayers={
+ modifySplit:{remove:'M12 3v5M12 10v4M12 16v5M8 4l8 16',target:'M3 6h18v12H3z'},
+ modifyTrim:{target:'M18 4v16',action:'M11 12h9M16 8l4 4-4 4'},
+ modifyAlignBaseline:{target:'M3 19h18',action:'M8 13v6M16 15v4'},
+ alignFaces:{target:'M15 4h5v12h-5z',action:'M11 9h4M12 7l3 2-3 2M15 14h-4M14 12l-3 2 3 2'},
+ modifyJunction:{target:'M9 9h11v5H9',add:'M4 4v16h5'},
+ wallTrim:{target:'M4 5v14h8M20 5v14h-8',action:'M9 12h6M7 9l3 3-3 3M17 9l-3 3 3 3'},
+ attachTop:{target:'M3 7l9-4 9 4',action:'M9 12l3-4 3 4M12 8v8'},
+ attachBase:{target:'M3 20h18',action:'M9 13l3 4 3-4M12 8v9'},
+ detachBoundary:{target:'M3 5l9-3 9 3',remove:'M8 8h8',action:'M9 12l3-3 3 3'},
+ modifyStep:{target:'M3 20h5v-5h5v-5h5V5h3',action:'M5 7h8l3-3M13 7l3 3'},
+ modifyHealOpening:{add:'M8 9h8v7H8zM8 12h8M12 9v7',target:'M3 5h18v14H3z'},
+ modifySplayOpening:{target:'M8 8l8-2v12l-8-2z',action:'M8 8v8'},
+ modifySweep:{target:'M4 19V9h6v6h4V7h6',action:'M16 4l4 3-4 3'},
+ modifyDisassemble:{target:'M9 9h6v6H9z',action:'M9 9L4 4M15 9l5-5M9 15l-5 5M15 15l5 5'},
+ modifyEdgeDetail:{target:'M13 4l7 7M20 11a9 9 0 0 1-9 9',action:'M4 20V4h16'},
+ roofIntersection:{target:'M12 19V9',action:'M2 15l8-8 6 6 6-6M3 9l9 10L21 9'},
+ roofValley:{target:'M12 7v11',action:'M3 7l9 11 9-11M3 18l9-5 9 5'},
+ roofJoin:{target:'M10 8v12M15 13v7',add:'M7 16l3-3 3 3'}
+};
+const iconSvg=(base,layers={},standardKey=null)=>{const standard=window.DRAUPR_STANDARD_ICONS?.[standardKey];if(standard)return `<svg class="icon icon-custom" viewBox="0 0 24 24" aria-hidden="true">${standard}</svg>`;return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="icon-geometry" d="${base}"/>${layers.glass?`<path class="icon-glass" d="${layers.glass}"/>`:''}${layers.target?`<path class="icon-target" d="${layers.target}"/>`:''}${layers.action?`<path class="icon-action" d="${layers.action}"/>`:''}${layers.add?`<path class="icon-add" d="${layers.add}"/>`:''}${layers.remove?`<path class="icon-remove" d="${layers.remove}"/>`:''}</svg>`};
+const icon=k=>iconSvg(iconPaths[k]||iconPaths.create,iconLayers[k],k);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const copy=v=>JSON.parse(JSON.stringify(v));
 const S={connected:false,prefs:{language:'en',theme:'light',units:'mm',keep_drawing:true},ws:'create',category:'envelope',kind:'wall',drafts:{},selection:[],bound:[],changes:{},materials:{items:[],names:[],total:0},source:'all',material:null,library:[],project:{levels:[{id:'ground',name:'Ground',elevation:'0 mm'}],activeLevel:'ground'},fieldTarget:null,sampleTarget:null,panel:null,projectTab:'levels',reports:[],pending:new Map(),seq:0,pathSource:'draw'};
@@ -23,10 +113,14 @@ function request(action,payload={}){
 async function run(action,payload={},message=null){try{const data=await request(action,payload);if(message)notice(message,'success');return data}catch(e){notice(e.message,'error');throw e}}
 function applyLanguage(){document.documentElement.lang=S.prefs.language;document.documentElement.dir=S.prefs.language==='fa'?'rtl':'ltr';document.body.dataset.theme=S.prefs.theme;$('language').value=S.prefs.language;document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));$('materialSearch').placeholder=t('searchMaterials');$('presetSearch').placeholder=t('searchPresets')}
 function nav(){
- $('workspaces').innerHTML=['create','edit','modify','materials','library','project'].map(k=>`<button data-workspace="${k}" class="${S.ws===k?'active':''}" aria-current="${S.ws===k?'page':'false'}">${icon(k)}${esc(t(k))}</button>`).join('');
+ $('workspaces').innerHTML=['create','edit','modify','materials','library','project'].map(k=>{const name=t(k);return `<button data-workspace="${k}" class="${S.ws===k?'active':''}" aria-current="${S.ws===k?'page':'false'}" aria-label="${esc(name)}" title="${esc(name)}" data-tooltip="${esc(name)}">${icon(k)}<span class="sr-only">${esc(name)}</span></button>`}).join('');
  $('category').innerHTML=schema.categories.map(c=>`<option value="${c.id}" ${S.category===c.id?'selected':''}>${esc(label(c))}</option>`).join('');
- $('tools').innerHTML=schema.tools.filter(q=>q.category===S.category).map(q=>`<button role="tab" aria-selected="${q.id===S.kind}" class="${q.id===S.kind?'active':''}" data-tool="${q.id}">${icon(q.id)}${esc(label(q))}</button>`).join('');
+ $('tools').innerHTML=schema.tools.filter(q=>q.category===S.category).map(q=>{const name=label(q);return `<button role="tab" aria-selected="${q.id===S.kind}" class="tool-icon-button ${q.id===S.kind?'active':''}" data-tool="${q.id}" aria-label="${esc(name)}" title="${esc(name)}" data-tooltip="${esc(name)}">${icon(q.id)}<span class="sr-only">${esc(name)}</span></button>`}).join('');
  ['create','edit','modify','materials','library','project'].forEach(k=>$('view-'+k).hidden=k!==S.ws);
+}
+function enhanceModifierIcons(){
+ const ids=['modifySplit','modifyTrim','modifyAlignBaseline','alignFaces','modifyJunction','wallTrim','attachTop','attachBase','detachBoundary','modifyStep','modifyHealOpening','modifySplayOpening','modifySweep','modifyDisassemble','modifyEdgeDetail','roofIntersection','roofValley','roofJoin'];
+ ids.forEach(id=>{const b=$(id);if(!b)return;const name=b.textContent.trim();b.classList.add('tool-icon-button');b.title=name;b.dataset.tooltip=name;b.setAttribute('aria-label',name);b.innerHTML=`${iconSvg(actionIconPaths[id]||iconPaths.modify,actionIconLayers[id],id)}<span class="sr-only">${esc(name)}</span>`});
 }
 function workspace(ws){S.ws=ws;nav();if(ws==='edit'&&!Object.keys(S.changes).length)bindSelection();if(ws==='materials'){materialTargets();renderPanels();loadMaterials()}if(ws==='library'){renderLibrary();loadLibraryObjects();loadRailingSources()}if(S.connected)request('preferences',{workspace:ws}).catch(()=>{})}
 function preview(el,kind,p){
@@ -109,7 +203,7 @@ function projectNav(){const tabs=['levels','reports','health','settings'];$('pro
 function renderLevels(){$('levels').innerHTML=S.project.levels.map(l=>`<div class="level-row" data-level-id="${esc(l.id)}"><input type="radio" name="activeLevel" value="${esc(l.id)}" ${l.id===S.project.activeLevel?'checked':''} aria-label="${esc(t('active'))}"><input data-level-name value="${esc(l.name)}" aria-label="${esc(t('name'))}"><input data-level-z value="${esc(l.elevation)}" aria-label="Elevation"><button data-remove-level="${esc(l.id)}" aria-label="Remove level">×</button></div>`).join('')}
 function collectLevels(){S.project.levels=[...$('levels').querySelectorAll('.level-row')].map(row=>({id:row.dataset.levelId,name:row.querySelector('[data-level-name]').value,elevation:row.querySelector('[data-level-z]').value}));S.project.activeLevel=$('levels').querySelector('input:checked')?.value||S.project.levels[0]?.id}
 function renderQuantities(){const oldType=$('reportType').value,oldLevel=$('reportLevel').value;const types=[...new Set(S.reports.map(r=>r.type))],levels=[...new Set(S.reports.map(r=>r.level))];$('reportType').innerHTML=`<option value="">${esc(t('all'))} · ${esc(t('type'))}</option>`+types.map(v=>`<option value="${esc(v)}">${esc(label(tools[v]||{label:v}))}</option>`).join('');$('reportLevel').innerHTML=`<option value="">${esc(t('all'))} · ${esc(t('level'))}</option>`+levels.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');$('reportType').value=types.includes(oldType)?oldType:'';$('reportLevel').value=levels.includes(oldLevel)?oldLevel:'';const rows=S.reports.filter(r=>(!oldType||r.type===oldType)&&(!oldLevel||r.level===oldLevel));$('quantities').innerHTML=`<table><thead><tr>${['name','type','level','length','area','volume'].map(k=>`<th>${esc(t(k))}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.name)}${r.scaled?' ⚠':''}</td><td>${esc(label(tools[r.type]||{label:r.type}))}</td><td>${esc(r.level)}</td><td>${esc(r.length_display??r.length_mm??'—')}</td><td>${esc(r.area_m2??'—')}</td><td>${esc(r.volume_m3??'—')}</td></tr>`).join('')}</tbody></table>`}
-function renderAll(){$('refresh').innerHTML='<svg class="icon" viewBox="0 0 24 24"><path d="M20 7v5h-5M20 12a8 8 0 1 0-2 6M20 12l-3-5"/></svg>';applyLanguage();nav();strip();renderCreate();renderEdit();renderMaterials();renderLibrary();projectNav();renderLevels();if(S.ws==='library'){loadLibraryObjects();loadRailingSources();}$('units').value=S.prefs.units;$('theme').value=S.prefs.theme;$('keepDrawing').checked=S.prefs.keep_drawing}
+function renderAll(){$('refresh').innerHTML='<svg class="icon" viewBox="0 0 24 24"><path d="M20 7v5h-5M20 12a8 8 0 1 0-2 6M20 12l-3-5"/></svg>';applyLanguage();nav();strip();renderCreate();renderEdit();renderMaterials();renderLibrary();projectNav();renderLevels();enhanceModifierIcons();if(S.ws==='library'){loadLibraryObjects();loadRailingSources();}$('units').value=S.prefs.units;$('theme').value=S.prefs.theme;$('keepDrawing').checked=S.prefs.keep_drawing}
 let modalResolve;
 function modal(title,body,submit=t('save')){return new Promise(resolve=>{$('modalTitle').textContent=title;$('modalBody').innerHTML=body;$('modalSubmit').textContent=submit;modalResolve=resolve;$('modal').showModal()})}
 function closeModal(value=null){$('modal').close();if(modalResolve){modalResolve(value);modalResolve=null}}
@@ -189,7 +283,7 @@ async function clicked(event){const b=event.target.closest('button');if(!b)retur
  case 'modifySplayOpening':{const d=await modal(t('splayOpening'),`<div class="two-col"><label>Jamb splay (0–45°)<input name="angle" type="number" min="0" max="45" value="10"></label><label>Sill slope (0–15°)<input name="sillSlope" type="number" min="0" max="15" value="5"></label></div><label>Casing setback / عقب‌نشینی<input name="setback" value="25 mm"></label>`,t('apply'));if(d)await run('modifySplayOpening',d,t('toolActive'));break}
  case 'modifySweep':{const d=await modal(t('profileRegistration'),`<label>Profile anchor / نقطه مبنا<select name="anchor"><option value="left_top">Top Left</option><option value="center_top">Top Center</option><option value="right_top">Top Right</option><option value="left_middle">Middle Left</option><option value="center">Center</option><option value="right_middle">Middle Right</option><option value="left_bottom">Bottom Left</option><option value="center_bottom">Bottom Center</option><option value="right_bottom">Bottom Right</option></select></label><label class="check"><input name="flip" type="checkbox"><span>Flip normal / معکوس کردن سمت</span></label><label class="check"><input name="startReturn" type="checkbox"><span>Start return / برگشت ابتدا</span></label><label class="check"><input name="endReturn" type="checkbox"><span>End return / برگشت انتها</span></label><label>Return length / طول برگشت<input name="returnLength" value="50 mm"></label>`,t('apply'));if(d)await run('modifySweep',d,t('toolActive'));break}
  case 'modifyDisassemble':if(await confirmAction('Disassembly is one-way and removes parametric editing. Continue? / جداسازی یک‌طرفه است و ویرایش پارامتریک را حذف می‌کند. ادامه؟'))await run('modifyDisassemble',{ids:S.selection.map(x=>x.id),confirmed:true},t('done'));break;
- case 'modifyEdgeDetail':{const d=await modal(t('edgeDetail'),`<label>Style / نوع<select name="style"><option value="chamfer">Chamfer / پخ</option><option value="bullnose">Bullnose / گرده</option></select></label><label>Size / اندازه<input name="size" value="20 mm"></label>`,t('apply'));if(d)await run('modifyEdgeDetail',d,t('done'));break}
+ case 'modifyEdgeDetail':{const d=await modal(t('edgeDetail'),`<label>Style / نوع<select name="style"><option value="chamfer">Chamfer / پخ</option><option value="bullnose">Bullnose / گرده</option></select></label><label>Size / اندازه<input name="size" value="20 mm"></label><small>Preselect edges, or click Apply and then click a visible edge. / لبه‌ها را از قبل انتخاب کنید، یا پس از اعمال روی یک لبه کلیک کنید.</small>`,t('apply'));if(d)await run('modifyEdgeDetail',d,t('toolActive'));break}
  case 'exportQuantities':case 'exportSchedule':case 'exportMaterials':case 'exportLevels':case 'scenes':case 'diagnostics':await run(id);break;
  case 'sync':await run('sync',{},t('done'));selection(await run('selection'));break;
  case 'audit':{const data=await run('audit');$('auditResults').innerHTML=`<div class="card"><h2>${data.objects} ${esc(t('selection'))}</h2>${data.warnings.length?`<ul class="issues">${data.warnings.map(m=>`<li>${esc(m)}</li>`).join('')}</ul>`:esc(t('ready'))}</div>`;break}
@@ -209,6 +303,14 @@ let searchTimer;$('materialSearch').addEventListener('input',()=>{clearTimeout(s
 $('reportType').addEventListener('change',renderQuantities);$('reportLevel').addEventListener('change',renderQuantities);
 $('modalForm').addEventListener('submit',e=>{e.preventDefault();const d=Object.fromEntries(new FormData($('modalForm')));$('modalForm').querySelectorAll('input[type=checkbox][name]').forEach(el=>d[el.name]=el.checked);closeModal(d)});
 $('modal').addEventListener('cancel',e=>{e.preventDefault();closeModal()});
+function setNavCollapsed(value){
+ document.body.classList.toggle('nav-collapsed',value);
+ $('navCollapse').textContent=value?'▶':'◀';
+ $('navCollapse').setAttribute('aria-expanded',String(!value));
+ try{localStorage.setItem('draupr-nav-collapsed',value?'1':'0')}catch(_e){}
+}
+$('navCollapse').addEventListener('click',()=>setNavCollapsed(!document.body.classList.contains('nav-collapsed')));
+try{setNavCollapsed(localStorage.getItem('draupr-nav-collapsed')==='1')}catch(_e){setNavCollapsed(false)}
 function demoMaterials(){const names=[...new Set(schema.tools.flatMap(q=>q.fields.filter(f=>f.type==='material').map(f=>f.default)))];S.materials={names,total:names.length,items:names.map((name,i)=>({name,color:name.includes('Glass')?'#83bedb':name.match(/Timber|Walnut/)?'#aa815b':name.match(/Mullion|Steel/)?'#536072':name.includes('Brick')?'#af776a':'#c6c6bd',opacity:name.includes('Glass')?35:100,inModel:false,texture:false,favorite:false,category:'other'}))}}
 async function connect(attempt=0){if(window.sketchup&&typeof window.sketchup.studioCommand==='function'){try{const d=await request('ready');S.connected=true;$('connection').textContent=t('connected');$('offline').hidden=true;applyState(d);notice(t('ready'));return}catch(e){notice(e.message,'error')}}if(attempt<10){setTimeout(()=>connect(attempt+1),200);return}S.connected=false;$('connection').textContent=t('preview');$('offline').hidden=false;notice(t('offline'))}
 window.Draupr.__test={request,renderAll,bindSelection,workspace,tools,schema,esc};

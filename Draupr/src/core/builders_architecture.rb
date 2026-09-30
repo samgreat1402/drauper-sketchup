@@ -229,6 +229,16 @@ module Draupr
       end
       def build_railing(p)
         g=root('Railing',:framing);raw=p['path_points'].is_a?(Array) ? p['path_points'].map { |a| p3(*a) } : [ORIGIN,p3(p['length'])];pts=PathFrames.clean(raw,p['closed']==true)
+        if p['closed']!=true && pts.length>1 && p['return_length'].to_f>1.mm
+          first=pts[0].vector_to(pts[1]);last=pts[-2].vector_to(pts[-1]);first.normalize!;last.normalize!
+          first_side=Z_AXIS.cross(first);last_side=Z_AXIS.cross(last)
+          if first_side.length>1e-9 && last_side.length>1e-9
+            first_side.normalize!;last_side.normalize!
+            if p['flip_profile']==true;first_side.reverse!;last_side.reverse!;end
+            pts.unshift(pts.first.offset(first_side,p['return_length'].to_f)) if p['start_return']==true
+            pts.push(pts.last.offset(last_side,p['return_length'].to_f)) if p['end_return']==true
+          end
+        end
         pm=mat(p,'post_material',:steel);rm=mat(p,'rail_material',:steel);h=p['height'];total=0.0
         if WarehouseRailings.preset?(p['preset'])
           bar=lambda { |key,a,b,w,d,m| bar_between(g.entities,'rail',key,a,b,w,d,m) }
@@ -409,7 +419,14 @@ module Draupr
         raise 'The selected host roof is too flat for this Dormer. / سقف میزبان انتخاب‌شده برای این دورمر بیش از حد تخت است.' unless slope>0.02
         requested_eave=[p['height'].to_f,300.mm].max;requested_rise=[p['rise'].to_f,80.mm].max;depth=drawn;host_z=slope*depth
         raise 'The drawn Dormer footprint is too shallow for this roof slope. Draw farther uphill. / محدوده دورمر برای این شیب کم‌عمق است؛ آن را بیشتر به سمت بالا بکشید.' if host_z<350.mm
-        clearance=[[host_z*0.08,60.mm].max,180.mm].min;available=host_z-clearance;simple=type=='flat';rise_factor=type=='pointed' ? 1.25 : 1.0
+        # The drawn rectangle is a minimum placement footprint, not a hard
+        # ceiling on Dormer height. Use the remaining selected roof face up to
+        # its ridge/edge when available; only scale dimensions when the real
+        # host face cannot contain the requested rear intersection.
+        max_depth=[p.fetch('host_max_depth',drawn*2.0).to_f,drawn].max
+        max_host_z=slope*max_depth
+        clearance=[[max_host_z*0.035,45.mm].max,120.mm].min
+        available=max_host_z-clearance;simple=type=='flat';rise_factor=type=='pointed' ? 1.25 : 1.0
         requested_total=requested_eave+(simple ? 0.0 : requested_rise*rise_factor);fit_scale=[available/[requested_total,1.mm].max,1.0].min;eave=requested_eave*fit_scale;rise=requested_rise*fit_scale
         if eave<250.mm
           minimum_rise=simple ? 0.0 : 60.mm
@@ -423,7 +440,7 @@ module Draupr
         rear=join_profile.reverse.map { |x,z| p3(x0+(x/w)*(x1-x0),z/slope,z) }
         opening=[p3(x0,0,0),p3(x1,0,0)]+rear
         side_z=type=='shed' ? eave+rise : eave;side_y=side_z/slope;actual_depth=join_profile.map { |_x,z| z/slope }.max
-        {'opening'=>opening,'actual_depth'=>actual_depth,'drawn_depth'=>drawn,'geometry_contract'=>'roof-hosted-dormer-v5','auto_fitted'=>fit_scale<0.9999,'fit_scale'=>fit_scale,'direction_only'=>false,'wall_height'=>eave,'fitted_rise'=>rise,'front_base'=>0.0,'eave'=>eave,'profile'=>profile,'front_profile'=>front_profile,'panels'=>panels,'front_edges'=>front_edges,'side_edges'=>side_edges,'cheek_join'=>[side_y,side_z],'side_rear_z'=>side_z,'overhang'=>overhang}
+        {'opening'=>opening,'actual_depth'=>actual_depth,'drawn_depth'=>drawn,'host_max_depth'=>max_depth,'auto_extended'=>actual_depth>drawn+1.mm,'geometry_contract'=>'roof-hosted-dormer-v6','auto_fitted'=>fit_scale<0.9999,'fit_scale'=>fit_scale,'direction_only'=>false,'wall_height'=>eave,'fitted_rise'=>rise,'front_base'=>0.0,'eave'=>eave,'profile'=>profile,'front_profile'=>front_profile,'panels'=>panels,'front_edges'=>front_edges,'side_edges'=>side_edges,'cheek_join'=>[side_y,side_z],'side_rear_z'=>side_z,'overhang'=>overhang}
       end
       def extend_dormer_profile(profile,overhang)
         left_a,left_b=profile[0],profile[1];right_a,right_b=profile[-2],profile[-1]
@@ -604,7 +621,7 @@ module Draupr
         build_dormer_front_details(group.entities,solution,fascia_width,fascia_depth,materials)
         build_dormer_roof_shell(group.entities,type,solution,thickness,materials[:roof])
         shutters=front_window && type=='gabled' && p['shutters']!=false && p['shutters'].to_s!='false' && width>=1000.mm && solution['wall_height'].to_f>=350.mm
-        write(group,area_m2:width*solution['wall_height'].to_f*0.00064516,host_slope_rise_mm:p['host_slope_rise'].to_f*25.4,dormer_type:type,joined_depth_mm:solution['actual_depth']*25.4,roof_overhang_mm:solution['overhang'].to_f*25.4,reference_geometry:"#{type} exact host-plane intersection",drawn_depth_mm:solution['drawn_depth'].to_f*25.4,geometry_contract:solution['geometry_contract'],solid_cheeks:true,roof_shell_provides_soffit:true,separate_soffit_faces:false,shutters:shutters,siding_texture:true,roof_underside_clearance:true,physical_window_opening:front_window,window_reveals:front_window,fascia_width_mm:fascia_width*25.4,visual_refinement:'reference-gabled-v2',auto_fitted:solution['auto_fitted'],fit_scale:solution['fit_scale'])
+        write(group,area_m2:width*solution['wall_height'].to_f*0.00064516,host_slope_rise_mm:p['host_slope_rise'].to_f*25.4,dormer_type:type,joined_depth_mm:solution['actual_depth']*25.4,roof_overhang_mm:solution['overhang'].to_f*25.4,reference_geometry:"#{type} exact host-plane intersection",drawn_depth_mm:solution['drawn_depth'].to_f*25.4,geometry_contract:solution['geometry_contract'],solid_cheeks:true,roof_shell_provides_soffit:true,separate_soffit_faces:false,shutters:shutters,siding_texture:true,roof_underside_clearance:true,physical_window_opening:front_window,window_reveals:front_window,fascia_width_mm:fascia_width*25.4,visual_refinement:'reference-gabled-v2',auto_extended:solution['auto_extended'],auto_fitted:solution['auto_fitted'],fit_scale:solution['fit_scale'])
       end
       def build_molding(p)
         g=root('Molding',:framing);m=mat(p,'material',:wall_finish)
