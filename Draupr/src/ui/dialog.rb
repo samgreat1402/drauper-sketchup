@@ -187,6 +187,10 @@ module Draupr
         when 'modifySplit';Sketchup.active_model.select_tool(Studio::AssemblySplitTool.new);true
         when 'modifyTrim';Sketchup.active_model.select_tool(Studio::PathTrimBoundaryTool.new);true
         when 'modifyAlignBaseline';Sketchup.active_model.select_tool(Studio::BaselineAlignTool.new);true
+        when 'modifyWallLength'
+          walls=Core::Objects.selected.select { |object| Core::Metadata.read(object)['type']=='wall' }
+          raise 'Select exactly one Draupr wall.' unless walls.length==1
+          Sketchup.active_model.select_tool(Studio::WallDimensionTool.new(walls.first));true
         when 'modifyAttachBoundary'
           boundary=d['boundary'].to_s;raise 'Boundary must be top or base. / مرز باید بالا یا پایین باشد.' unless %w[top base].include?(boundary);Sketchup.active_model.select_tool(Studio::BoundaryAttachTool.new(boundary));true
         when 'modifyDetachBoundary'

@@ -13,8 +13,9 @@ module Draupr
   %w[data_schema settings materials tags geometry metadata diag preferences parameters transforms path_frames object_index i18n parts project builders molding_profiles railing_presets warehouse_railings builders_architecture].each { |name| Sketchup.require File.join(SRC,'core',name) }
   # Read-only legacy geometry recovery; no native boolean operation is used.
   Sketchup.require File.join(SRC,'tools','walls','wall_carve')
-  %w[walls objects wall_junctions wall_connections hosts material_service reports scenes library_service roof_tools modify_tools modifier_suite].each { |name| Sketchup.require File.join(SRC,'core',name) }
+  %w[walls objects wall_junctions wall_connections hosts material_service reports scenes library_service roof_tools modify_tools modifier_suite wall_length_solver].each { |name| Sketchup.require File.join(SRC,'core',name) }
   Sketchup.require File.join(SRC,'studio','draw_tool')
+  Sketchup.require File.join(SRC,'studio','wall_dimension_tool')
   Sketchup.require File.join(SRC,'studio','pickers')
   Sketchup.require File.join(SRC,'studio','modifier_pickers')
   Sketchup.require File.join(SRC,'ui','dialog')
@@ -26,6 +27,11 @@ module Draupr
     p=Core::Parameters.normalize('wall',{},Core::Preferences.defaults_for('wall'))
     p['level_id']=Core::Project.active_level
     Sketchup.active_model.select_tool(Studio::DrawTool.new('wall',p,'path'))
+  rescue StandardError => e;::UI.messagebox(e.message);end
+  def self.edit_wall_length
+    walls=Core::Objects.selected.select { |g| Core::Metadata.read(g)['type']=='wall' }
+    raise 'Select exactly one Draupr wall.' unless walls.length==1
+    Sketchup.active_model.select_tool(Studio::WallDimensionTool.new(walls.first))
   rescue StandardError => e;::UI.messagebox(e.message);end
   unless file_loaded?(__FILE__)
     menu=::UI.menu('Extensions').add_submenu('Draupr')
@@ -49,6 +55,8 @@ module Draupr
     ::UI.add_context_menu_handler do |context|
       next if Core::Objects.selected.empty?
       context.add_item('Edit in Draupr Studio') { Draupr.edit_selection }
+      walls=Core::Objects.selected.select { |g| Core::Metadata.read(g)['type']=='wall' }
+      context.add_item('Create Driving Wall Dimension') { Draupr.edit_wall_length } if walls.length==1
     end
     toolbar.show;file_loaded(__FILE__)
   end

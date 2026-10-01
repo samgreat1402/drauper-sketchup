@@ -1,5 +1,37 @@
 # Changelog
 
+## 4.1.43 Preview
+
+- Fixed the driving-dimension target step shown failing in the submitted recording.
+- Target endpoints can now be selected through the visible wall end cap, end edges, or nearby centerline marker.
+- Maps thick-wall visible corners back to the correct logical centerline endpoint in perspective views.
+- Expanded screen-space endpoint tolerance and highlights the resolved logical endpoint before clicking.
+
+## 4.1.42 Preview
+
+- Replaced unreliable automatic wall dimensions with user-authored driving dimensions.
+- Added a three-click workflow: fixed reference, selected-wall endpoint, and dimension-line placement.
+- References can originate on the target wall, another wall, or other inferencable SketchUp geometry.
+- Uses actual built wall-segment endpoints instead of assuming the stored path order represents the visible wall ends.
+- Drives the selected endpoint along the wall axis; near-perpendicular dimensions move the whole target wall.
+- Preserves hosted openings, blocks invalid shortening, and protects joined moving endpoints.
+
+## 4.1.41 Preview
+
+- Improved the temporary wall-dimension overlay discovered during native testing.
+- Moved the numeric label above the dimension line and added a high-contrast background and border.
+- Sized the label dynamically so formatted metric and imperial values remain readable.
+- Kept the endpoint anchors and editable Measurements workflow unchanged.
+
+## 4.1.40 Preview
+
+- Added Revit-style temporary wall dimensions for straight two-point Draupr walls.
+- Added exact wall-length entry through SketchUp's native Measurements box with model-unit parsing.
+- Added Start, End, and Center anchor modes; click an endpoint or press Tab to choose the fixed reference.
+- Preserved hosted door and window positions relative to the selected anchor and blocked invalid wall shortening.
+- Protected joined endpoints from destructive resizing and retained native SketchUp Undo/Redo.
+- Added the Editable Wall Length command to Modify and to the Draupr wall context menu.
+
 ## 4.1.39 Preview
 
 - Audited all 18 Modify buttons from HTML click routing through the JavaScript bridge to their Ruby implementations.

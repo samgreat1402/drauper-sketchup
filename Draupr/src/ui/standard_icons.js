@@ -23,6 +23,7 @@ window.DRAUPR_STANDARD_ICONS = {
   'skylight': '<path class="icon-geometry" d="M3 18L9 5h12l-6 13z"/><path class="icon-glass" d="M7 15l4-7h7l-4 7z"/><path class="icon-target" d="M7 15l4-7h7l-4 7z"/>',
   'dormer': '<path class="icon-geometry" d="M2 19l5-11 15 3M7 14l5-7 6 5v8H7zM12 7v13"/><path class="icon-glass" d="M9 14h6v5H9z"/><path class="icon-target" d="M7 14l5-7 6 5"/><path class="icon-action" d="M2 19l5-11 15 3"/>',
   'molding': '<path class="icon-geometry" d="M3 20h18M5 20V6h14v5h-8v5h5v4M8 9h8"/><path class="icon-target" d="M5 20V6h14v5h-8v5h5"/>',
+  'modifyWallLength': '<path class="icon-geometry" d="M3 7h18v10H3z"/><path class="icon-target" d="M4 4v16M20 4v16"/><path class="icon-action" d="M7 12h10M7 12l3-3M7 12l3 3M17 12l-3-3M17 12l-3 3"/>',
   'modifySplit': '<path class="icon-geometry" d="M3 7h18v10H3z"/><path class="icon-target" d="M3 7h8v10H3zM13 7h8v10h-8z"/><path class="icon-remove" d="M12 3v18M8 4l8 16"/>',
   'modifyTrim': '<path class="icon-geometry" d="M4 6v12h8M20 4v16"/><path class="icon-target" d="M20 4v16"/><path class="icon-action" d="M10 12h9M15 8l4 4-4 4"/>',
   'modifyAlignBaseline': '<path class="icon-geometry" d="M5 6h6v7H5zM14 9h5v6h-5z"/><path class="icon-target" d="M3 19h18"/><path class="icon-action" d="M8 13v6M16 15v4"/>',
