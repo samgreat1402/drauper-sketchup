@@ -3,7 +3,7 @@
 **Draupr Studio** is a free and open-source parametric architectural modeling extension for SketchUp. It provides intelligent architectural objects, hosted relationships, material workflows, editing tools, and bilingual English–Persian support.
 
 [![License: GPL v3+](https://img.shields.io/badge/License-GPLv3%2B-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-4.1.39%20Preview-orange.svg)](Draupr/src/config/release.json)
+[![Release](https://img.shields.io/badge/release-4.1.43%20Preview-orange.svg)](https://github.com/samgreat1402/drauper-sketchup/releases/tag/v4.1.43)
 [![Native testing](https://img.shields.io/badge/native%20testing-required-red.svg)](Draupr/qa/NATIVE_ACCEPTANCE.md)
 
 > **Project status: Preview.** The source is published for testing and contribution. Review the native acceptance checklist before using Draupr in production work.
@@ -13,6 +13,7 @@
 - Parametric walls, roofs, slabs, beams, columns, foundations, stairs, railings, ramps, louvers, skylights, dormers, doors, and windows.
 - Hosted openings that remain associated with their walls and roofs.
 - Roof edge-to-face joins, wall junctions, boundary attachment, split/knife, trim, alignment, and healing tools.
+- User-authored driving wall dimensions with SketchUp Measurements input, same-wall or external references, endpoint resizing, and relative whole-wall movement.
 - Nine roof-hosted Dormer types with physical roof openings and editable materials.
 - Material assignment, reusable presets, object library, project levels, quantities, and reports.
 - English and Persian user interface with RTL support.
@@ -21,20 +22,35 @@
 
 ## Current preview
 
-The current source version is **4.1.39 Preview**. Recent work includes an original 41-icon CAD/BIM family with function-specific architectural symbols, a high-contrast workspace rail, and the corrected face-aligned Knife indicator, plus:
+The current source version is **4.1.43 Preview**. The latest release introduces user-authored driving wall dimensions instead of unreliable automatic dimensions:
 
-- exact host-roof plane intersections;
-- adaptive divided-light windows and optional Gabled shutters;
-- seamless horizontal-siding material instead of projecting siding boards;
-- crown and cheek clipping against the true offset roof underside;
-- removal of duplicate soffit sheets and Dormer gutters;
-- separate facade trim, roof fascia, frame, glass, siding, and roof materials.
+- Pick a fixed reference on the target wall, another wall, or inferencable SketchUp geometry.
+- Pick the start or end cap of the selected target wall.
+- Place the temporary dimension and enter the required value in SketchUp Measurements.
+- Drive the chosen endpoint along its wall axis, or move the whole wall for near-perpendicular relative dimensions.
+- Preserve hosted openings and native Undo/Redo while protecting joined moving endpoints.
+- Select thick-wall endpoints through visible end caps, end edges, or nearby corners in perspective views.
+
+This workflow currently supports one straight, unscaled, two-point Draupr wall. Joined endpoints that would need to move are intentionally blocked in this Preview.
+
+Recent releases also added the original function-specific CAD/BIM icon family, unified vertical Studio, corrected Knife indicators, expanded Dormer types, roof-hosted openings, material separation, and roof-junction tools.
+
+## Driving wall dimensions
+
+1. Select one straight Draupr wall.
+2. Open **Modify → Driving Wall Dimension**.
+3. Click the fixed reference.
+4. Click an end cap, end edge, or endpoint of the selected wall.
+5. Click to place the dimension line.
+6. Type a value such as `4500mm`, `4.5m`, or `15'` in SketchUp Measurements and press **Enter**.
+
+Press **Esc** to clear the current dimension; press **Esc** again to exit the tool.
 
 ## Installation
 
 ### Install an RBZ build
 
-1. Download an `.rbz` package from the repository Releases page.
+1. Download the latest `.rbz` package from the [v4.1.43 Preview release](https://github.com/samgreat1402/drauper-sketchup/releases/tag/v4.1.43).
 2. Open **SketchUp → Extension Manager**.
 3. Select **Install Extension** and choose the RBZ file.
 4. Restart SketchUp if requested, then open **Extensions → Draupr Studio**.
